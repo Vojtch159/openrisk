@@ -1,0 +1,423 @@
+- protocolId: spark
+  label: Governance model
+  value: Sky ecosystem governance via Sky token voting and Sky Forum proposals.
+  source: { label: Sky Forum, url: https://forum.sky.money/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: spark
+  label: Upgradeability
+  value: SparkLend is upgradeable via governance-controlled proxy; sUSDS is a simple ERC-4626 token.
+  source: { label: Spark Docs, url: https://docs.spark.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: spark
+  label: Timelock
+  value: Sky protocol has a governance delay mechanism for risk parameter changes.
+  source: { label: Sky Forum, url: https://forum.sky.money/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: spark
+  label: Pause capability
+  value: Yes — Spark can pause markets via governance-controlled pause guardian.
+  source: { label: Spark Docs, url: https://docs.spark.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: spark
+  label: Admin roles
+  value: Governance-controlled admin keys manage risk parameters and asset listings.
+  source: { label: DeFiScan, url: https://www.defiscan.info/protocols/spark/ethereum, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+
+- protocolId: aave
+  label: Governance model
+  value: On-chain DAO governance via AAVE/stkAAVE token voting (Governance V3).
+  source: { label: Aave Governance, url: https://governance.aave.com/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: aave
+  label: Upgradeability
+  value: Core contracts are upgradeable; governed by Aave Governance executor.
+  source: { label: Aave Docs, url: https://aave.com/docs, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: aave
+  label: Timelock
+  value: Short and long executor timelocks control governance execution speed.
+  source: { label: Aave Governance, url: https://governance.aave.com/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: aave
+  label: Pause capability
+  value: Yes — Protocol Guardian and Emergency Guardian multisigs can freeze markets.
+  source: { label: DeFiScan, url: https://www.defiscan.info/protocols/aave/ethereum, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: aave
+  label: Admin roles
+  value: Risk Stewards, Guardian, and multisig signers manage parameters alongside DAO voting.
+  source: { label: LlamaRisk, url: https://research.llamarisk.com/research-aave, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+
+- protocolId: morpho
+  label: Governance model
+  value: Morpho DAO governance via MORPHO token voting on the Morpho Forum.
+  source: { label: Morpho Forum, url: https://forum.morpho.org/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: morpho
+  label: Upgradeability
+  value: Morpho Blue core is immutable; governance controls certain periphery parameters.
+  source: { label: Morpho Docs, url: https://docs.morpho.org/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: morpho
+  label: Timelock
+  value: Governance decisions are executed through the Morpho DAO timelock.
+  source: { label: Morpho Docs, url: https://docs.morpho.org/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: morpho
+  label: Pause capability
+  value: Isolated markets can be frozen by governance; no global pause for Blue.
+  source: { label: DeFiScan, url: https://www.defiscan.info/protocols/morpho/ethereum, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: morpho
+  label: Admin roles
+  value: Curator roles manage vault allocations; DAO controls core protocol parameters.
+  source: { label: CuratorWatch, url: https://curatorwatch.com, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+
+- protocolId: fluid
+  label: Governance model
+  value: Instadapp governance via INST token voting and Instadapp DAO.
+  source: { label: Fluid Docs, url: https://docs.fluid.instadapp.io/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: fluid
+  label: Upgradeability
+  value: Core contracts are upgradeable; governed by Instadapp DAO.
+  source: { label: Fluid Docs, url: https://docs.fluid.instadapp.io/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: fluid
+  label: Timelock
+  value: Governance has a timelock on parameter changes.
+  source: { label: Fluid Docs, url: https://docs.fluid.instadapp.io/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: fluid
+  label: Pause capability
+  value: Lending markets can be paused via governance.
+  source: { label: Fluid Docs, url: https://docs.fluid.instadapp.io/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: fluid
+  label: Admin roles
+  value: Instadapp DAO controls all protocol-level parameters.
+  source: { label: Fluid Docs, url: https://docs.fluid.instadapp.io/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+
+- protocolId: gearbox
+  label: Governance model
+  value: Gearbox DAO governance via GEAR token voting on the governance forum.
+  source: { label: Gearbox Governance, url: https://gov.gearbox.fi/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: gearbox
+  label: Upgradeability
+  value: Core contracts are upgradeable; governed by Gearbox DAO.
+  source: { label: Gearbox Docs, url: https://docs.gearbox.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: gearbox
+  label: Timelock
+  value: Governance proposals go through a timelock before execution.
+  source: { label: Gearbox Governance, url: https://gov.gearbox.fi/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: gearbox
+  label: Pause capability
+  value: Pause mechanism exists for credit accounts and pool operations.
+  source: { label: Gearbox Docs, url: https://docs.gearbox.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: gearbox
+  label: Admin roles
+  value: DAO-controlled multisig manages critical operations alongside on-chain governance.
+  source: { label: Gearbox Docs, url: https://docs.gearbox.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+
+- protocolId: euler
+  label: Governance model
+  value: Euler DAO governance via EUL token voting and governance forum.
+  source: { label: Euler Forum, url: https://forum.euler.finance/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: euler
+  label: Upgradeability
+  value: Modular vault architecture; core contracts upgradeable by governance.
+  source: { label: Euler Docs, url: https://docs.euler.finance/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: euler
+  label: Timelock
+  value: Governance proposals require a timelock delay before execution.
+  source: { label: Euler Docs, url: https://docs.euler.finance/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: euler
+  label: Pause capability
+  value: Vault-level pause mechanism exists for risk management.
+  source: { label: Euler Docs, url: https://docs.euler.finance/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: euler
+  label: Admin roles
+  value: Governance multisig and DAO share control over protocol parameters.
+  source: { label: Euler Forum, url: https://forum.euler.finance/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+
+- protocolId: compound
+  label: Governance model
+  value: On-chain DAO governance via COMP token voting and governance forum.
+  source: { label: Compound Governance, url: https://www.comp.xyz/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: compound
+  label: Upgradeability
+  value: V2 is partially upgradeable; V3 comets are upgradeable by governance.
+  source: { label: Compound Docs, url: https://docs.compound.finance/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: compound
+  label: Timelock
+  value: GovernorBravo timelock enforces a minimum delay on governance actions.
+  source: { label: Compound Governance, url: https://www.comp.xyz/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: compound
+  label: Pause capability
+  value: Markets can be paused via governance; no global pause.
+  source: { label: Compound Docs, url: https://docs.compound.finance/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: compound
+  label: Admin roles
+  value: Governance controls all market parameters; OpenZeppelin timelock for execution.
+  source: { label: DeFiScan, url: https://www.defiscan.info/protocols/compound/ethereum, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+
+- protocolId: liquity
+  label: Governance model
+  value: V1 is fully immutable (no governance); V2 introduced governance for certain parameters.
+  source: { label: Liquity Docs, url: https://docs.liquity.org/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: liquity
+  label: Upgradeability
+  value: V1 core contracts are immutable with no upgrade path; V2 has upgradeable components.
+  source: { label: Liquity Docs, url: https://docs.liquity.org/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: liquity
+  label: Timelock
+  value: V1 has no timelock (immutable); V2 governance includes timelock delays.
+  source: { label: Liquity Governance, url: https://gov.liquity.org/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: liquity
+  label: Pause capability
+  value: V1 has no pause mechanism by design; V2 has governance-controlled pause.
+  source: { label: Liquity Docs, url: https://docs.liquity.org/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: liquity
+  label: Immutability note
+  value: Liquity V1's immutability is a structural property, not a risk judgment. No admin can alter V1 core contracts.
+  source: { label: DeFiScan, url: https://www.defiscan.info/protocols/liquity/ethereum, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+
+- protocolId: uniswap
+  label: Governance model
+  value: Uniswap DAO governance via UNI token voting and Uniswap Governance forum.
+  source: { label: Uniswap Governance, url: https://gov.uniswap.org/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: uniswap
+  label: Upgradeability
+  value: Each version is independently deployed; V4 uses singleton contracts with hooks. V3 is non-upgradeable.
+  source: { label: Uniswap Docs, url: https://docs.uniswap.org/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: uniswap
+  label: Timelock
+  value: Uniswap DAO timelock controls governance execution for fee switches and treasury.
+  source: { label: Uniswap Governance, url: https://gov.uniswap.org/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: uniswap
+  label: Pause capability
+  value: No protocol-level pause; V4 hooks can implement custom pause logic.
+  source: { label: Uniswap Docs, url: https://docs.uniswap.org/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: uniswap
+  label: Admin roles
+  value: DAO controls fee switches and treasury; pool deployers have no special admin rights.
+  source: { label: DeFiScan, url: https://www.defiscan.info/protocols/uniswap/ethereum, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+
+- protocolId: curve
+  label: Governance model
+  value: Curve DAO governance via veCRV token voting and Curve governance forum.
+  source: { label: Curve Governance, url: https://gov.curve.fi/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: curve
+  label: Upgradeability
+  value: Core pool contracts are non-upgradeable; DAO parameters can be adjusted by governance.
+  source: { label: Curve Docs, url: https://docs.curve.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: curve
+  label: Timelock
+  value: Curve DAO includes a timelock for governance parameter changes.
+  source: { label: Curve Governance, url: https://gov.curve.fi/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: curve
+  label: Pause capability
+  value: No global pause; emergency DAO can kill individual pools.
+  source: { label: Curve Docs, url: https://docs.curve.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: curve
+  label: Admin roles
+  value: Fee admin controlled by DAO; pool parameters managed through gauge voting.
+  source: { label: DeFiScan, url: https://www.defiscan.info/protocols/curve/ethereum, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+
+- protocolId: balancer
+  label: Governance model
+  value: Balancer DAO governance via BAL token voting and Balancer forum.
+  source: { label: Balancer Forum, url: https://forum.balancer.fi/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: balancer
+  label: Upgradeability
+  value: V2 pools are deployed via factory; V3 introduces upgradeable pool components.
+  source: { label: Balancer Docs, url: https://docs.balancer.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: balancer
+  label: Timelock
+  value: Balancer DAO timelock controls governance execution.
+  source: { label: Balancer Docs, url: https://docs.balancer.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: balancer
+  label: Pause capability
+  value: Pools can be paused by the emergency multisig.
+  source: { label: Balancer Docs, url: https://docs.balancer.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: balancer
+  label: Admin roles
+  value: Emergency multisig, protocol fee controller, and DAO share governance responsibilities.
+  source: { label: Balancer Forum, url: https://forum.balancer.fi/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+
+- protocolId: cow-swap
+  label: Governance model
+  value: CoW DAO governance via COW token voting and CoW Forum.
+  source: { label: CoW Forum, url: https://forum.cow.fi/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: cow-swap
+  label: Settlement model
+  value: Solver-driven batch auctions with no pooled user funds; funds remain in user wallets until settlement.
+  source: { label: CoW Docs, url: https://docs.cow.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: cow-swap
+  label: Smart contract upgradeability
+  value: Settlement and vault contracts are upgradeable by CoW DAO.
+  source: { label: CoW Docs, url: https://docs.cow.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: cow-swap
+  label: Pause capability
+  value: Settlement can be paused by the DAO multisig in emergencies.
+  source: { label: CoW Docs, url: https://docs.cow.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: cow-swap
+  label: Solver competition
+  value: Open solver competition ensures best execution; solvers must bond to participate.
+  source: { label: CoW Docs, url: https://docs.cow.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+
+- protocolId: one-inch
+  label: Governance model
+  value: 1inch DAO governance via 1INCH token voting on the governance forum.
+  source: { label: 1inch Governance, url: https://gov.1inch.io/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: one-inch
+  label: Settlement model
+  value: DEX aggregation routes orders across multiple liquidity sources; no pooled user funds.
+  source: { label: 1inch Docs, url: https://portal.1inch.dev/documentation, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: one-inch
+  label: Upgradeability
+  value: Router and aggregation contracts are upgradeable by 1inch DAO.
+  source: { label: 1inch Docs, url: https://portal.1inch.dev/documentation, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: one-inch
+  label: Pause capability
+  value: Aggregation can be paused by governance in emergencies.
+  source: { label: 1inch Docs, url: https://portal.1inch.dev/documentation, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: one-inch
+  label: Admin roles
+  value: DAO multisig controls protocol parameters and fee distribution.
+  source: { label: 1inch Governance, url: https://gov.1inch.io/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+
+- protocolId: zero-x-matcha
+  label: Governance model
+  value: 0x DAO governance via ZRX token voting; protocol is open and permissionless.
+  source: { label: 0x Docs, url: https://0x.org/docs, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: zero-x-matcha
+  label: Settlement model
+  value: DEX aggregation with RFQ and open orderbook; no pooled user funds.
+  source: { label: 0x Docs, url: https://0x.org/docs, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: zero-x-matcha
+  label: Upgradeability
+  value: Core exchange contracts are upgradeable by 0x DAO governance.
+  source: { label: 0x Docs, url: https://0x.org/docs, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: zero-x-matcha
+  label: Pause capability
+  value: Exchange contracts can be paused by governance.
+  source: { label: 0x Docs, url: https://0x.org/docs, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: zero-x-matcha
+  label: Admin roles
+  value: 0x DAO manages protocol upgrades; Matcha frontend operated separately.
+  source: { label: 0x Docs, url: https://0x.org/docs, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+
+- protocolId: yearn
+  label: Governance model
+  value: Yearn DAO governance via YFI token voting on the governance forum.
+  source: { label: Yearn Governance, url: https://gov.yearn.fi/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: yearn
+  label: Upgradeability
+  value: Vault strategies are upgradeable; V3 vaults use modular architecture.
+  source: { label: Yearn Docs, url: https://docs.yearn.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: yearn
+  label: Timelock
+  value: Governance decisions go through multisig and timelock enforcement.
+  source: { label: Yearn Docs, url: https://docs.yearn.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: yearn
+  label: Pause capability
+  value: Vaults can be paused by governance multisig.
+  source: { label: Yearn Docs, url: https://docs.yearn.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: yearn
+  label: Admin roles
+  value: Multisig guardians manage vault parameters alongside DAO governance.
+  source: { label: Yearn Docs, url: https://docs.yearn.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+
+- protocolId: mellow
+  label: Governance model
+  value: Mellow protocol governance via documentation-tracked parameters.
+  source: { label: Mellow Docs, url: https://docs.mellow.finance/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: mellow
+  label: Upgradeability
+  value: LRT vault architecture is modular and upgradeable.
+  source: { label: Mellow Docs, url: https://docs.mellow.finance/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: mellow
+  label: Pause capability
+  value: Vault operators can pause deposits and withdrawals.
+  source: { label: Mellow Docs, url: https://docs.mellow.finance/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: mellow
+  label: Admin roles
+  value: Vault operators and curators manage risk parameters per vault.
+  source: { label: Mellow Docs, url: https://docs.mellow.finance/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: mellow
+  label: Restaking exposure
+  value: LRT vault infrastructure involves restaking protocols (EigenLayer) which carry additional slashing and smart contract risk.
+  source: { label: Mellow Docs, url: https://docs.mellow.finance/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+
+- protocolId: morpho-vaults
+  label: Governance model
+  value: MetaMorpho vaults governed by curator-managed allocation parameters; Morpho DAO governs core protocol.
+  source: { label: Morpho Forum, url: https://forum.morpho.org/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: morpho-vaults
+  label: Vault model
+  value: Curated vaults where curators manage risk-optimized allocations across Morpho Blue markets.
+  source: { label: Morpho Docs, url: https://docs.morpho.org/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: morpho-vaults
+  label: Curator control
+  value: Curators can rebalance vault allocations within defined risk parameters; cannot directly access user funds.
+  source: { label: CuratorWatch, url: https://curatorwatch.com, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: morpho-vaults
+  label: Pause capability
+  value: Curators can pause vault operations; Morpho DAO can freeze underlying markets.
+  source: { label: Morpho Docs, url: https://docs.morpho.org/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: morpho-vaults
+  label: Admin roles
+  value: Curators hold significant allocation power; performance and risk vary by curator.
+  source: { label: CuratorWatch, url: https://curatorwatch.com, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+
+- protocolId: pendle
+  label: Governance model
+  value: Pendle DAO governance via PENDLE token voting on the governance forum.
+  source: { label: Pendle Governance, url: https://gov.pendle.finance/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: pendle
+  label: Upgradeability
+  value: Core yield tokenization contracts are upgradeable by Pendle DAO.
+  source: { label: Pendle Docs, url: https://docs.pendle.finance/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: pendle
+  label: Timelock
+  value: Governance changes go through timelock before execution.
+  source: { label: Pendle Docs, url: https://docs.pendle.finance/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: pendle
+  label: Pause capability
+  value: Markets can be paused by governance in emergencies.
+  source: { label: Pendle Docs, url: https://docs.pendle.finance/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: pendle
+  label: Admin roles
+  value: DAO controls protocol parameters; market creators have limited admin capabilities.
+  source: { label: Pendle Governance, url: https://gov.pendle.finance/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+
+- protocolId: lido
+  label: Governance model
+  value: Lido DAO governance via LDO token voting and Lido Research Forum.
+  source: { label: Lido Research, url: https://research.lido.fi/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: lido
+  label: Upgradeability
+  value: stETH token and core contracts are upgradeable by Lido DAO governance.
+  source: { label: Lido Docs, url: https://docs.lido.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: lido
+  label: Timelock
+  value: Easy Track and standard governance motions go through timelock.
+  source: { label: Lido Docs, url: https://docs.lido.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: lido
+  label: Pause capability
+  value: Deposits and withdrawals can be paused by DAO multisig.
+  source: { label: Lido Docs, url: https://docs.lido.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: lido
+  label: Node operator risk
+  value: Permissioned node operator set managed by Lido DAO; operator performance and slashing risk on validator set.
+  source: { label: Lido Docs, url: https://docs.lido.fi/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: lido
+  label: Collateral dominance
+  value: stETH is the most widely used DeFi collateral asset; concentration risk in lending protocols.
+  source: { label: DeFiScan, url: https://www.defiscan.info/protocols/lido/ethereum, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+
+- protocolId: rocket-pool
+  label: Governance model
+  value: Rocket Pool DAO governance via RPL token voting on the DAO forum.
+  source: { label: Rocket Pool DAO, url: https://dao.rocketpool.net/, provenance: governance_forum, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: rocket-pool
+  label: Upgradeability
+  value: rETH and core contracts are upgradeable by Rocket Pool DAO.
+  source: { label: Rocket Pool Docs, url: https://docs.rocketpool.net/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: rocket-pool
+  label: Timelock
+  value: Governance proposals require timelock before execution.
+  source: { label: Rocket Pool Docs, url: https://docs.rocketpool.net/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: rocket-pool
+  label: Pause capability
+  value: Deposits can be paused by DAO multisig in emergencies.
+  source: { label: Rocket Pool Docs, url: https://docs.rocketpool.net/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }
+- protocolId: rocket-pool
+  label: Node operator model
+  value: Permissionless node operators with RPL bond requirement; operator-level slashing and MEV risk.
+  source: { label: Rocket Pool Docs, url: https://docs.rocketpool.net/, provenance: provider_page, capturedAt: "2026-06-11T08:00:00.000Z" }

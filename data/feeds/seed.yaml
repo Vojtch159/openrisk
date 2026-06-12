@@ -1,0 +1,203 @@
+- id: defiscan
+  name: DeFiScan
+  shortName: DeFiScan
+  type: rating
+  focus: "Decentralization maturity: who controls keys, upgrades, and admin powers."
+  methodology: "Stage-based centralization reviews backed by contract and control-surface analysis."
+  automation: api
+  machineReadable: yes
+  independence: independent
+  independenceNote: "Non-profit DeFi Collective project with open, community-reviewable methodology."
+  links:
+    homepage: https://defiscan.info/
+    methodology: https://docs.defiscan.info/
+    data: https://defiscan.info/data/index.json
+- id: llamarisk
+  name: LlamaRisk
+  shortName: LlamaRisk
+  type: research
+  focus: "Protocol research, collateral assessments, market health, and parameter recommendations."
+  methodology: "Provider-authored risk research and active risk-service mandates."
+  automation: page_snapshot
+  machineReadable: partial
+  independence: curates_vaults
+  independenceNote: "Holds paid risk mandates and operates vault strategies in markets it researches."
+  links:
+    homepage: https://www.llamarisk.com/
+- id: blockanalitica
+  name: BlockAnalitica
+  shortName: BlockAnalitica
+  type: dashboard
+  focus: "Quantitative onchain lending risk dashboards covering liquidations, collateral health, and exposure."
+  methodology: "Market-level monitoring and risk analytics, including the Sphere product."
+  automation: page_snapshot
+  machineReadable: partial
+  independence: curates_vaults
+  independenceNote: "Also curates lending vaults in markets covered by its analytics."
+  links:
+    homepage: https://blockanalitica.com/
+- id: curatorwatch
+  name: CuratorWatch
+  shortName: CuratorWatch
+  type: dashboard
+  focus: "Vault-level monitoring for Morpho curators, allocations, and curator behavior."
+  methodology: "Curator and vault requirements, allocation monitoring, and comparative grades."
+  automation: page_snapshot
+  machineReadable: no
+  independence: independent
+  independenceNote: "Independent watchdog that does not curate the vaults it monitors."
+  links:
+    homepage: https://curatorwatch.com/
+    methodology: https://curatorwatch.com/docs
+- id: defipunkd
+  name: "DeFiPunk'd"
+  shortName: "DeFiPunk'd"
+  type: rating
+  focus: "Control, exit, autonomy, open access, and verifiability assessed through distributed model consensus."
+  methodology: "Dimension-based provider ratings; ungraded protocol pages remain partial coverage."
+  automation: manual_snapshot
+  machineReadable: no
+  independence: independent
+  independenceNote: "No protocol mandates or capital-allocation activity are publicly disclosed."
+  links:
+    homepage: https://defipunkd.com/
+- id: credora
+  name: Credora
+  shortName: Credora
+  type: rating
+  focus: "Institutional credit-risk ratings for protocols, borrowers, and rated vault exposures."
+  methodology: "Credit ratings distributed through reports, APIs, and attestations."
+  automation: api
+  machineReadable: yes
+  independence: paid_mandate
+  independenceNote: "Commercial ratings are distributed into protocol and vault integrations."
+  links:
+    homepage: https://www.credora.network/
+- id: xerberus
+  name: Xerberus
+  shortName: Xerberus
+  type: rating
+  focus: "Mechanism-level risk ratings for protocols, assets, pools, and vaults."
+  methodology: "Composite provider ratings built from security, economics, governance, receipt-token, and cross-chain domains."
+  automation: api
+  machineReadable: yes
+  independence: commercial
+  independenceNote: "Commercial provider that publicly states it does not accept payment from rated issuers."
+  links:
+    homepage: https://xerberus.io/
+    methodology: https://publish.obsidian.md/xerberus/
+    data: https://app.xerberus.io/api/dendrogram/scores?classes=Protocol
+- id: philidor
+  name: Philidor Analytics
+  shortName: Philidor
+  type: rating
+  focus: "Deterministic vault ratings across asset quality, code maturity, and governance controls."
+  methodology: "Open deterministic framework exposed through public analytics and developer interfaces."
+  automation: api
+  machineReadable: yes
+  independence: commercial
+  independenceNote: "For-profit analytics provider that does not curate rated vaults."
+  links:
+    homepage: https://philidor.io/
+    data: https://analytics.philidor.io/
+- id: pigi
+  name: pigi.finance
+  shortName: pigi
+  type: dashboard
+  focus: "Vault analytics, historical exploits, concentration, and risk-adjusted yield comparisons."
+  methodology: "Strategy and vault comparison data across lending, LP, and yield products."
+  automation: api
+  machineReadable: yes
+  independence: commercial
+  independenceNote: "Commercial analytics vendor without disclosed vault curation."
+  links:
+    homepage: https://pigi.finance/
+    methodology: https://pigi.finance/defi-api
+    data: https://pigi.finance/vaults
+- id: defisaver
+  name: DeFi Saver
+  shortName: DeFi Saver
+  type: monitoring
+  focus: "Position-management tooling with loan-health, safety-ratio, and liquidation-protection monitoring."
+  methodology: "Coverage means supported protocol positions and risk-relevant management tooling, not a provider rating."
+  automation: page_snapshot
+  machineReadable: no
+  independence: commercial
+  independenceNote: "Commercial execution tooling; revenue is linked to usage rather than ratings."
+  links:
+    homepage: https://defisaver.com/
+- id: zyfai
+  name: Zyfai Risk
+  shortName: Zyfai
+  type: dashboard
+  focus: "Live pool risk metrics, TVL, APY, and security grades."
+  methodology: "Pool-level grades and real-time risk analytics for whitelisted DeFi strategies."
+  automation: page_snapshot
+  machineReadable: partial
+  independence: curates_vaults
+  independenceNote: "The associated yield agent deploys user capital into protocols covered by the dashboard."
+  links:
+    homepage: https://zyf.ai/
+    data: https://risk.zyf.ai/
+- id: anticapture
+  name: Anticapture
+  shortName: Anticapture
+  type: research
+  focus: "DAO capture risk, voting-power concentration, cost-to-attack, and governance monitoring."
+  methodology: "Stage-based governance security framework with open-source analysis."
+  automation: page_snapshot
+  machineReadable: partial
+  independence: paid_mandate
+  independenceNote: "Built by a commercial governance service provider working with assessed DAOs."
+  links:
+    homepage: https://anticapture.com/
+    data: https://app.anticapture.com/
+- id: exponential
+  name: Exponential DeFi
+  shortName: Exponential
+  type: rating
+  focus: "A-F pool ratings decomposed into protocol, asset, chain, and pool risk."
+  methodology: "Pre-migration Exponential ratings retained as reference samples after the product moved into YO."
+  automation: page_snapshot
+  machineReadable: partial
+  independence: curates_vaults
+  independenceNote: "Investment platform that allocated user capital into pools it rated."
+  links:
+    homepage: https://exponential.fi/
+- id: defisafety
+  name: DeFi Safety
+  shortName: DeFi Safety
+  type: rating
+  focus: "Process Quality Reviews covering documentation, testing, audits, and admin-key practices."
+  methodology: "Standardized 0-100 process-quality review framework."
+  automation: page_snapshot
+  machineReadable: partial
+  independence: independent
+  independenceNote: "Independent public-good reviewer that does not deploy capital into reviewed protocols."
+  links:
+    homepage: https://www.defisafety.com/
+    methodology: https://www.defisafety.com/our_review
+- id: gauntlet
+  name: Gauntlet
+  shortName: Gauntlet
+  type: research
+  focus: "Agent-based economic simulation, parameter optimization, and insolvency prevention."
+  methodology: "Mandate-based market risk research, monitoring, and parameter recommendations."
+  automation: page_snapshot
+  machineReadable: partial
+  independence: paid_mandate
+  independenceNote: "Receives paid mandates from protocols and DAOs it assesses."
+  links:
+    homepage: https://www.gauntlet.xyz/
+- id: chaoslabs
+  name: Chaos Labs
+  shortName: Chaos Labs
+  type: dashboard
+  focus: "Economic risk dashboards, stress simulation, and parameter automation for lending markets."
+  methodology: "Protocol-specific risk mandates, monitoring hubs, and automated parameter recommendations."
+  automation: page_snapshot
+  machineReadable: partial
+  independence: paid_mandate
+  independenceNote: "Receives paid mandates from protocols and DAOs it assesses."
+  links:
+    homepage: https://chaoslabs.xyz/

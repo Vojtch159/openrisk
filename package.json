@@ -1,0 +1,41 @@
+{
+  "name": "openrisk",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "build": "pnpm run static:data && nuxt build",
+    "dev": "nuxt dev",
+    "generate": "pnpm run static:data && nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "validate:data": "tsx scripts/validate-data.ts",
+    "check:no-scoring": "tsx scripts/check-no-scoring.ts",
+    "static:data": "tsx scripts/generate-static-data.ts",
+    "static:build": "pnpm run build"
+  },
+  "dependencies": {
+    "@nuxt/eslint": "latest",
+    "@tailwindcss/vite": "latest",
+    "@tanstack/vue-table": "latest",
+    "@lucide/vue": "latest",
+    "nuxt": "latest",
+    "yaml": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@nuxt/test-utils": "latest",
+    "@playwright/test": "latest",
+    "@types/node": "latest",
+    "eslint": "latest",
+    "tsx": "latest",
+    "typescript": "latest",
+    "vitest": "latest",
+    "vue-tsc": "latest"
+  },
+  "packageManager": "pnpm@10.15.1"
+}

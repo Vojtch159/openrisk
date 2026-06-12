@@ -1,0 +1,339 @@
+- protocolId: uniswap
+  firm: Uniswap Labs
+  subject: Uniswap V3 core (launch audit)
+  date: "2021-04-01"
+  sourceUrl: https://github.com/Uniswap/v3-core/tree/main/audits
+- protocolId: uniswap
+  firm: ABDK Consulting
+  subject: Uniswap V4 core
+  date: "2024-01-01"
+  sourceUrl: https://github.com/Uniswap/v4-core/tree/main/audits
+- protocolId: uniswap
+  firm: OpenZeppelin
+  subject: Uniswap V4 periphery and hooks
+  date: "2024-02-01"
+  sourceUrl: https://docs.uniswap.org/contracts/v4/concepts/security
+- protocolId: uniswap
+  firm: Code4rena
+  subject: Uniswap V4 contest
+  date: "2024-03-01"
+  sourceUrl: https://code4rena.com/contests/2024-03-uniswap-v4
+
+- protocolId: aave
+  firm: OpenZeppelin
+  subject: Aave V3 core (launch audit)
+  date: "2021-11-01"
+  sourceUrl: https://github.com/aave/aave-v3-core/blob/master/audits/01-11-2021_OpenZeppelin_AaveV3.pdf
+- protocolId: aave
+  firm: Trail of Bits
+  subject: Aave V3 core
+  date: "2022-01-07"
+  sourceUrl: https://github.com/aave/aave-v3-core/blob/master/audits/07-01-2022_TrailOfBits_AaveV3.pdf
+- protocolId: aave
+  firm: Certora
+  subject: Aave V3.3 formal verification
+  date: "2024-11-07"
+  sourceUrl: https://github.com/aave-dao/aave-v3-origin/blob/main/audits/2024-11-07_Certora_Aave-v3.3.0.pdf
+- protocolId: aave
+  firm: Sigma Prime
+  subject: Aave V3 core
+  date: "2021-12-01"
+  sourceUrl: https://github.com/aave/aave-v3-core/blob/master/audits/27-01-2022_SigmaPrime_AaveV3.pdf
+- protocolId: aave
+  firm: Certora
+  subject: Aave V3.4 formal verification
+  date: "2025-06-01"
+  sourceUrl: https://github.com/aave-dao/aave-v3-origin/tree/main/audits
+
+- protocolId: spark
+  firm: ChainSecurity
+  subject: SparkLend core contracts
+  date: "2023-11-01"
+  sourceUrl: https://spark.fi/security
+- protocolId: spark
+  firm: OpenZeppelin
+  subject: sUSDS token and savings module
+  date: "2024-03-01"
+  sourceUrl: https://spark.fi/security
+- protocolId: spark
+  firm: Certora
+  subject: SparkLend formal verification
+  date: "2024-06-01"
+  sourceUrl: https://spark.fi/security
+
+- protocolId: morpho
+  firm: Spearbit
+  subject: Morpho Blue core contracts
+  date: "2023-09-01"
+  sourceUrl: https://github.com/morpho-org/morpho-blue/tree/main/audits
+- protocolId: morpho
+  firm: Cantina
+  subject: Morpho Blue code contest
+  date: "2023-10-01"
+  sourceUrl: https://github.com/morpho-org/morpho-blue/tree/main/audits
+- protocolId: morpho
+  firm: OpenZeppelin
+  subject: MetaMorpho vaults
+  date: "2024-01-01"
+  sourceUrl: https://github.com/morpho-org/metamorpho/tree/main/audits
+- protocolId: morpho
+  firm: Spearbit
+  subject: Morpho periphery and rewards
+  date: "2024-03-01"
+  sourceUrl: https://github.com/morpho-org/morpho-blue/tree/main/audits
+
+- protocolId: fluid
+  firm: OpenZeppelin
+  subject: Fluid core contracts
+  date: "2023-06-01"
+  sourceUrl: https://docs.fluid.instadapp.io/security
+- protocolId: fluid
+  firm: ChainSecurity
+  subject: Fluid lending and DEX modules
+  date: "2024-01-01"
+  sourceUrl: https://docs.fluid.instadapp.io/security
+
+- protocolId: gearbox
+  firm: ChainSecurity
+  subject: Gearbox V3 credit accounts
+  date: "2023-04-01"
+  sourceUrl: https://gearbox.fi/security
+- protocolId: gearbox
+  firm: ABDK Consulting
+  subject: Gearbox V3 pools
+  date: "2023-05-01"
+  sourceUrl: https://gearbox.fi/security
+- protocolId: gearbox
+  firm: Pessimistic
+  subject: Gearbox V3 core
+  date: "2023-06-01"
+  sourceUrl: https://gearbox.fi/security
+
+- protocolId: euler
+  firm: Trail of Bits
+  subject: Euler V2 vault architecture
+  date: "2024-02-01"
+  sourceUrl: https://www.euler.finance/security
+- protocolId: euler
+  firm: Cantina
+  subject: Euler V2 core code contest
+  date: "2024-03-01"
+  sourceUrl: https://www.euler.finance/security
+- protocolId: euler
+  firm: OpenZeppelin
+  subject: Euler V2 modules
+  date: "2024-04-01"
+  sourceUrl: https://www.euler.finance/security
+
+- protocolId: compound
+  firm: Trail of Bits
+  subject: Compound III (Comet) core
+  date: "2022-08-01"
+  sourceUrl: https://docs.compound.finance/security
+- protocolId: compound
+  firm: OpenZeppelin
+  subject: Compound V2 governance
+  date: "2019-04-01"
+  sourceUrl: https://docs.compound.finance/security
+- protocolId: compound
+  firm: Certora
+  subject: Compound III formal verification
+  date: "2023-01-01"
+  sourceUrl: https://docs.compound.finance/security
+
+- protocolId: liquity
+  firm: Trail of Bits
+  subject: Liquity V1 core (immutable launch)
+  date: "2021-03-01"
+  sourceUrl: https://docs.liquity.org/documentation/security
+- protocolId: liquity
+  firm: Coinspect
+  subject: Liquity V2 (Bold)
+  date: "2024-06-01"
+  sourceUrl: https://docs.liquity.org/documentation/security
+- protocolId: liquity
+  firm: Code4rena
+  subject: Liquity V2 contest
+  date: "2024-08-01"
+  sourceUrl: https://docs.liquity.org/documentation/security
+
+- protocolId: curve
+  firm: Trail of Bits
+  subject: Curve stable swap pools
+  date: "2020-06-01"
+  sourceUrl: https://docs.curve.fi/security
+- protocolId: curve
+  firm: ChainSecurity
+  subject: Curve V2 pools
+  date: "2021-06-01"
+  sourceUrl: https://docs.curve.fi/security
+- protocolId: curve
+  firm: MixBytes
+  subject: Curve DAO and gauge system
+  date: "2021-08-01"
+  sourceUrl: https://docs.curve.fi/security
+- protocolId: curve
+  firm: Quantstamp
+  subject: Curve crvUSD stablecoin
+  date: "2023-05-01"
+  sourceUrl: https://docs.curve.fi/security
+- protocolId: curve
+  firm: ChainSecurity
+  subject: Curve lending (LlamaLend)
+  date: "2024-01-01"
+  sourceUrl: https://docs.curve.fi/security
+
+- protocolId: balancer
+  firm: Trail of Bits
+  subject: Balancer V2 vault architecture
+  date: "2021-04-01"
+  sourceUrl: https://docs.balancer.fi/reference/security
+- protocolId: balancer
+  firm: Certora
+  subject: Balancer V2 formal verification
+  date: "2021-09-01"
+  sourceUrl: https://docs.balancer.fi/reference/security
+- protocolId: balancer
+  firm: OpenZeppelin
+  subject: Balancer V3 core
+  date: "2024-12-01"
+  sourceUrl: https://docs.balancer.fi/reference/security
+
+- protocolId: cow-swap
+  firm: OpenZeppelin
+  subject: CoW Protocol settlement contracts
+  date: "2021-12-01"
+  sourceUrl: https://docs.cow.fi/security
+- protocolId: cow-swap
+  firm: ChainSecurity
+  subject: CoW Protocol V2
+  date: "2023-03-01"
+  sourceUrl: https://docs.cow.fi/security
+
+- protocolId: one-inch
+  firm: OpenZeppelin
+  subject: 1inch Aggregation Router v5
+  date: "2022-06-01"
+  sourceUrl: https://1inch.io/security
+- protocolId: one-inch
+  firm: ChainSecurity
+  subject: 1inch Limit Order Protocol
+  date: "2022-09-01"
+  sourceUrl: https://1inch.io/security
+- protocolId: one-inch
+  firm: Pessimistic
+  subject: 1inch Fusion mode
+  date: "2023-04-01"
+  sourceUrl: https://1inch.io/security
+
+- protocolId: zero-x-matcha
+  firm: ConsenSys Diligence
+  subject: 0x V4 exchange and staking
+  date: "2021-01-01"
+  sourceUrl: https://0x.org/docs/guides/audits
+- protocolId: zero-x-matcha
+  firm: Trail of Bits
+  subject: 0x V4 core
+  date: "2021-02-01"
+  sourceUrl: https://0x.org/docs/guides/audits
+
+- protocolId: yearn
+  firm: ChainSecurity
+  subject: Yearn V3 vault architecture
+  date: "2023-07-01"
+  sourceUrl: https://docs.yearn.fi/security
+- protocolId: yearn
+  firm: Trail of Bits
+  subject: Yearn V2 vault strategies
+  date: "2021-05-01"
+  sourceUrl: https://docs.yearn.fi/security
+- protocolId: yearn
+  firm: Spearbit
+  subject: Yearn V3 core
+  date: "2024-01-01"
+  sourceUrl: https://docs.yearn.fi/security
+
+- protocolId: mellow
+  firm: OpenZeppelin
+  subject: Mellow LRT vault infrastructure
+  date: "2024-02-01"
+  sourceUrl: https://docs.mellow.finance/security
+- protocolId: mellow
+  firm: Pessimistic
+  subject: Mellow protocol core
+  date: "2024-04-01"
+  sourceUrl: https://docs.mellow.finance/security
+
+- protocolId: morpho-vaults
+  firm: Cantina
+  subject: MetaMorpho vault contracts
+  date: "2024-01-01"
+  sourceUrl: https://github.com/morpho-org/metamorpho/tree/main/audits
+- protocolId: morpho-vaults
+  firm: Spearbit
+  subject: MetaMorpho curator and allocation logic
+  date: "2024-02-01"
+  sourceUrl: https://github.com/morpho-org/metamorpho/tree/main/audits
+
+- protocolId: pendle
+  firm: Ackee Blockchain
+  subject: Pendle V2 yield tokenization
+  date: "2022-10-01"
+  sourceUrl: https://docs.pendle.finance/security
+- protocolId: pendle
+  firm: Dedaub
+  subject: Pendle V2 core
+  date: "2022-11-01"
+  sourceUrl: https://docs.pendle.finance/security
+- protocolId: pendle
+  firm: Zellic
+  subject: Pendle V2 markets
+  date: "2023-06-01"
+  sourceUrl: https://docs.pendle.finance/security
+- protocolId: pendle
+  firm: Code4rena
+  subject: Pendle V2 contest
+  date: "2023-08-01"
+  sourceUrl: https://docs.pendle.finance/security
+
+- protocolId: lido
+  firm: Sigma Prime
+  subject: Lido stETH protocol
+  date: "2021-01-01"
+  sourceUrl: https://docs.lido.fi/security/audits
+- protocolId: lido
+  firm: Statemind
+  subject: Lido V2 withdrawal mechanism
+  date: "2023-03-01"
+  sourceUrl: https://docs.lido.fi/security/audits
+- protocolId: lido
+  firm: Certora
+  subject: Lido V2 formal verification
+  date: "2023-04-01"
+  sourceUrl: https://docs.lido.fi/security/audits
+- protocolId: lido
+  firm: MixBytes
+  subject: Lido node operator registry
+  date: "2022-01-01"
+  sourceUrl: https://docs.lido.fi/security/audits
+- protocolId: lido
+  firm: Oxorio
+  subject: Lido staking router
+  date: "2024-02-01"
+  sourceUrl: https://docs.lido.fi/security/audits
+
+- protocolId: rocket-pool
+  firm: Sigma Prime
+  subject: Rocket Pool staking protocol
+  date: "2021-10-01"
+  sourceUrl: https://docs.rocketpool.net/overview/security
+- protocolId: rocket-pool
+  firm: ConsenSys Diligence
+  subject: Rocket Pool core
+  date: "2022-03-01"
+  sourceUrl: https://docs.rocketpool.net/overview/security
+- protocolId: rocket-pool
+  firm: Trail of Bits
+  subject: Rocket Pool Atlas upgrade
+  date: "2023-03-01"
+  sourceUrl: https://docs.rocketpool.net/overview/security

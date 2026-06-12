@@ -1,0 +1,321 @@
+- id: spark
+  name: Spark
+  family: Sky
+  category: lending
+  summary: Sky ecosystem lending and savings protocol.
+  notes: Includes SparkLend and sUSDS as requested by the RFP.
+  versions: [SparkLend, sUSDS]
+  ethereumScope: Ethereum mainnet Spark markets and Sky savings products.
+  defillama:
+    protocolSlug: spark
+    chain: Ethereum
+    metric: tvl
+  links:
+    website: https://spark.fi/
+    docs: https://docs.spark.fi/
+    governance: https://forum.sky.money/
+    defillama: https://defillama.com/protocol/spark
+- id: aave
+  name: Aave
+  category: lending
+  summary: Multi-market liquidity protocol for overcollateralized borrowing.
+  notes: Includes v3 and v4 scope where public governance and risk feeds are available.
+  versions: [v3, v4]
+  ethereumScope: Ethereum mainnet Aave deployments and governance-controlled markets.
+  defillama:
+    protocolSlug: aave
+    chain: Ethereum
+    metric: tvl
+  links:
+    website: https://aave.com/
+    docs: https://aave.com/docs
+    governance: https://governance.aave.com/
+    defillama: https://defillama.com/protocol/aave
+- id: morpho
+  name: Morpho
+  category: lending
+  summary: Lending protocol with isolated markets and vault-based risk allocation.
+  notes: Core lending protocol. Morpho Vaults are tracked separately under Yield.
+  versions: [Blue]
+  ethereumScope: Ethereum mainnet Morpho Blue markets.
+  defillama:
+    protocolSlug: morpho-blue
+    chain: Ethereum
+    metric: tvl
+  links:
+    website: https://morpho.org/
+    docs: https://docs.morpho.org/
+    governance: https://forum.morpho.org/
+    defillama: https://defillama.com/protocol/morpho-blue
+- id: fluid
+  name: Fluid
+  category: lending
+  summary: Lending and DEX hybrid built around shared liquidity.
+  notes: Tracks lending, vault, and DEX-adjacent risk where providers separate them.
+  versions: [Fluid]
+  ethereumScope: Ethereum mainnet Fluid protocol.
+  defillama:
+    protocolSlug: fluid
+    chain: Ethereum
+    metric: tvl
+  links:
+    website: https://fluid.instadapp.io/
+    docs: https://docs.fluid.instadapp.io/
+    defillama: https://defillama.com/protocol/fluid
+- id: gearbox
+  name: Gearbox
+  category: lending
+  summary: Credit-account leverage protocol for composable DeFi positions.
+  notes: Tracks protocol-level risk and supported credit markets.
+  versions: [v3]
+  ethereumScope: Ethereum mainnet Gearbox credit accounts and pools.
+  defillama:
+    protocolSlug: gearbox
+    chain: Ethereum
+    metric: tvl
+  links:
+    website: https://gearbox.fi/
+    docs: https://docs.gearbox.fi/
+    governance: https://gov.gearbox.fi/
+    defillama: https://defillama.com/protocol/gearbox
+- id: euler
+  name: Euler
+  category: lending
+  summary: Modular vault lending protocol.
+  notes: Tracks Euler vaults and governance-controlled modules.
+  versions: [v2]
+  ethereumScope: Ethereum mainnet Euler vault ecosystem.
+  defillama:
+    protocolSlug: euler
+    chain: Ethereum
+    metric: tvl
+  links:
+    website: https://www.euler.finance/
+    docs: https://docs.euler.finance/
+    governance: https://forum.euler.finance/
+    defillama: https://defillama.com/protocol/euler
+- id: compound
+  name: Compound
+  category: lending
+  summary: Money market protocol with governance-managed risk parameters.
+  notes: Includes v2 and v3.
+  versions: [v2, v3]
+  ethereumScope: Ethereum mainnet Compound deployments.
+  defillama:
+    protocolSlug: compound-finance
+    chain: Ethereum
+    metric: tvl
+  links:
+    website: https://compound.finance/
+    docs: https://docs.compound.finance/
+    governance: https://www.comp.xyz/
+    defillama: https://defillama.com/protocol/compound-finance
+- id: liquity
+  name: Liquity
+  category: lending
+  summary: Immutable collateralized debt protocol.
+  notes: Includes v1 and v2 where feed providers distinguish versions.
+  versions: [v1, v2]
+  ethereumScope: Ethereum mainnet Liquity deployments.
+  defillama:
+    protocolSlug: liquity
+    chain: Ethereum
+    metric: tvl
+  links:
+    website: https://www.liquity.org/
+    docs: https://docs.liquity.org/
+    governance: https://gov.liquity.org/
+    defillama: https://defillama.com/protocol/liquity
+- id: uniswap
+  name: Uniswap
+  category: dex
+  summary: Automated market maker and intent-based exchange infrastructure.
+  notes: Includes v3, v4, and UniswapX.
+  versions: [v3, v4, UniswapX]
+  ethereumScope: Ethereum mainnet Uniswap liquidity and routing.
+  defillama:
+    protocolSlug: uniswap
+    chain: Ethereum
+    metric: tvl
+  links:
+    website: https://uniswap.org/
+    docs: https://docs.uniswap.org/
+    governance: https://gov.uniswap.org/
+    defillama: https://defillama.com/protocol/uniswap
+- id: curve
+  name: Curve
+  category: dex
+  summary: Stablecoin, LST, and correlated-asset AMM infrastructure.
+  notes: Tracks protocol-level pools and governance risk.
+  versions: [Curve]
+  ethereumScope: Ethereum mainnet Curve pools and DAO governance.
+  defillama:
+    protocolSlug: curve-dex
+    chain: Ethereum
+    metric: tvl
+  links:
+    website: https://curve.fi/
+    docs: https://docs.curve.fi/
+    governance: https://gov.curve.fi/
+    defillama: https://defillama.com/protocol/curve-dex
+- id: balancer
+  name: Balancer
+  category: dex
+  summary: Weighted and stable pool AMM infrastructure.
+  notes: Tracks Ethereum mainnet pool and governance risk.
+  versions: [v2, v3]
+  ethereumScope: Ethereum mainnet Balancer pools and governance.
+  defillama:
+    protocolSlug: balancer
+    chain: Ethereum
+    metric: tvl
+  links:
+    website: https://balancer.fi/
+    docs: https://docs.balancer.fi/
+    governance: https://forum.balancer.fi/
+    defillama: https://defillama.com/protocol/balancer
+- id: cow-swap
+  name: CoW Swap
+  family: CoW Protocol
+  category: swap_aggregator
+  summary: Intent-based DEX protocol with solver competition and MEV protection.
+  notes: Swap aggregator with no pooled liquidity; volume metric is the relevant capital-at-risk measure.
+  versions: [CoW Protocol]
+  ethereumScope: Ethereum mainnet settlement and solver ecosystem.
+  defillama:
+    protocolSlug: cowswap
+    chain: Ethereum
+    metric: volume
+  links:
+    website: https://cow.fi/
+    docs: https://docs.cow.fi/
+    governance: https://forum.cow.fi/
+    defillama: https://defillama.com/protocol/cowswap
+- id: one-inch
+  name: 1inch
+  category: swap_aggregator
+  summary: DEX aggregation and limit order protocol.
+  notes: DEX aggregator with routed liquidity; volume metric is the relevant capital-at-risk measure.
+  versions: [Aggregation Protocol, Limit Order Protocol]
+  ethereumScope: Ethereum mainnet 1inch aggregation and order flow.
+  defillama:
+    protocolSlug: 1inch
+    chain: Ethereum
+    metric: volume
+  links:
+    website: https://1inch.io/
+    docs: https://portal.1inch.dev/documentation
+    governance: https://gov.1inch.io/
+    defillama: https://defillama.com/protocol/1inch-network
+- id: zero-x-matcha
+  name: 0x / Matcha
+  family: 0x
+  category: swap_aggregator
+  summary: 0x protocol and Matcha exchange frontend.
+  notes: Swap aggregator with no pooled liquidity; volume metric is the relevant capital-at-risk measure.
+  versions: [0x Protocol, Matcha]
+  ethereumScope: Ethereum mainnet 0x liquidity and Matcha routing.
+  defillama:
+    protocolSlug: 0x-aggregator
+    chain: Ethereum
+    metric: volume
+  links:
+    website: https://0x.org/
+    docs: https://0x.org/docs
+    defillama: https://defillama.com/protocol/0x-aggregator
+- id: yearn
+  name: Yearn Finance
+  category: yield
+  summary: Automated yield vault protocol.
+  notes: Tracks Ethereum mainnet vault strategy and governance risk.
+  versions: [v2, v3]
+  ethereumScope: Ethereum mainnet Yearn vaults.
+  defillama:
+    protocolSlug: yearn-finance
+    chain: Ethereum
+    metric: tvl
+  links:
+    website: https://yearn.fi/
+    docs: https://docs.yearn.fi/
+    governance: https://gov.yearn.fi/
+    defillama: https://defillama.com/protocol/yearn-finance
+- id: mellow
+  name: Mellow
+  category: yield
+  summary: Modular LRT vault infrastructure.
+  notes: Tracks Ethereum vault and restaking-adjacent risk where available.
+  versions: [Vaults]
+  ethereumScope: Ethereum mainnet Mellow vaults.
+  defillama:
+    protocolSlug: mellow-protocol
+    chain: Ethereum
+    metric: tvl
+  links:
+    website: https://mellow.finance/
+    docs: https://docs.mellow.finance/
+    defillama: https://defillama.com/protocol/mellow-protocol
+- id: morpho-vaults
+  name: Morpho Vaults
+  family: Morpho
+  category: yield
+  summary: Curated MetaMorpho vaults.
+  notes: Tracked separately from the core Morpho lending protocol.
+  versions: [MetaMorpho]
+  ethereumScope: Ethereum mainnet MetaMorpho vaults and curator-managed allocations.
+  defillama:
+    protocolSlug: metamorpho
+    chain: Ethereum
+    metric: tvl
+  links:
+    website: https://morpho.org/
+    docs: https://docs.morpho.org/
+    governance: https://forum.morpho.org/
+    defillama: https://defillama.com/protocol/metamorpho
+- id: pendle
+  name: Pendle
+  category: yield
+  summary: Yield tokenization and fixed-rate trading protocol.
+  notes: Tracks Ethereum mainnet yield markets.
+  versions: [v2]
+  ethereumScope: Ethereum mainnet Pendle markets.
+  defillama:
+    protocolSlug: pendle
+    chain: Ethereum
+    metric: tvl
+  links:
+    website: https://www.pendle.finance/
+    docs: https://docs.pendle.finance/
+    governance: https://gov.pendle.finance/
+    defillama: https://defillama.com/protocol/pendle
+- id: lido
+  name: Lido
+  category: liquid_staking
+  summary: ETH liquid staking protocol and stETH issuer.
+  notes: stETH is a major DeFi collateral and yield source.
+  versions: [stETH]
+  ethereumScope: Ethereum mainnet Lido staking and stETH governance.
+  defillama:
+    protocolSlug: lido
+    chain: Ethereum
+    metric: tvl
+  links:
+    website: https://lido.fi/
+    docs: https://docs.lido.fi/
+    governance: https://research.lido.fi/
+    defillama: https://defillama.com/protocol/lido
+- id: rocket-pool
+  name: Rocket Pool
+  category: liquid_staking
+  summary: Decentralized ETH staking protocol and rETH issuer.
+  notes: Tracks rETH and Ethereum node operator governance risk.
+  versions: [rETH]
+  ethereumScope: Ethereum mainnet Rocket Pool staking and rETH.
+  defillama:
+    protocolSlug: rocket-pool
+    chain: Ethereum
+    metric: tvl
+  links:
+    website: https://rocketpool.net/
+    docs: https://docs.rocketpool.net/
+    governance: https://dao.rocketpool.net/
+    defillama: https://defillama.com/protocol/rocket-pool

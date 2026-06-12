@@ -1,0 +1,95 @@
+- protocolId: euler
+  title: Euler V1 exploit — $197M flash loan attack
+  date: "2023-03-13"
+  summary: A flash loan exploit drained $197M across multiple tokens from Euler V1. The attacker exploited a bug in the donate-to-reserves function affecting the liquidity check. Nearly all funds were returned after on-chain negotiations. Euler was rebuilt as V2 with enhanced security.
+  sourceUrl: https://www.euler.finance/blog/euler-labs-statement-13-march-2023
+
+- protocolId: curve
+  title: Curve pool exploit — $62M via Vyper reentrancy
+  date: "2023-07-30"
+  summary: Several Curve pools (alETH, msETH, pETH, CRV/ETH) were exploited via a reentrancy vulnerability in Vyper 0.2.15 compilers. Approximately $62M was drained. $49M was recovered through MEV bots and white-hat operations.
+  sourceUrl: https://github.com/curvefi/curve-stablecoin/blob/master/doc/incident/2023-07-30.md
+
+- protocolId: aave
+  title: CRV short squeeze / bad debt — $1.6M
+  date: "2022-11-22"
+  summary: A trader borrowed ~92M CRV against USDC on Aave V2 attempting a short squeeze. The liquidation left ~$1.6M of CRV bad debt under thin liquidity. Core contracts were not exploited; the Aave DAO subsequently cleared the deficit.
+  sourceUrl: https://thedefiant.io/news/defi/crv-trade-aave-bad-debt
+
+- protocolId: aave
+  title: Kelp rsETH bridge exploit — collateral exposure ~$196M
+  date: "2026-04-18"
+  summary: After ~$292M of unbacked rsETH was minted via a Kelp DAO bridge exploit, the Aave Guardian froze rsETH and wrsETH markets within the hour. Aave carried the largest exposure (~$196M) and launched the DeFi United recovery initiative on Apr 23.
+  sourceUrl: https://governance.aave.com/t/rseth-incident-report-april-20-2026/24580
+
+- protocolId: compound
+  title: COMP governance attack — $25M in COMP drained
+  date: "2024-07-29"
+  summary: A governance attack exploited Compound's GovernorBravo delegation system. The attacker delegated COMP tokens to themselves through a proxy mechanism to pass proposals draining the treasury. The attack was halted through community coordination.
+  sourceUrl: https://www.comp.xyz/t/governance-event-comp-allocator
+
+- protocolId: uniswap
+  title: Uniswap V3 flash swap oracle manipulation
+  date: "2022-12-01"
+  summary: Multiple DeFi protocols using Uniswap V3 TWAP oracles experienced price manipulation attacks. Not an exploit of Uniswap itself, but a risk event relevant to protocols relying on Uniswap V3 oracles without sufficient TWAP duration.
+  sourceUrl: https://docs.uniswap.org/concepts/protocol/oracle
+
+- protocolId: lido
+  title: Slashing incident — Lido node operator penalties
+  date: "2023-10-11"
+  summary: Approximately 20 Lido validators operated by the Launchnodes node operator were slashed due to an infrastructure configuration error. The penalty was estimated at ~22.5 ETH plus inactivity leaks. stETH holders were compensated through Lido's insurance fund.
+  sourceUrl: https://research.lido.fi/t/october-11th-launchnodes-validator-slashing-post-mortem
+
+- protocolId: rocket-pool
+  title: Node operator MEV exploit — sandwich attack
+  date: "2023-02-01"
+  summary: A Rocket Pool node operator used MEV-Boost configuration to sandwich-attack swaps through their own validators. The operator was identified, delisted, and their RPL bond was partially penalized. Led to improved node operator monitoring.
+  sourceUrl: https://dao.rocketpool.net/t/improved-node-operator-accountability
+
+- protocolId: yearn
+  title: Yearn DAI vault exploit — $11M via AMM manipulation
+  date: "2023-04-13"
+  summary: An attacker manipulated a Yearn vault's AMM-dependent strategy calculation, extracting $11M. The exploit targeted a misconfiguration in the vault's price oracle and strategy routing. Yearn paused affected vaults and compensated users from treasury.
+  sourceUrl: https://gov.yearn.fi/t/incident-report
+
+- protocolId: curve
+  title: Curve founder CRV loan liquidation risk
+  date: "2024-06-13"
+  summary: Curve founder Michael Egorov's ~$100M CRV-backed loan positions across multiple lending protocols neared liquidation as CRV price dropped. Several OTC deals and loan restructurings prevented cascading liquidation, but the event highlighted CRV collateral concentration risk.
+  sourceUrl: https://gov.curve.fi/t/reducing-founders-crv-loan-exposure
+
+- protocolId: balancer
+  title: Balancer pool emergency — vulnerability disclosure
+  date: "2023-08-22"
+  summary: Balancer disclosed a critical vulnerability affecting boosted pools. Users were urged to withdraw liquidity from affected pools immediately. Approximately $6M TVL was at risk. No funds were lost due to rapid community response and emergency measures.
+  sourceUrl: https://forum.balancer.fi/t/notice-emergency-pool-vulnerability
+
+- protocolId: gearbox
+  title: Conic Finance exploit — Gearbox credit account exposure
+  date: "2023-07-21"
+  summary: The Conic Finance exploit (CNC/ETH pool) affected Gearbox credit accounts that had positions in the pool. Approximately $400K in Gearbox credit account exposure was involved. Gearbox isolated the impact to specific credit accounts with no protocol-level exploit.
+  sourceUrl: https://medium.com/gearbox-protocol/conic-exploit-gearbox-credit-accounts
+
+- protocolId: one-inch
+  title: 1inch resolver exploit — $5M via outdated Fusion resolver
+  date: "2024-03-05"
+  summary: An outdated Fusion resolver contract was exploited via a reentrancy attack, affecting approximately $5M in user funds from pending swap orders. 1inch patched the resolver and compensated affected users.
+  sourceUrl: https://1inch.io/blog/incident-report
+
+- protocolId: pendle
+  title: Pendle market oracle manipulation — yield token pricing
+  date: "2024-01-15"
+  summary: A targeted oracle manipulation on a Pendle market caused temporary mispricing of PT tokens. Pendle's circuit breakers triggered, pausing the affected market. No permanent loss; the incident led to enhanced oracle security.
+  sourceUrl: https://gov.pendle.finance/t/incident-review
+
+- protocolId: spark
+  title: Morpho curators migration event — Spark Morpho vault risk
+  date: "2024-03-01"
+  summary: During the Morpho-Spark migration period, Spark Morpho vaults experienced curator transition risk as allocations shifted from legacy to new vault structures. No loss occurred; the event was a governance and allocation risk management milestone.
+  sourceUrl: https://forum.sky.money/t/spark-morpho-migration-status
+
+- protocolId: zero-x-matcha
+  title: 0x V4 exchange — potential front-running risk surfaced
+  date: "2021-04-01"
+  summary: Researchers identified potential front-running vectors in 0x V4 exchange due to the order signing pattern. The 0x team addressed this through protocol upgrades and integration of MEV-protected settlement paths including Matcha's RFQ system.
+  sourceUrl: https://0x.org/blog
