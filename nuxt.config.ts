@@ -35,7 +35,7 @@ export default defineNuxtConfig({
     preset: 'vercel-static',
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/feeds', '/matrix', '/info', '/methodology', '/contribute', '/about', '/faq'],
+      routes: ['/', '/feeds', '/info', '/methodology', '/contribute', '/about', '/faq'],
     },
   },
   build: {
