@@ -29,14 +29,14 @@ const contributingFeeds = new Set(positiveCoverage.map((cell) => cell.feedId));
 if (dataset.feeds.length < 16) {
   throw new Error(`Expected at least 16 feeds, found ${dataset.feeds.length}`);
 }
-if (positiveCoverage.length !== 136) {
-  throw new Error(`Expected exactly 136 sourced positive coverage cells, found ${positiveCoverage.length}`);
+if (positiveCoverage.length !== 132) {
+  throw new Error(`Expected exactly 132 sourced positive coverage cells, found ${positiveCoverage.length}`);
 }
-if (positiveCoverage.filter((cell) => cell.status === 'covered').length !== 62) {
-  throw new Error('Expected exactly 62 covered cells from the Neutral Risk reference');
+if (positiveCoverage.filter((cell) => cell.status === 'covered').length !== 54) {
+  throw new Error('Expected exactly 54 covered cells from the Neutral Risk reference');
 }
-if (positiveCoverage.filter((cell) => cell.status === 'partial').length !== 74) {
-  throw new Error('Expected exactly 74 partial cells from the Neutral Risk reference');
+if (positiveCoverage.filter((cell) => cell.status === 'partial').length !== 78) {
+  throw new Error('Expected exactly 78 partial cells from the Neutral Risk reference');
 }
 if (coveredProtocols.size !== 20) {
   throw new Error(`Expected positive coverage for all 20 protocols, found ${coveredProtocols.size}`);

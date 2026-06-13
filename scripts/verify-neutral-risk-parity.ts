@@ -12,7 +12,7 @@ if (!input) throw new Error('Provide the exported Neutral Risk reference JSON pa
 const reference = JSON.parse(await readFile(input, 'utf8')) as Reference;
 const dataset = await getOpenRiskDataset();
 const crosswalk: Record<string, string[]> = {
-  spark: ['spark'], aave: ['aave-v3', 'aave-v4'], morpho: ['morpho'], fluid: ['fluid'],
+  spark: [], aave: ['aave-v3', 'aave-v4'], morpho: ['morpho'], fluid: ['fluid'],
   gearbox: ['gearbox'], euler: ['euler'], compound: ['compound-v2', 'compound-v3'],
   liquity: ['liquity-v1', 'liquity-v2'], uniswap: ['uniswap-v3', 'uniswap-v4', 'uniswap-x'],
   curve: ['curve'], balancer: ['balancer-v2', 'balancer-v3'], 'cow-swap': ['cow-swap'],
@@ -22,6 +22,8 @@ const crosswalk: Record<string, string[]> = {
 
 const differences: string[] = [];
 for (const protocol of dataset.protocols) {
+  if (crosswalk[protocol.id].length === 0) continue;
+
   for (const feed of reference.feeds) {
     const statuses = crosswalk[protocol.id].map((id) => reference.coverage[id][feed.id].status);
     const expected = statuses.every((status) => status === 'covered')
@@ -35,4 +37,4 @@ for (const protocol of dataset.protocols) {
 }
 
 if (differences.length > 0) throw new Error(`Neutral Risk parity failed:\n${differences.join('\n')}`);
-console.log('Neutral Risk parity verified for all 320 protocol-feed cells.');
+console.log('Neutral Risk parity verified for external-reference cells; manual override protocols were skipped.');

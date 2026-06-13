@@ -1,0 +1,1942 @@
+- protocolId: spark
+  feedId: defiscan
+  status: partial
+  summary: "SparkLend: DeFiScan centralization review for Spark governance and upgrade controls; sUSDS has no provider-specific feed in this snapshot."
+  providerLabel: "SparkLend: Stage 0"
+  scope: "SparkLend: covered; sUSDS: not covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+    label: DeFiScan source
+    url: https://www.defiscan.info/protocols/spark/ethereum
+  notes: Version-scoped Spark coverage; parent Spark is partial because not every listed version has this feed.
+- protocolId: spark
+  feedId: blockanalitica
+  status: partial
+  summary: "SparkLend: On-chain risk dashboard for SparkLend markets including rates, liquidations, and collateral exposure; sUSDS has no provider-specific feed in this snapshot."
+  providerLabel: "SparkLend: Live dashboard"
+  scope: "SparkLend: covered; sUSDS: not covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+    label: BlockAnalitica source
+    url: https://blockanalitica.com/
+  notes: Version-scoped Spark coverage; parent Spark is partial because not every listed version has this feed.
+- protocolId: spark
+  feedId: credora
+  status: partial
+  summary: "sUSDS: Per-vault credit rating coverage for Spark Savings Vaults; SparkLend has no provider-specific feed in this snapshot."
+  providerLabel: "sUSDS: A- to B+"
+  scope: "SparkLend: not covered; sUSDS: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+    label: Credora source
+    url: https://www.credora.network/
+  notes: Version-scoped Spark coverage; parent Spark is partial because not every listed version has this feed.
+- protocolId: spark
+  feedId: philidor
+  status: partial
+  summary: "sUSDS: Deterministic vault scoring for Spark savings vault exposure; SparkLend has no provider-specific feed in this snapshot."
+  providerLabel: "sUSDS: Prime (8.38 / 10)"
+  scope: "SparkLend: not covered; sUSDS: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+    label: Philidor Analytics source
+    url: https://analytics.philidor.io/
+  notes: Version-scoped Spark coverage; parent Spark is partial because not every listed version has this feed.
+- protocolId: spark
+  feedId: defisaver
+  status: partial
+  summary: "SparkLend: Position-management tooling with loan-health, safety-ratio tracking, and liquidation protection; sUSDS has no provider-specific feed in this snapshot."
+  providerLabel: "SparkLend: Position tooling"
+  scope: "SparkLend: covered; sUSDS: not covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+    label: DeFi Saver source
+    url: https://defisaver.com/
+  notes: Version-scoped Spark coverage; parent Spark is partial because not every listed version has this feed.
+- protocolId: aave
+  feedId: defiscan
+  status: partial
+  summary: "Aave V3: Governance can upgrade pools without a ≥7-day exit window or sufficient Security Council."
+  providerLabel: "Aave V3: Stage 0"
+  providerText: "Aave V3: Stage 0"
+  providerTextVerified: true
+  scope: "Aave V3: covered; Aave V4: not covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiScan source
+    url: https://www.defiscan.info/protocols/aave/ethereum
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: aave
+  feedId: llamarisk
+  status: covered
+  summary: "Aave V3: Official Aave V3 risk service provider: collateral onboarding, parameter assessments, PT-risk analytics. Aave V4: Published Aave V4 risk analyses: hub-and-spoke architecture, dynamic liquidations, V4 parameters."
+  providerLabel: "Aave V3: Risk-steward (research) | Aave V4: Risk-centric analysis"
+  providerText: "Aave V3: Risk-steward (research) | Aave V4: Risk-centric analysis"
+  providerTextVerified: true
+  scope: "Aave V3: covered; Aave V4: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: LlamaRisk source
+    url: https://research.llamarisk.com/research-aave
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: aave
+  feedId: blockanalitica
+  status: partial
+  summary: "Aave V3: Sphere tracks Aave v3 (Core & Prime) rates, liquidations, and risk scores."
+  providerLabel: "Aave V3: Live dashboard"
+  providerText: "Aave V3: Live dashboard"
+  providerTextVerified: true
+  scope: "Aave V3: covered; Aave V4: not covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: BlockAnalitica source
+    url: https://app.defi-sphere.com/aave_core
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: aave
+  feedId: curatorwatch
+  status: partial
+  summary: "Aave V3: Vault-level risk monitoring for Morpho curators: allocation risk and curator behavior. Aave V4: Vault-level risk monitoring for Morpho curators: allocation risk and curator behavior."
+  providerLabel: Version-limited coverage
+  scope: "Aave V3: partial; Aave V4: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: CuratorWatch source
+    url: https://curatorwatch.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: aave
+  feedId: defipunkd
+  status: covered
+  summary: "Aave V3: 5-dimension AI-consensus (page titled Aave V3); spot-check pending. Aave V4: Separate 'Aave V4' page (~$85M TVL); 5-dimension AI-consensus, most dimensions unknown."
+  providerLabel: "Aave V3: Silver tier | Aave V4: Silver tier"
+  scope: "Aave V3: covered; Aave V4: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiPunk'd source
+    url: https://defipunkd.com/protocol/aave
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: aave
+  feedId: xerberus
+  status: partial
+  summary: "Aave V3: Independent risk rating for DeFi vaults; 300+ subscores across 85+ mechanisms. Open-source."
+  providerLabel: Version-limited coverage
+  scope: "Aave V3: partial; Aave V4: not covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Xerberus source
+    url: https://www.xerberus.io
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: aave
+  feedId: philidor
+  status: partial
+  summary: "Aave V3: Aave v3 supply vaults; e.g. WETH 8.76 (Prime), USDT 7.90 (Core)."
+  providerLabel: "Aave V3: Prime / Core (≈7.9–8.8 / 10)"
+  providerText: "Aave V3: Prime / Core (≈7.9–8.8 / 10)"
+  providerTextVerified: true
+  scope: "Aave V3: covered; Aave V4: not covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Philidor Analytics source
+    url: https://analytics.philidor.io
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: aave
+  feedId: pigi
+  status: partial
+  summary: "Aave V3: Vault analytics and risk-adjusted yield across 50+ protocols; exploits, concentration, risk-adjusted APY. Paid structured API."
+  providerLabel: Version-limited coverage
+  scope: "Aave V3: covered; Aave V4: not covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: pigi.finance source
+    url: https://pigi.finance
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: aave
+  feedId: defisaver
+  status: covered
+  summary: "Aave V3: Position-management tooling: live loan-health / safety-ratio tracking and automated liquidation protection for leveraged positions. Aave V4: Aave V4 live on DeFi Saver day-one: automation, leverage, liquidation protection."
+  providerLabel: "Aave V4: Full management"
+  scope: "Aave V3: covered; Aave V4: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Saver source
+    url: https://defisaver.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: aave
+  feedId: zyfai
+  status: partial
+  summary: "Aave V3: Live per-pool grade; flagship USDC and WETH reserves pass all checks."
+  providerLabel: "Aave V3: Excellent (4/4)"
+  providerText: "Aave V3: Excellent (4/4)"
+  providerTextVerified: true
+  scope: "Aave V3: covered; Aave V4: not covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Zyfai Risk source
+    url: https://risk.zyf.ai
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: aave
+  feedId: anticapture
+  status: partial
+  summary: "Aave V3: Listed on the Anticapture governance-security dashboard but no Stage published yet."
+  providerLabel: "Aave V3: Not Assessed"
+  providerText: "Aave V3: Not Assessed"
+  providerTextVerified: true
+  scope: "Aave V3: partial; Aave V4: not covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Anticapture source
+    url: https://app.anticapture.com/aave
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: aave
+  feedId: exponential
+  status: partial
+  summary: "Aave V3: A–F pool risk; Aave V3 pools rated around A (top protocol tier). Pre-migration sample — methodology moved into YO Protocol in 2026."
+  providerLabel: "Aave V3: A (top tier)"
+  scope: "Aave V3: covered; Aave V4: not covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Exponential DeFi source
+    url: https://exponential.fi
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: aave
+  feedId: defisafety
+  status: partial
+  summary: "Aave V3: Process Quality Review; ~94% (a 93% figure also appears across sources — confirm on the live PQR). Documentation, testing, audits, admin keys."
+  providerLabel: "Aave V3: 94% (PQR)"
+  scope: "Aave V3: covered; Aave V4: not covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Safety source
+    url: https://www.defisafety.com/app/pqrs/358
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: aave
+  feedId: gauntlet
+  status: partial
+  summary: "Aave V3: Aave's official risk steward 2021–2024 (quarterly risk reviews, parameter recommendations); Gauntlet discontinued the engagement Feb 2024."
+  providerLabel: "Aave V3: Mandate ended (2024)"
+  providerText: "Aave V3: Mandate ended (2024)"
+  providerTextVerified: true
+  scope: "Aave V3: partial; Aave V4: not covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Gauntlet source
+    url: https://blockworks.co/news/gauntlet-discontinues-work-at-aave
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: aave
+  feedId: chaoslabs
+  status: partial
+  summary: "Aave V3: Primary Aave risk provider Nov 2022–Apr 2026 (Risk Stewards, Edge Risk Oracles, VaR dashboards); Chaos Labs exited 2026-04-06, LlamaRisk took over continuity."
+  providerLabel: "Aave V3: Mandate ended (2026)"
+  providerText: "Aave V3: Mandate ended (2026)"
+  providerTextVerified: true
+  scope: "Aave V3: partial; Aave V4: not covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Chaos Labs source
+    url: https://www.coindesk.com/tech/2026/04/06/aave-loses-key-risk-manager-chaos-labs-amid-contributor-exodus-and-disputes
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho
+  feedId: defiscan
+  status: covered
+  summary: "Morpho: Morpho Blue core is immutable and upgrades protected; short of Stage 2 on on-chain governance + 30-day exit window."
+  providerLabel: "Morpho: Stage 1"
+  providerText: "Morpho: Stage 1"
+  providerTextVerified: true
+  scope: "Morpho: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiScan source
+    url: https://www.defiscan.info/protocols/morpho/ethereum
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho
+  feedId: llamarisk
+  status: partial
+  summary: "Morpho: Protocol risk research and parameter recommendations; collateral and governance risk."
+  providerLabel: Version-limited coverage
+  scope: "Morpho: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: LlamaRisk source
+    url: https://www.llamarisk.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho
+  feedId: blockanalitica
+  status: covered
+  summary: "Morpho: On-chain analytics for Morpho Blue markets: rates, liquidations, collateral exposure."
+  providerLabel: "Morpho: Live dashboard"
+  providerText: "Morpho: Live dashboard"
+  providerTextVerified: true
+  scope: "Morpho: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: BlockAnalitica source
+    url: https://morpho.blockanalitica.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho
+  feedId: curatorwatch
+  status: covered
+  summary: "Morpho: Curator/vault grading across MetaMorpho vaults; High/Medium/Low + composite score."
+  providerLabel: "Morpho: Grade (0–100)"
+  providerText: "Morpho: Grade (0–100)"
+  providerTextVerified: true
+  scope: "Morpho: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: CuratorWatch source
+    url: https://curatorwatch.com/docs
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho
+  feedId: defipunkd
+  status: covered
+  summary: "Morpho: 5-dimension AI-consensus (Morpho Blue + Optimizers); spot-check pending."
+  providerLabel: "Morpho: Bronze tier"
+  scope: "Morpho: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiPunk'd source
+    url: https://defipunkd.com/protocol/morpho
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho
+  feedId: credora
+  status: covered
+  summary: "Morpho: Live credit ratings on Morpho Blue markets & vaults; blue-chip vaults rated A+."
+  providerLabel: "Morpho: A+ to D"
+  providerText: "Morpho: A+ to D"
+  providerTextVerified: true
+  scope: "Morpho: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Credora source
+    url: https://forum.morpho.org/t/credora-network-risk-ratings-on-morpho/1652
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho
+  feedId: xerberus
+  status: partial
+  summary: "Morpho: Independent risk rating for DeFi vaults; 300+ subscores across 85+ mechanisms. Open-source."
+  providerLabel: Version-limited coverage
+  scope: "Morpho: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Xerberus source
+    url: https://www.xerberus.io
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho
+  feedId: philidor
+  status: covered
+  summary: "Morpho: Curated MetaMorpho vaults; e.g. Steakhouse USDC 8.61, Gauntlet USDC Prime 8.49."
+  providerLabel: "Morpho: Prime (≈8.5 / 10)"
+  providerText: "Morpho: Prime (≈8.5 / 10)"
+  providerTextVerified: true
+  scope: "Morpho: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Philidor Analytics source
+    url: https://analytics.philidor.io
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho
+  feedId: pigi
+  status: covered
+  summary: "Morpho: Vault analytics and risk-adjusted yield across 50+ protocols; exploits, concentration, risk-adjusted APY. Paid structured API."
+  providerLabel: Protocol-specific coverage
+  scope: "Morpho: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: pigi.finance source
+    url: https://pigi.finance
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho
+  feedId: defisaver
+  status: covered
+  summary: "Morpho: Position-management tooling: live loan-health / safety-ratio tracking and automated liquidation protection for leveraged positions."
+  providerLabel: Protocol-specific coverage
+  scope: "Morpho: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Saver source
+    url: https://defisaver.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho
+  feedId: zyfai
+  status: covered
+  summary: "Morpho: 27 curated MetaMorpho vaults graded live; range Good–Excellent."
+  providerLabel: "Morpho: Excellent (top vaults)"
+  providerText: "Morpho: Excellent (top vaults)"
+  providerTextVerified: true
+  scope: "Morpho: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Zyfai Risk source
+    url: https://risk.zyf.ai
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho
+  feedId: exponential
+  status: covered
+  summary: "Morpho: Morpho Blue in the A-rated protocol tier (immutable core). Pre-migration sample (YO Protocol)."
+  providerLabel: "Morpho: A (top tier)"
+  scope: "Morpho: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Exponential DeFi source
+    url: https://exponential.fi
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho
+  feedId: defisafety
+  status: partial
+  summary: "Morpho: Process Quality Review published (PQR id 535); verbatim score pending confirmation on the live page."
+  providerLabel: Version-limited coverage
+  scope: "Morpho: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Safety source
+    url: https://www.defisafety.com/app/pqrs/535
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho
+  feedId: gauntlet
+  status: covered
+  summary: "Morpho: Curates Morpho vaults via curator multisig (caps, allocations, fees) across Prime/Core/Frontier risk bands — judge-and-player."
+  providerLabel: "Morpho: Vault curator"
+  providerText: "Morpho: Vault curator"
+  providerTextVerified: true
+  scope: "Morpho: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Gauntlet source
+    url: https://www.gauntlet.xyz/resources/under-the-hood-unpacking-our-morpho-vault-curation-methodology
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: fluid
+  feedId: blockanalitica
+  status: covered
+  summary: "Fluid: Added to Sphere coverage in 2025; rates, liquidations, risk analytics."
+  providerLabel: "Fluid: Live dashboard"
+  providerText: "Fluid: Live dashboard"
+  providerTextVerified: true
+  scope: "Fluid: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: BlockAnalitica source
+    url: https://defi-sphere.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: fluid
+  feedId: defipunkd
+  status: partial
+  summary: "Fluid: Multi-dimension registry: Control, Exit, Autonomy, Open Access, Verifiability via LLM consensus."
+  providerLabel: Version-limited coverage
+  scope: "Fluid: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiPunk'd source
+    url: https://defipunkd.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: fluid
+  feedId: pigi
+  status: covered
+  summary: "Fluid: Vault analytics and risk-adjusted yield across 50+ protocols; exploits, concentration, risk-adjusted APY. Paid structured API."
+  providerLabel: Protocol-specific coverage
+  scope: "Fluid: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: pigi.finance source
+    url: https://pigi.finance
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: fluid
+  feedId: defisaver
+  status: covered
+  summary: "Fluid: Position-management tooling: live loan-health / safety-ratio tracking and automated liquidation protection for leveraged positions."
+  providerLabel: Protocol-specific coverage
+  scope: "Fluid: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Saver source
+    url: https://defisaver.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: fluid
+  feedId: zyfai
+  status: covered
+  summary: "Fluid: Live per-pool grades; e.g. wstETH Excellent (5/5), WETH Good (3/5)."
+  providerLabel: "Fluid: Good–Excellent"
+  providerText: "Fluid: Good–Excellent"
+  providerTextVerified: true
+  scope: "Fluid: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Zyfai Risk source
+    url: https://risk.zyf.ai
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: fluid
+  feedId: exponential
+  status: partial
+  summary: "Fluid: Fluid protocol page listed; pool grades not captured pre-migration."
+  providerLabel: Version-limited coverage
+  scope: "Fluid: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Exponential DeFi source
+    url: https://exponential.fi
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: gearbox
+  feedId: llamarisk
+  status: partial
+  summary: "Gearbox: Protocol risk research and parameter recommendations; collateral and governance risk."
+  providerLabel: Version-limited coverage
+  scope: "Gearbox: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: LlamaRisk source
+    url: https://www.llamarisk.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: gearbox
+  feedId: defipunkd
+  status: partial
+  summary: "Gearbox: Multi-dimension registry: Control, Exit, Autonomy, Open Access, Verifiability via LLM consensus."
+  providerLabel: Version-limited coverage
+  scope: "Gearbox: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiPunk'd source
+    url: https://defipunkd.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: gearbox
+  feedId: pigi
+  status: covered
+  summary: "Gearbox: Vault analytics and risk-adjusted yield across 50+ protocols; exploits, concentration, risk-adjusted APY. Paid structured API."
+  providerLabel: Protocol-specific coverage
+  scope: "Gearbox: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: pigi.finance source
+    url: https://pigi.finance
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: gearbox
+  feedId: chaoslabs
+  status: covered
+  summary: "Gearbox: Risk monitoring & alerting platform plus recommendations: gauge APY rates, fees, per-collateral liquidation thresholds, leverage bounds."
+  providerLabel: "Gearbox: Risk partnership"
+  providerText: "Gearbox: Risk partnership"
+  providerTextVerified: true
+  scope: "Gearbox: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Chaos Labs source
+    url: https://chaoslabs.xyz/posts/chaos-labs-partners-with-gearbox
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: euler
+  feedId: llamarisk
+  status: partial
+  summary: "Euler: Protocol risk research and parameter recommendations; collateral and governance risk."
+  providerLabel: Version-limited coverage
+  scope: "Euler: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: LlamaRisk source
+    url: https://www.llamarisk.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: euler
+  feedId: curatorwatch
+  status: partial
+  summary: "Euler: Vault-level risk monitoring for Morpho curators: allocation risk and curator behavior."
+  providerLabel: Version-limited coverage
+  scope: "Euler: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: CuratorWatch source
+    url: https://curatorwatch.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: euler
+  feedId: defipunkd
+  status: partial
+  summary: "Euler: Multi-dimension registry: Control, Exit, Autonomy, Open Access, Verifiability via LLM consensus."
+  providerLabel: Version-limited coverage
+  scope: "Euler: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiPunk'd source
+    url: https://defipunkd.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: euler
+  feedId: pigi
+  status: covered
+  summary: "Euler: Vault analytics and risk-adjusted yield across 50+ protocols; exploits, concentration, risk-adjusted APY. Paid structured API."
+  providerLabel: Protocol-specific coverage
+  scope: "Euler: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: pigi.finance source
+    url: https://pigi.finance
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: euler
+  feedId: defisaver
+  status: covered
+  summary: "Euler: Position-management tooling: live loan-health / safety-ratio tracking and automated liquidation protection for leveraged positions."
+  providerLabel: Protocol-specific coverage
+  scope: "Euler: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Saver source
+    url: https://defisaver.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: euler
+  feedId: zyfai
+  status: covered
+  summary: "Euler: Euler Prime WETH Excellent (4/4); Euler Earn USDC Good (3/4, low TVL)."
+  providerLabel: "Euler: Good–Excellent"
+  providerText: "Euler: Good–Excellent"
+  providerTextVerified: true
+  scope: "Euler: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Zyfai Risk source
+    url: https://risk.zyf.ai
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: euler
+  feedId: exponential
+  status: partial
+  summary: "Euler: Euler (v2) protocol page listed; pool grades not captured pre-migration."
+  providerLabel: Version-limited coverage
+  scope: "Euler: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Exponential DeFi source
+    url: https://exponential.fi
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: euler
+  feedId: defisafety
+  status: partial
+  summary: "Euler: Process Quality Review of Euler V2 published (PQR id 607); verbatim score pending confirmation."
+  providerLabel: Version-limited coverage
+  scope: "Euler: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Safety source
+    url: https://www.defisafety.com/app/pqrs/607
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: euler
+  feedId: gauntlet
+  status: covered
+  summary: "Euler: Recurring Market Risk Parameter Recommendations on Euler governance (Euler Prime/Yield/Base): supply/borrow caps, IR curves; co-manages a USDC vault."
+  providerLabel: "Euler: Risk param recs"
+  providerText: "Euler: Risk param recs"
+  providerTextVerified: true
+  scope: "Euler: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Gauntlet source
+    url: https://forum.euler.finance/t/gauntlet-market-risk-parameter-recommendations-2025-03-19/1326
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: compound
+  feedId: defiscan
+  status: partial
+  summary: "Compound V3: Comet (V3): governance can upgrade markets without a ≥7-day exit window or sufficient Security Council. DeFiScan has no separate V2 page."
+  providerLabel: "Compound V3: Stage 0"
+  providerText: "Compound V3: Stage 0"
+  providerTextVerified: true
+  scope: "Compound V2: not covered; Compound V3: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiScan source
+    url: https://www.defiscan.info/protocols/compound-v3/ethereum
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: compound
+  feedId: blockanalitica
+  status: partial
+  summary: "Compound V3: On-chain risk dashboard for Compound v3 markets: rates, liquidations, collateral health."
+  providerLabel: "Compound V3: Live dashboard"
+  providerText: "Compound V3: Live dashboard"
+  providerTextVerified: true
+  scope: "Compound V2: not covered; Compound V3: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: BlockAnalitica source
+    url: https://compound.blockanalitica.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: compound
+  feedId: curatorwatch
+  status: partial
+  summary: "Compound V3: Vault-level risk monitoring for Morpho curators: allocation risk and curator behavior."
+  providerLabel: Version-limited coverage
+  scope: "Compound V2: not covered; Compound V3: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: CuratorWatch source
+    url: https://curatorwatch.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: compound
+  feedId: defipunkd
+  status: partial
+  summary: "Compound V3: Multi-dimension registry: Control, Exit, Autonomy, Open Access, Verifiability via LLM consensus."
+  providerLabel: Version-limited coverage
+  scope: "Compound V2: not covered; Compound V3: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiPunk'd source
+    url: https://defipunkd.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: compound
+  feedId: philidor
+  status: partial
+  summary: "Compound V3: Compound v3 supply markets; e.g. USDC 5.50 (Core), USDT 8.73 (Prime)."
+  providerLabel: "Compound V3: Core / Prime (5.5–8.7 / 10)"
+  providerText: "Compound V3: Core / Prime (5.5–8.7 / 10)"
+  providerTextVerified: true
+  scope: "Compound V2: not covered; Compound V3: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Philidor Analytics source
+    url: https://analytics.philidor.io
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: compound
+  feedId: defisaver
+  status: covered
+  summary: "Compound V2: Legacy Compound V2 (Comptroller / cToken) position management; support being deprecated. Compound V3: Position-management tooling: live loan-health / safety-ratio tracking and automated liquidation protection for leveraged positions."
+  providerLabel: Protocol-specific coverage
+  scope: "Compound V2: covered; Compound V3: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Saver source
+    url: https://help.defisaver.com/protocols/compound
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: compound
+  feedId: zyfai
+  status: partial
+  summary: "Compound V3: Compound v3 USDC/USDT/WBTC/WETH Comet markets graded live."
+  providerLabel: "Compound V3: Excellent (5/5)"
+  providerText: "Compound V3: Excellent (5/5)"
+  providerTextVerified: true
+  scope: "Compound V2: not covered; Compound V3: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Zyfai Risk source
+    url: https://risk.zyf.ai
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: compound
+  feedId: anticapture
+  status: partial
+  summary: 'Compound V3: Governance-security Stage: ≥1 High-Risk item; "5 items to Stage 1". Tracks the COMP Governor (one DAO across Compound versions).'
+  providerLabel: "Compound V3: Stage 0"
+  providerText: "Compound V3: Stage 0"
+  providerTextVerified: true
+  scope: "Compound V2: not covered; Compound V3: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Anticapture source
+    url: https://app.anticapture.com/comp
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: compound
+  feedId: exponential
+  status: partial
+  summary: "Compound V2: Legacy Compound (V2) pools rated pre-migration (e.g. an ETH lending pool rated A). Compound V3: Compound V3 (Comet) USDC markets rated A. Pre-migration sample."
+  providerLabel: "Compound V3: A (pools)"
+  scope: "Compound V2: partial; Compound V3: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Exponential DeFi source
+    url: https://exponential.fi
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: compound
+  feedId: defisafety
+  status: partial
+  summary: "Compound V2: Process Quality Review of Compound (Finance) published (PQR id 426); verbatim score pending confirmation. Compound V3: Process Quality Review of Compound III / Comet published (PQR id 582); verbatim score pending confirmation."
+  providerLabel: Version-limited coverage
+  scope: "Compound V2: partial; Compound V3: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Safety source
+    url: https://www.defisafety.com/app/pqrs/426
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: compound
+  feedId: gauntlet
+  status: partial
+  summary: "Compound V3: 24/7 risk management across Comet deployments: parameter optimization (collateral factors, supply caps, IR curves) with recommendations to Compound governance."
+  providerLabel: "Compound V3: Active risk mandate"
+  providerText: "Compound V3: Active risk mandate"
+  providerTextVerified: true
+  scope: "Compound V2: not covered; Compound V3: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Gauntlet source
+    url: https://www.gauntlet.xyz
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: compound
+  feedId: chaoslabs
+  status: partial
+  summary: "Compound V3: Grants-funded Compound Multi-Chain Risk Monitoring Hub: VaR, collateral-at-risk, per-wallet health scores — monitoring, not a parameter mandate."
+  providerLabel: "Compound V3: Risk monitoring hub"
+  providerText: "Compound V3: Risk monitoring hub"
+  providerTextVerified: true
+  scope: "Compound V2: not covered; Compound V3: partial"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Chaos Labs source
+    url: https://chaoslabs.xyz/posts/compound-multi-chain-risk-monitoring-hub
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: liquity
+  feedId: defiscan
+  status: partial
+  summary: "Liquity V1: Immutable LUSD CDP; no loss-of-funds upgrade path, dependencies mitigated, alternative frontends exist. DeFiScan's Liquity review is V1-only."
+  providerLabel: "Liquity V1: Stage 2"
+  providerText: "Liquity V1: Stage 2"
+  providerTextVerified: true
+  scope: "Liquity V1: covered; Liquity V2: not covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiScan source
+    url: https://www.defiscan.info/protocols/liquity/ethereum
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: liquity
+  feedId: blockanalitica
+  status: partial
+  summary: "Liquity V1: Quantitative on-chain risk dashboards for lending markets: liquidations, collateral health, exposure. Liquity V2: Sphere tracks Liquity V2 (BOLD): borrow metrics and the V2 Stability Pool."
+  providerLabel: "Liquity V2: Live dashboard"
+  providerText: "Liquity V2: Live dashboard"
+  providerTextVerified: true
+  scope: "Liquity V1: partial; Liquity V2: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: BlockAnalitica source
+    url: https://blockanalitica.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: liquity
+  feedId: defipunkd
+  status: partial
+  summary: "Liquity V1: 'Liquity V1 CDP' page; 5-dimension AI-consensus, all green (tentative); spot-check pending. Liquity V2: 'Liquity V2 CDP' page exists but ungraded — no model quorum yet; spot-check pending."
+  providerLabel: "Liquity V1: Silver tier | Liquity V2: Wood tier (ungraded)"
+  scope: "Liquity V1: covered; Liquity V2: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiPunk'd source
+    url: https://defipunkd.com/protocol/liquity
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: liquity
+  feedId: pigi
+  status: covered
+  summary: "Liquity V1: Vault analytics and risk-adjusted yield across 50+ protocols; exploits, concentration, risk-adjusted APY. Paid structured API. Liquity V2: Vault analytics and risk-adjusted yield across 50+ protocols; exploits, concentration, risk-adjusted APY. Paid structured API."
+  providerLabel: Protocol-specific coverage
+  scope: "Liquity V1: covered; Liquity V2: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: pigi.finance source
+    url: https://pigi.finance
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: liquity
+  feedId: defisaver
+  status: covered
+  summary: "Liquity V1: Position-management tooling: live loan-health / safety-ratio tracking and automated liquidation protection for leveraged positions. Liquity V2: Position-management tooling: live loan-health / safety-ratio tracking and automated liquidation protection for leveraged positions."
+  providerLabel: Protocol-specific coverage
+  scope: "Liquity V1: covered; Liquity V2: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Saver source
+    url: https://defisaver.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: liquity
+  feedId: exponential
+  status: partial
+  summary: "Liquity V1: Liquity (LUSD) protocol page listed; pool grades not captured pre-migration."
+  providerLabel: Version-limited coverage
+  scope: "Liquity V1: partial; Liquity V2: not covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Exponential DeFi source
+    url: https://exponential.fi
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: liquity
+  feedId: defisafety
+  status: covered
+  summary: "Liquity V1: Process Quality Review (Oct 2023); an earlier review scored 97%. Liquity V2: Process Quality Review of Liquity V2 / BOLD (Feb 2025)."
+  providerLabel: "Liquity V1: 93% (PQR) | Liquity V2: 85% (PQR)"
+  scope: "Liquity V1: covered; Liquity V2: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Safety source
+    url: https://www.defisafety.com/app/pqrs/376
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: uniswap
+  feedId: defiscan
+  status: partial
+  summary: "Uniswap V3: Uniswap v3: non-custodial, no loss-of-funds upgrade path, no external dependencies, alternative frontends exist."
+  providerLabel: "Uniswap V3: Stage 2"
+  providerText: "Uniswap V3: Stage 2"
+  providerTextVerified: true
+  scope: "Uniswap V3: covered; Uniswap V4: not covered; UniswapX: not covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiScan source
+    url: https://www.defiscan.info/protocols/uniswap-v3/ethereum
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: uniswap
+  feedId: llamarisk
+  status: partial
+  summary: "Uniswap V3: Protocol risk research and parameter recommendations; collateral and governance risk."
+  providerLabel: Version-limited coverage
+  scope: "Uniswap V3: partial; Uniswap V4: not covered; UniswapX: not covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: LlamaRisk source
+    url: https://www.llamarisk.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: uniswap
+  feedId: defipunkd
+  status: partial
+  summary: "Uniswap V3: Uniswap V3 deployment page; at least one model submission, no quorum yet. Uniswap V4: Uniswap V4 deployment listed (PoolManager/hooks) but no analysis on file yet."
+  providerLabel: "Uniswap V3: Wood tier (ungraded) | Uniswap V4: Wood tier"
+  scope: "Uniswap V3: partial; Uniswap V4: partial; UniswapX: not covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiPunk'd source
+    url: https://defipunkd.com/protocol/uniswap
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: uniswap
+  feedId: philidor
+  status: partial
+  summary: "Uniswap V3: Uniswap v3 LP positions scored as vaults; e.g. USDC/WETH 0.05% 8.72. Uniswap V4: Uniswap V4 LP positions scored as vaults (Philidor covers V2/V3/V4 deployments)."
+  providerLabel: "Uniswap V3: Prime (≈8.7 / 10)"
+  providerText: "Uniswap V3: Prime (≈8.7 / 10)"
+  providerTextVerified: true
+  scope: "Uniswap V3: covered; Uniswap V4: covered; UniswapX: not covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Philidor Analytics source
+    url: https://analytics.philidor.io
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: uniswap
+  feedId: pigi
+  status: partial
+  summary: "Uniswap V3: Vault analytics and risk-adjusted yield across 50+ protocols; exploits, concentration, risk-adjusted APY. Paid structured API."
+  providerLabel: Version-limited coverage
+  scope: "Uniswap V3: partial; Uniswap V4: not covered; UniswapX: not covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: pigi.finance source
+    url: https://pigi.finance
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: uniswap
+  feedId: defisaver
+  status: partial
+  summary: "Uniswap V3: Position-management tooling: live loan-health / safety-ratio tracking and automated liquidation protection for leveraged positions."
+  providerLabel: Version-limited coverage
+  scope: "Uniswap V3: partial; Uniswap V4: not covered; UniswapX: not covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Saver source
+    url: https://defisaver.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: uniswap
+  feedId: anticapture
+  status: partial
+  summary: 'Uniswap V3: Governance-security Stage (L2Beat-style): no High-Risk items, ≥1 Medium-Risk; "4 items to Stage 2". Tracks the UNI DAO.'
+  providerLabel: "Uniswap V3: Stage 1"
+  providerText: "Uniswap V3: Stage 1"
+  providerTextVerified: true
+  scope: "Uniswap V3: covered; Uniswap V4: not covered; UniswapX: not covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Anticapture source
+    url: https://app.anticapture.com/uni
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: uniswap
+  feedId: exponential
+  status: partial
+  summary: "Uniswap V3: Uniswap V3 protocol page listed; pool grades not captured pre-migration."
+  providerLabel: Version-limited coverage
+  scope: "Uniswap V3: partial; Uniswap V4: not covered; UniswapX: not covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Exponential DeFi source
+    url: https://exponential.fi
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: uniswap
+  feedId: defisafety
+  status: partial
+  summary: "Uniswap V3: Process Quality Review (PASS); 94–96% across sources — pending confirmation on the live PQR."
+  providerLabel: "Uniswap V3: 96% (PQR)"
+  scope: "Uniswap V3: covered; Uniswap V4: not covered; UniswapX: not covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Safety source
+    url: https://www.defisafety.com/app/pqrs/415
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: uniswap
+  feedId: gauntlet
+  status: partial
+  summary: "Uniswap V4: Uniswap Foundation partnership optimising v4 / Unichain liquidity incentives — not lending-risk parameters."
+  providerLabel: "Uniswap V4: Incentive optimization"
+  providerText: "Uniswap V4: Incentive optimization"
+  providerTextVerified: true
+  scope: "Uniswap V3: not covered; Uniswap V4: partial; UniswapX: not covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Gauntlet source
+    url: https://www.gauntlet.xyz
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: curve
+  feedId: defiscan
+  status: covered
+  summary: "Curve: DAO/admin upgrade rights not protected by a ≥7-day exit window or sufficient Security Council."
+  providerLabel: "Curve: Stage 0"
+  providerText: "Curve: Stage 0"
+  providerTextVerified: true
+  scope: "Curve: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiScan source
+    url: https://www.defiscan.info/protocols/curve-finance/ethereum
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: curve
+  feedId: llamarisk
+  status: covered
+  summary: "Curve: Quantitative market-health scoring for crvUSD / LlamaLend markets."
+  providerLabel: "Curve: Market Health Scores"
+  providerText: "Curve: Market Health Scores"
+  providerTextVerified: true
+  scope: "Curve: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: LlamaRisk source
+    url: https://llamarisk.com/research/curve-market-health-methodology
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: curve
+  feedId: defipunkd
+  status: covered
+  summary: "Curve: 5-dimension AI-consensus; spot-check pending."
+  providerLabel: "Curve: Silver tier"
+  scope: "Curve: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiPunk'd source
+    url: https://defipunkd.com/protocol/curve-finance
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: curve
+  feedId: defisaver
+  status: covered
+  summary: "Curve: Position-management tooling: live loan-health / safety-ratio tracking and automated liquidation protection for leveraged positions."
+  providerLabel: Protocol-specific coverage
+  scope: "Curve: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Saver source
+    url: https://defisaver.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: curve
+  feedId: exponential
+  status: covered
+  summary: 'Curve: Protocol-risk component rated "Good" (tiers: Best/Good/Average/Watch out/Avoid). Pre-migration sample.'
+  providerLabel: "Curve: Good"
+  scope: "Curve: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Exponential DeFi source
+    url: https://exponential.fi
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: curve
+  feedId: defisafety
+  status: partial
+  summary: "Curve: Process Quality Review published (PQR id 550); verbatim score pending confirmation."
+  providerLabel: Version-limited coverage
+  scope: "Curve: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Safety source
+    url: https://www.defisafety.com/app/pqrs/550
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: balancer
+  feedId: defipunkd
+  status: partial
+  summary: "Balancer V2: Separate 'Balancer V2' page; only Verifiability graded, other dimensions unknown. Balancer V3: 'Balancer V3' page; 5-dimension AI-consensus, 2 of 5 graded; preliminary. Spot-check pending."
+  providerLabel: "Balancer V2: Wood tier (partial) | Balancer V3: Bronze tier"
+  scope: "Balancer V2: partial; Balancer V3: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiPunk'd source
+    url: https://defipunkd.com/protocol/balancer-v2
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: balancer
+  feedId: exponential
+  status: partial
+  summary: "Balancer V2: Balancer V2 protocol page listed; pool grades not captured pre-migration."
+  providerLabel: Version-limited coverage
+  scope: "Balancer V2: partial; Balancer V3: not covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Exponential DeFi source
+    url: https://exponential.fi
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: balancer
+  feedId: defisafety
+  status: partial
+  summary: "Balancer V2: Process Quality Review published (PQR id 568); a 100% figure appears in one source — treat as unconfirmed pending the live PQR."
+  providerLabel: Version-limited coverage
+  scope: "Balancer V2: covered; Balancer V3: not covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Safety source
+    url: https://www.defisafety.com/app/pqrs/568
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: cow-swap
+  feedId: defipunkd
+  status: partial
+  summary: "CoW Swap: Multi-dimension registry: Control, Exit, Autonomy, Open Access, Verifiability via LLM consensus."
+  providerLabel: Version-limited coverage
+  scope: "CoW Swap: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiPunk'd source
+    url: https://defipunkd.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: one-inch
+  feedId: defipunkd
+  status: partial
+  summary: "1inch: Multi-dimension registry: Control, Exit, Autonomy, Open Access, Verifiability via LLM consensus."
+  providerLabel: Version-limited coverage
+  scope: "1inch: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiPunk'd source
+    url: https://defipunkd.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: one-inch
+  feedId: defisaver
+  status: partial
+  summary: "1inch: Position-management tooling: live loan-health / safety-ratio tracking and automated liquidation protection for leveraged positions."
+  providerLabel: Version-limited coverage
+  scope: "1inch: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Saver source
+    url: https://defisaver.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: one-inch
+  feedId: defisafety
+  status: partial
+  summary: "1inch: An early DeFi Safety review exists (PQR id 17); confirm it is current and read the score on the live page."
+  providerLabel: Version-limited coverage
+  scope: "1inch: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Safety source
+    url: https://www.defisafety.com/app/pqrs/17
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: zero-x-matcha
+  feedId: defipunkd
+  status: partial
+  summary: "0x / Matcha: Multi-dimension registry: Control, Exit, Autonomy, Open Access, Verifiability via LLM consensus."
+  providerLabel: Version-limited coverage
+  scope: "0x / Matcha: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiPunk'd source
+    url: https://defipunkd.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: zero-x-matcha
+  feedId: defisaver
+  status: partial
+  summary: "0x / Matcha: Position-management tooling: live loan-health / safety-ratio tracking and automated liquidation protection for leveraged positions."
+  providerLabel: Version-limited coverage
+  scope: "0x / Matcha: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Saver source
+    url: https://defisaver.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: zero-x-matcha
+  feedId: defisafety
+  status: partial
+  summary: "0x / Matcha: Process Quality Review of 0x Protocol published (PQR id 131); verbatim score pending confirmation."
+  providerLabel: Version-limited coverage
+  scope: "0x / Matcha: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Safety source
+    url: https://www.defisafety.com/app/pqrs/131
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: yearn
+  feedId: llamarisk
+  status: partial
+  summary: "Yearn Finance: Protocol risk research and parameter recommendations; collateral and governance risk."
+  providerLabel: Version-limited coverage
+  scope: "Yearn Finance: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: LlamaRisk source
+    url: https://www.llamarisk.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: yearn
+  feedId: defipunkd
+  status: partial
+  summary: "Yearn Finance: Multi-dimension registry: Control, Exit, Autonomy, Open Access, Verifiability via LLM consensus."
+  providerLabel: Version-limited coverage
+  scope: "Yearn Finance: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiPunk'd source
+    url: https://defipunkd.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: yearn
+  feedId: philidor
+  status: covered
+  summary: "Yearn Finance: Yearn v3 vaults; e.g. USDC yVault 7.50, Curve sUSD yVault 7.90."
+  providerLabel: "Yearn Finance: Core (≈7.5–7.9 / 10)"
+  providerText: "Yearn Finance: Core (≈7.5–7.9 / 10)"
+  providerTextVerified: true
+  scope: "Yearn Finance: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Philidor Analytics source
+    url: https://analytics.philidor.io
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: yearn
+  feedId: zyfai
+  status: covered
+  summary: "Yearn Finance: Yearn mainnet USDT/WETH vaults graded live."
+  providerLabel: "Yearn Finance: Excellent (most vaults)"
+  providerText: "Yearn Finance: Excellent (most vaults)"
+  providerTextVerified: true
+  scope: "Yearn Finance: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Zyfai Risk source
+    url: https://risk.zyf.ai
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: yearn
+  feedId: exponential
+  status: partial
+  summary: 'Yearn Finance: Yearn appeared in the A-rated tier yet a "Watch out" label also surfaced pre-migration — conflicting; pending re-verification.'
+  providerLabel: Version-limited coverage
+  scope: "Yearn Finance: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Exponential DeFi source
+    url: https://exponential.fi
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: yearn
+  feedId: defisafety
+  status: covered
+  summary: "Yearn Finance: Process Quality Review of Yearn V2."
+  providerLabel: "Yearn Finance: 93% (PQR)"
+  scope: "Yearn Finance: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Safety source
+    url: https://www.defisafety.com/app/pqrs/354
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: mellow
+  feedId: curatorwatch
+  status: partial
+  summary: "Mellow: Vault-level risk monitoring for Morpho curators: allocation risk and curator behavior."
+  providerLabel: Version-limited coverage
+  scope: "Mellow: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: CuratorWatch source
+    url: https://curatorwatch.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: mellow
+  feedId: defipunkd
+  status: partial
+  summary: "Mellow: Multi-dimension registry: Control, Exit, Autonomy, Open Access, Verifiability via LLM consensus."
+  providerLabel: Version-limited coverage
+  scope: "Mellow: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiPunk'd source
+    url: https://defipunkd.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho-vaults
+  feedId: llamarisk
+  status: partial
+  summary: "Morpho Vaults: Protocol risk research and parameter recommendations; collateral and governance risk."
+  providerLabel: Version-limited coverage
+  scope: "Morpho Vaults: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: LlamaRisk source
+    url: https://www.llamarisk.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho-vaults
+  feedId: blockanalitica
+  status: partial
+  summary: "Morpho Vaults: Quantitative on-chain risk dashboards for lending markets: liquidations, collateral health, exposure."
+  providerLabel: Version-limited coverage
+  scope: "Morpho Vaults: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: BlockAnalitica source
+    url: https://blockanalitica.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho-vaults
+  feedId: curatorwatch
+  status: covered
+  summary: "Morpho Vaults: MetaMorpho vaults graded on 9 requirements + 5-factor composite score."
+  providerLabel: "Morpho Vaults: Grade (0–100)"
+  providerText: "Morpho Vaults: Grade (0–100)"
+  providerTextVerified: true
+  scope: "Morpho Vaults: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: CuratorWatch source
+    url: https://curatorwatch.com/docs
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho-vaults
+  feedId: credora
+  status: covered
+  summary: "Morpho Vaults: Flagship per-vault credit product across MetaMorpho vaults; many blue-chip vaults A+."
+  providerLabel: "Morpho Vaults: A+ to D"
+  providerText: "Morpho Vaults: A+ to D"
+  providerTextVerified: true
+  scope: "Morpho Vaults: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Credora source
+    url: https://forum.morpho.org/t/credora-network-risk-ratings-on-morpho/1652
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho-vaults
+  feedId: philidor
+  status: covered
+  summary: "Morpho Vaults: MetaMorpho vaults; e.g. Steakhouse Prime USDC 8.54."
+  providerLabel: "Morpho Vaults: Prime (≈8.5 / 10)"
+  providerText: "Morpho Vaults: Prime (≈8.5 / 10)"
+  providerTextVerified: true
+  scope: "Morpho Vaults: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Philidor Analytics source
+    url: https://analytics.philidor.io
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho-vaults
+  feedId: pigi
+  status: covered
+  summary: "Morpho Vaults: Vault analytics and risk-adjusted yield across 50+ protocols; exploits, concentration, risk-adjusted APY. Paid structured API."
+  providerLabel: Protocol-specific coverage
+  scope: "Morpho Vaults: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: pigi.finance source
+    url: https://pigi.finance
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho-vaults
+  feedId: defisaver
+  status: partial
+  summary: "Morpho Vaults: Position-management tooling: live loan-health / safety-ratio tracking and automated liquidation protection for leveraged positions."
+  providerLabel: Version-limited coverage
+  scope: "Morpho Vaults: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Saver source
+    url: https://defisaver.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho-vaults
+  feedId: zyfai
+  status: covered
+  summary: "Morpho Vaults: Curated MetaMorpho vaults graded live; range Good–Excellent."
+  providerLabel: "Morpho Vaults: Excellent (top vaults)"
+  providerText: "Morpho Vaults: Excellent (top vaults)"
+  providerTextVerified: true
+  scope: "Morpho Vaults: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Zyfai Risk source
+    url: https://risk.zyf.ai
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: morpho-vaults
+  feedId: gauntlet
+  status: covered
+  summary: "Morpho Vaults: Named MetaMorpho vaults — Gauntlet USDC Prime/Core/Frontier, WETH Prime, USDT Core, USD Alpha — across Prime/Core/Frontier risk bands."
+  providerLabel: "Morpho Vaults: Curated vaults"
+  providerText: "Morpho Vaults: Curated vaults"
+  providerTextVerified: true
+  scope: "Morpho Vaults: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Gauntlet source
+    url: https://app.morpho.org
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: pendle
+  feedId: defiscan
+  status: covered
+  summary: "Pendle: Pendle multisig holds upgrade rights; upgrades unprotected and frontend self-hosting requirement unmet."
+  providerLabel: "Pendle: Stage 0"
+  providerText: "Pendle: Stage 0"
+  providerTextVerified: true
+  scope: "Pendle: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiScan source
+    url: https://www.defiscan.info/protocols/pendle/ethereum
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: pendle
+  feedId: llamarisk
+  status: covered
+  summary: "Pendle: Pendle PT-as-collateral risk + Exponential-Lower-Bound pricing methodology."
+  providerLabel: "Pendle: PT collateral assessment"
+  providerText: "Pendle: PT collateral assessment"
+  providerTextVerified: true
+  scope: "Pendle: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: LlamaRisk source
+    url: https://www.llamarisk.com/research/2025-02-14T17:10:51.000Z
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: pendle
+  feedId: defipunkd
+  status: covered
+  summary: "Pendle: 5-dimension AI-consensus (Pendle V2); spot-check pending."
+  providerLabel: "Pendle: Bronze tier"
+  scope: "Pendle: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiPunk'd source
+    url: https://defipunkd.com/protocol/pendle
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: pendle
+  feedId: exponential
+  status: covered
+  summary: "Pendle: Pendle PT / yield pools cluster around a B pool rating. Pre-migration sample."
+  providerLabel: "Pendle: B (pools)"
+  scope: "Pendle: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Exponential DeFi source
+    url: https://exponential.fi
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: pendle
+  feedId: defisafety
+  status: partial
+  summary: "Pendle: Process Quality Review published (PQR id 601); verbatim score pending confirmation."
+  providerLabel: Version-limited coverage
+  scope: "Pendle: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Safety source
+    url: https://www.defisafety.com/app/pqrs/601
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: lido
+  feedId: defiscan
+  status: covered
+  summary: "Lido: Lido v2: DAO/Aragon upgrade rights not protected by a ≥7-day exit window or sufficient Security Council."
+  providerLabel: "Lido: Stage 0"
+  providerText: "Lido: Stage 0"
+  providerTextVerified: true
+  scope: "Lido: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiScan source
+    url: https://www.defiscan.info/protocols/lido-v2/ethereum
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: lido
+  feedId: llamarisk
+  status: covered
+  summary: "Lido: Qualitative wstETH assessment (Market / Technology / Counterparty risk)."
+  providerLabel: "Lido: Collateral Risk Assessment"
+  providerText: "Lido: Collateral Risk Assessment"
+  providerTextVerified: true
+  scope: "Lido: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: LlamaRisk source
+    url: https://hackmd.io/@PrismaRisk/wsteth
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: lido
+  feedId: defipunkd
+  status: covered
+  summary: "Lido: 5-dimension AI-consensus; spot-check pending."
+  providerLabel: "Lido: Silver tier"
+  scope: "Lido: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiPunk'd source
+    url: https://defipunkd.com/protocol/lido
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: lido
+  feedId: xerberus
+  status: partial
+  summary: "Lido: Independent risk rating for DeFi vaults; 300+ subscores across 85+ mechanisms. Open-source."
+  providerLabel: Version-limited coverage
+  scope: "Lido: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Xerberus source
+    url: https://www.xerberus.io
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: lido
+  feedId: pigi
+  status: covered
+  summary: "Lido: Vault analytics and risk-adjusted yield across 50+ protocols; exploits, concentration, risk-adjusted APY. Paid structured API."
+  providerLabel: Protocol-specific coverage
+  scope: "Lido: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: pigi.finance source
+    url: https://pigi.finance
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: lido
+  feedId: defisaver
+  status: partial
+  summary: "Lido: Position-management tooling: live loan-health / safety-ratio tracking and automated liquidation protection for leveraged positions."
+  providerLabel: Version-limited coverage
+  scope: "Lido: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Saver source
+    url: https://defisaver.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: lido
+  feedId: exponential
+  status: covered
+  summary: 'Lido: Protocol-risk component rated "Average" (tiers: Best/Good/Average/Watch out/Avoid); Lido ETH staking pool rated A. Pre-migration sample.'
+  providerLabel: "Lido: Average"
+  scope: "Lido: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: Exponential DeFi source
+    url: https://exponential.fi
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: lido
+  feedId: defisafety
+  status: covered
+  summary: "Lido: Process Quality Review; ~92% (an earlier review scored 84%)."
+  providerLabel: "Lido: 92% (PQR)"
+  scope: "Lido: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Safety source
+    url: https://www.defisafety.com/app/pqrs/437
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: rocket-pool
+  feedId: llamarisk
+  status: covered
+  summary: "Rocket Pool: Qualitative rETH assessment; suitable as minority collateral exposure."
+  providerLabel: "Rocket Pool: Collateral Risk Assessment"
+  providerText: "Rocket Pool: Collateral Risk Assessment"
+  providerTextVerified: true
+  scope: "Rocket Pool: covered"
+  referenceStatus: verified
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: LlamaRisk source
+    url: https://hackmd.io/@PrismaRisk/rETH
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: rocket-pool
+  feedId: defipunkd
+  status: covered
+  summary: "Rocket Pool: 5-dimension AI-consensus, Phase-0 preliminary; spot-check pending."
+  providerLabel: "Rocket Pool: Bronze tier (preliminary)"
+  scope: "Rocket Pool: covered"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFiPunk'd source
+    url: https://defipunkd.com/protocol/rocket-pool
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: rocket-pool
+  feedId: defisaver
+  status: partial
+  summary: "Rocket Pool: Position-management tooling: live loan-health / safety-ratio tracking and automated liquidation protection for leveraged positions."
+  providerLabel: Version-limited coverage
+  scope: "Rocket Pool: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Saver source
+    url: https://defisaver.com
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
+- protocolId: rocket-pool
+  feedId: defisafety
+  status: partial
+  summary: "Rocket Pool: Process Quality Review published (PQR id 581, ~2024); verbatim score pending confirmation."
+  providerLabel: Version-limited coverage
+  scope: "Rocket Pool: partial"
+  referenceStatus: reference_sample
+  referenceUrl: https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts
+  source:
+    label: DeFi Safety source
+    url: https://www.defisafety.com/app/pqrs/581
+    provenance: provider_page
+    capturedAt: 2026-06-11T14:00:00.000Z
+  notes: Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified.
