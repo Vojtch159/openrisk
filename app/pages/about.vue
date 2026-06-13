@@ -5,7 +5,7 @@ import { Building2, ExternalLink, Shield } from '@lucide/vue';
 <template>
   <div class="about-page">
     <div class="app-shell py-8">
-      <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-signal-blue">About OpenRisk</p>
+      <p class="page-eyebrow mb-3 font-bold uppercase tracking-[0.18em] text-signal-blue">About OpenRisk</p>
       <h1 class="max-w-4xl text-3xl font-semibold tracking-normal text-ink-950 sm:text-5xl">
         A neutral DeFi risk intelligence aggregator
       </h1>

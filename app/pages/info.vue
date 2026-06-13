@@ -6,46 +6,585 @@ const { data } = useOpenRiskData();
 </script>
 
 <template>
-  <div class="app-shell py-10">
-    <SectionHeader title="How OpenRisk works" description="The project purpose, coverage model, provenance rules, and common questions in one concise reference." />
+  <div class="info-page">
+    <section class="info-hero">
+      <div class="app-shell info-hero-grid">
+        <div class="info-hero-copy">
+          <p class="page-eyebrow info-eyebrow">About OpenRisk</p>
+          <h1>Risk evidence belongs in daylight.</h1>
+          <p>
+            OpenRisk collects what independent DeFi risk providers publish, keeps their words attached to their names,
+            and shows the disagreements instead of smoothing them into a proprietary verdict.
+          </p>
+        </div>
 
-    <section id="about" class="info-section">
-      <span>About</span><h2>Neutral aggregation, not another score</h2>
-      <p>OpenRisk shows what independent risk providers publish about Ethereum DeFi protocols. Provider positions stay attributed and side by side; OpenRisk does not reconcile them into a proprietary score, ranking, or investment recommendation.</p>
-      <div class="principles-grid"><article><strong>{{ data.stats.protocols }}</strong><small>Ethereum protocols</small></article><article><strong>{{ data.stats.feeds }}</strong><small>Independent sources</small></article><article><strong>{{ data.stats.positiveCells }}</strong><small>Sourced entries</small></article></div>
-    </section>
-
-    <section id="methodology" class="info-section">
-      <span>Methodology</span><h2>Oracle diversity for risk intelligence</h2>
-      <p class="methodology-intro">No single provider should be canonical for something as contextual as protocol risk. The registry prioritizes methodology diversity, explicit version scope, dated source links, and verified provider-authored language.</p>
-      <div class="methodology-grid">
-        <article><span>01</span><div><strong>Protocol selection</strong><p>Leading Ethereum applications selected by TVL or trading volume.</p></div></article>
-        <article><span>02</span><div><strong>Source diversity</strong><p>Ratings, dashboards, monitoring, and research remain distinct.</p></div></article>
-        <article><span>03</span><div><strong>Independence</strong><p>Commercial relationships and provider independence are disclosed.</p></div></article>
-        <article><span>04</span><div><strong>Attribution</strong><p>Capital metrics come from DefiLlama; risk claims stay with their original provider.</p></div></article>
+        <aside class="evidence-ledger" aria-label="OpenRisk evidence model">
+          <div class="ledger-topline">
+            <span>Current snapshot</span>
+            <strong>No OpenRisk score</strong>
+          </div>
+          <dl class="ledger-stats">
+            <div>
+              <dt>Protocols</dt>
+              <dd>{{ data.stats.protocols }}</dd>
+            </div>
+            <div>
+              <dt>Sources</dt>
+              <dd>{{ data.stats.feeds }}</dd>
+            </div>
+            <div>
+              <dt>Sourced entries</dt>
+              <dd>{{ data.stats.positiveCells }}</dd>
+            </div>
+          </dl>
+          <div class="ledger-rows" aria-hidden="true">
+            <div class="ledger-row">
+              <span>Aave</span>
+              <i class="covered" /><i class="covered" /><i class="partial" /><i class="missing" /><i class="covered" />
+            </div>
+            <div class="ledger-row">
+              <span>Lido</span>
+              <i class="covered" /><i class="partial" /><i class="covered" /><i class="covered" /><i class="missing" />
+            </div>
+            <div class="ledger-row">
+              <span>Uniswap</span>
+              <i class="partial" /><i class="covered" /><i class="missing" /><i class="covered" /><i class="covered" />
+            </div>
+          </div>
+          <p>Each cell says whether source material exists. It does not say whether a protocol is safe.</p>
+        </aside>
       </div>
     </section>
 
-    <section id="coverage" class="info-section">
-      <span>Coverage model</span><h2>What the three states mean</h2>
-      <p class="coverage-context"><strong>Coverage measures availability, not safety.</strong> A covered protocol is not necessarily safer than a missing one.</p>
-      <div class="definition-list"><article><b class="covered">Covered</b><p>Protocol-specific intelligence is available for the relevant protocol or version.</p></article><article><b class="partial">Partially covered</b><p>A provider covers only a version, market, vault, feature, or otherwise limited evidence set.</p></article><article><b class="missing">Missing</b><p>No protocol-specific provider entry has been found in the current static snapshot.</p></article></div>
-    </section>
+    <main class="app-shell info-main">
+      <section id="about" class="info-panel intro-panel">
+        <div class="section-label">Purpose</div>
+        <div>
+          <h2>A neutral layer over a fragmented risk landscape.</h2>
+          <p>
+            DeFi risk work is scattered across rating desks, monitoring dashboards, research notes, governance forums,
+            and provider docs. OpenRisk gives that work a common table without pretending the methods are the same.
+          </p>
+          <p>
+            The project is useful precisely because it refuses to collapse different methodologies into one number.
+            Users can inspect who said what, when, and about which protocol or version.
+          </p>
+        </div>
+      </section>
 
-    <section id="faq" class="info-section">
-      <span>FAQ</span><h2>Common questions</h2>
-      <div class="faq-list"><details open><summary>Why not combine providers into one score?</summary><p>Methodologies measure different things and may conflict. Combining them would introduce an OpenRisk judgment that the project charter explicitly excludes.</p></details><details><summary>How should version rows be read?</summary><p>Version views include only evidence whose source scope explicitly names that version. Evidence without explicit version scope remains at the parent protocol level.</p></details><details><summary>Is the data live?</summary><p>No. This prototype is a dated, fully static snapshot. The snapshot date and raw JSON link appear in the footer.</p></details><details><summary>Can the registry be corrected?</summary><p>Yes. Corrections should include a provider URL, governance record, onchain reference, or another dated source.</p></details></div>
-    </section>
+      <section id="methodology" class="info-panel">
+        <div class="section-label">Operating rules</div>
+        <div>
+          <h2>The constraints are part of the product.</h2>
+          <div class="rule-stack">
+            <article>
+              <strong>Keep providers distinct</strong>
+              <p>Ratings, dashboards, monitoring outputs, and research stay attributed to the source that published them.</p>
+            </article>
+            <article>
+              <strong>Preserve scope</strong>
+              <p>Version-specific evidence is shown only when the source explicitly names that version, market, vault, or feature.</p>
+            </article>
+            <article>
+              <strong>Reject derived verdicts</strong>
+              <p>OpenRisk does not add rankings, normalized grades, composite scores, or investment recommendations.</p>
+            </article>
+            <article>
+              <strong>Require provenance</strong>
+              <p>Covered and partial cells need a dated provider URL, governance record, onchain reference, or other source.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <section class="contribute-callout"><div><GitPullRequestArrow :size="20" /><div><strong>Review the data in public</strong><p>Open an issue, propose a correction, or inspect the repository-native dataset.</p></div></div><div class="callout-actions"><NuxtLink to="/contribute">Prepare a correction</NuxtLink><a :href="GITHUB_REPOSITORY_URL" target="_blank" rel="noreferrer">GitHub repository <ExternalLink :size="14" /></a></div></section>
+      <section id="coverage" class="coverage-panel">
+        <div class="coverage-copy">
+          <div class="section-label">Coverage language</div>
+          <h2>Coverage means evidence was found. Nothing more.</h2>
+          <p>
+            A covered protocol is not automatically safer than a missing one. The labels describe the availability and
+            scope of source material in the static snapshot.
+          </p>
+        </div>
+        <div class="coverage-definitions">
+          <article>
+            <b class="covered">Covered</b>
+            <p>Protocol-specific intelligence is available for the relevant protocol or version.</p>
+          </article>
+          <article>
+            <b class="partial">Partial</b>
+            <p>The provider covers a limited version, market, vault, feature, or evidence set.</p>
+          </article>
+          <article>
+            <b class="missing">Missing</b>
+            <p>No protocol-specific provider entry has been found in the current snapshot.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="faq" class="info-panel faq-panel">
+        <div class="section-label">FAQ</div>
+        <div>
+          <h2>Short answers before you use the table.</h2>
+          <div class="faq-list">
+            <details open>
+              <summary>Why not combine providers into one score?</summary>
+              <p>Because the methods measure different things. Combining them would make OpenRisk the judge, which is outside the charter.</p>
+            </details>
+            <details>
+              <summary>How should version rows be read?</summary>
+              <p>They include only evidence whose source scope explicitly names that version. Everything else stays at the parent protocol level.</p>
+            </details>
+            <details>
+              <summary>Is the data live?</summary>
+              <p>No. This prototype is a dated, static snapshot. The snapshot date and raw JSON link appear in the footer.</p>
+            </details>
+            <details>
+              <summary>Can the registry be corrected?</summary>
+              <p>Yes. Corrections should point to a dated provider URL, governance record, onchain reference, or primary source.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="contribute-callout">
+        <div>
+          <GitPullRequestArrow :size="20" aria-hidden="true" />
+          <div>
+            <strong>Review the data in public</strong>
+            <p>Open an issue, propose a correction, or inspect the repository-native dataset.</p>
+          </div>
+        </div>
+        <div class="callout-actions">
+          <NuxtLink to="/contribute">Prepare a correction</NuxtLink>
+          <a :href="GITHUB_REPOSITORY_URL" target="_blank" rel="noreferrer">
+            GitHub repository <ExternalLink :size="14" aria-hidden="true" />
+          </a>
+        </div>
+      </section>
+    </main>
   </div>
 </template>
 
 <style scoped>
-.info-section { border-top: 1px solid var(--color-ink-200); padding: 3rem 0; }.info-section:first-of-type { margin-top: 2.5rem; }.info-section > span { color: var(--color-signal-blue); font-size: .67rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }.info-section h2 { color: var(--color-ink-950); font-size: clamp(1.7rem,4vw,2.5rem); letter-spacing: -.035em; margin: .45rem 0 .8rem; }.info-section > p { color: var(--color-ink-600); font-size: .92rem; line-height: 1.75; }
-.principles-grid { display: grid; gap: .7rem; margin-top: 1.5rem; }.principles-grid article { background: var(--color-white); border: 1px solid var(--color-ink-200); border-radius: .65rem; padding: 1rem; }.principles-grid strong,.principles-grid small { display: block; }.principles-grid strong { color: var(--color-ink-950); font-size: 1.5rem; }.principles-grid small { color: var(--color-ink-500); font-size: .67rem; font-weight: 700; margin-top: .2rem; text-transform: uppercase; }
-.methodology-intro { margin-bottom: 0; max-width: 50rem; }.methodology-grid { display: grid; gap: .65rem; margin-top: 1.4rem; }.methodology-grid article { align-items: start; background: var(--color-white); border: 1px solid var(--color-ink-200); border-radius: .65rem; display: grid; gap: .75rem; grid-template-columns: auto minmax(0,1fr); padding: 1rem; }.methodology-grid article > span { color: var(--color-signal-blue); font-size: .62rem; font-weight: 800; letter-spacing: .08em; padding-top: .15rem; }.methodology-grid strong { color: var(--color-ink-900); display: block; font-size: .82rem; }.methodology-grid p { color: var(--color-ink-600); font-size: .75rem; line-height: 1.55; margin: .3rem 0 0; }
-.coverage-context { margin: 0; max-width: 48rem; }.coverage-context strong { color: var(--color-ink-800); font-weight: 750; }.definition-list,.faq-list { display: grid; gap: .6rem; margin-top: 1.25rem; }.definition-list article,.faq-list details { background: var(--color-white); border: 1px solid var(--color-ink-200); border-radius: .65rem; padding: 1rem; }.definition-list b { border-radius: 99px; display: inline-block; font-size: .68rem; padding: .35rem .55rem; text-transform: uppercase; }.definition-list b.covered { background: #dff6ea; color: #11613c; }.definition-list b.partial { background: #fff0d6; color: #7c4a09; }.definition-list b.missing { background: var(--color-ink-100); color: var(--color-ink-600); }.definition-list p,.faq-list p { color: var(--color-ink-600); font-size: .8rem; line-height: 1.6; margin: .65rem 0 0; }.faq-list summary { color: var(--color-ink-950); cursor: pointer; font-size: .86rem; font-weight: 750; }
-.contribute-callout { align-items: center; background: #202937; border-radius: .8rem; color: var(--color-on-dark); display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; padding: 1.2rem; }.contribute-callout > div:first-child { align-items: start; display: flex; gap: .7rem; }.contribute-callout strong { display: block; }.contribute-callout p { color: #b4bdca; font-size: .75rem; margin: .25rem 0 0; }.callout-actions { display: flex; flex-wrap: wrap; gap: .5rem; }.callout-actions a { align-items: center; background: #e8ecf1; border-radius: .45rem; color: #20242b; display: inline-flex; font-size: .72rem; font-weight: 750; gap: .3rem; padding: .65rem .75rem; }
-@media (min-width:640px) { .principles-grid { grid-template-columns: repeat(3,1fr); }.methodology-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+.info-page {
+  color: var(--color-ink-900);
+}
+
+.info-hero {
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--color-signal-blue) 10%, transparent), transparent 42%),
+    color-mix(in srgb, var(--color-white) 88%, transparent);
+  border-bottom: 1px solid var(--color-ink-200);
+}
+
+.info-hero-grid {
+  display: grid;
+  gap: 2rem;
+  padding-block: clamp(2rem, 6vw, 4.8rem);
+}
+
+.info-hero-copy {
+  align-self: end;
+  max-width: 50rem;
+}
+
+.info-eyebrow {
+  color: var(--color-signal-blue);
+  font-family: var(--font-mono);
+  font-weight: 800;
+  letter-spacing: .16em;
+  margin: 0 0 .9rem;
+  text-transform: uppercase;
+}
+
+.info-hero h1 {
+  color: var(--color-ink-950);
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 9vw, 6.8rem);
+  font-weight: 520;
+  letter-spacing: -.055em;
+  line-height: .86;
+  margin: 0;
+  max-width: 54rem;
+}
+
+.info-hero-copy > p:not(.info-eyebrow) {
+  color: var(--color-ink-700);
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
+  line-height: 1.75;
+  margin: 1.35rem 0 0;
+  max-width: 43rem;
+}
+
+.evidence-ledger {
+  align-self: stretch;
+  background:
+    linear-gradient(90deg, rgba(24, 32, 42, .045) 1px, transparent 1px) 0 0 / 2.25rem 2.25rem,
+    var(--color-white);
+  border: 1px solid var(--color-ink-200);
+  border-radius: .55rem;
+  box-shadow: var(--shadow-line);
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.ledger-topline {
+  align-items: center;
+  border-bottom: 1px solid var(--color-ink-200);
+  display: flex;
+  gap: .75rem;
+  justify-content: space-between;
+  padding-bottom: .85rem;
+}
+
+.ledger-topline span,
+.ledger-stats dt {
+  color: var(--color-ink-500);
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.ledger-topline strong {
+  background: var(--color-ink-950);
+  border-radius: 99px;
+  color: var(--color-ink-50);
+  font-size: .78rem;
+  padding: .38rem .6rem;
+}
+
+.ledger-stats {
+  display: grid;
+  gap: .6rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+}
+
+.ledger-stats div {
+  border-left: 1px solid var(--color-ink-200);
+  min-width: 0;
+  padding-left: .7rem;
+}
+
+.ledger-stats div:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.ledger-stats dd {
+  color: var(--color-ink-950);
+  font-size: clamp(1.45rem, 4vw, 2rem);
+  font-weight: 760;
+  line-height: 1;
+  margin: .32rem 0 0;
+}
+
+.ledger-rows {
+  display: grid;
+  gap: .48rem;
+}
+
+.ledger-row {
+  align-items: center;
+  background: color-mix(in srgb, var(--color-ink-50) 72%, transparent);
+  border: 1px solid var(--color-ink-100);
+  border-radius: .35rem;
+  display: grid;
+  gap: .45rem;
+  grid-template-columns: 5.2rem repeat(5, minmax(1.5rem, 1fr));
+  padding: .48rem;
+}
+
+.ledger-row span {
+  color: var(--color-ink-700);
+  font-size: .82rem;
+  font-weight: 750;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ledger-row i {
+  border-radius: .18rem;
+  display: block;
+  height: 1.7rem;
+}
+
+.ledger-row i.covered {
+  background: color-mix(in srgb, var(--color-signal-green) 82%, var(--color-white));
+}
+
+.ledger-row i.partial {
+  background: color-mix(in srgb, var(--color-signal-amber) 82%, var(--color-white));
+}
+
+.ledger-row i.missing {
+  background: var(--color-ink-200);
+}
+
+.evidence-ledger > p {
+  color: var(--color-ink-600);
+  font-size: .88rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.info-main {
+  display: grid;
+  gap: clamp(1.2rem, 3vw, 2rem);
+  padding-block: clamp(1.5rem, 5vw, 3rem);
+}
+
+.info-panel,
+.coverage-panel {
+  background: color-mix(in srgb, var(--color-white) 82%, transparent);
+  border: 1px solid var(--color-ink-200);
+  border-radius: .7rem;
+  box-shadow: var(--shadow-line);
+  display: grid;
+  gap: 1.4rem;
+  padding: clamp(1.1rem, 3vw, 2rem);
+}
+
+.section-label {
+  color: var(--color-signal-blue);
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  font-weight: 850;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.info-panel h2,
+.coverage-panel h2 {
+  color: var(--color-ink-950);
+  font-family: var(--font-serif);
+  font-size: clamp(1.9rem, 4.8vw, 3.2rem);
+  font-weight: 520;
+  letter-spacing: -.045em;
+  line-height: 1;
+  margin: 0;
+  max-width: 46rem;
+}
+
+.info-panel p,
+.coverage-panel p {
+  color: var(--color-ink-600);
+  font-size: .95rem;
+  line-height: 1.75;
+  margin: .9rem 0 0;
+  max-width: 48rem;
+}
+
+.intro-panel {
+  background:
+    linear-gradient(90deg, var(--color-ink-950) .35rem, transparent .35rem),
+    color-mix(in srgb, var(--color-white) 84%, transparent);
+}
+
+.rule-stack {
+  display: grid;
+  gap: .7rem;
+  margin-top: 1.3rem;
+}
+
+.rule-stack article {
+  align-items: start;
+  background: var(--color-white);
+  border: 1px solid var(--color-ink-200);
+  border-radius: .5rem;
+  display: grid;
+  gap: .35rem;
+  padding: 1rem;
+}
+
+.rule-stack strong {
+  color: var(--color-ink-950);
+  font-size: .92rem;
+}
+
+.rule-stack p {
+  font-size: .9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.coverage-panel {
+  background: #18202a;
+  color: #f4f1e8;
+}
+
+.coverage-panel .section-label {
+  color: #9cc6ef;
+}
+
+.coverage-panel h2 {
+  color: #f4f1e8;
+}
+
+.coverage-panel p {
+  color: rgba(244, 241, 232, .72);
+}
+
+.coverage-definitions {
+  display: grid;
+  gap: .7rem;
+}
+
+.coverage-definitions article {
+  background: rgba(255, 255, 255, .07);
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: .55rem;
+  padding: 1rem;
+}
+
+.coverage-definitions b {
+  border-radius: 99px;
+  display: inline-flex;
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+  padding: .36rem .56rem;
+  text-transform: uppercase;
+}
+
+.coverage-definitions b.covered {
+  background: color-mix(in srgb, var(--color-signal-green) 24%, transparent);
+  color: #8ee5bd;
+}
+
+.coverage-definitions b.partial {
+  background: color-mix(in srgb, var(--color-signal-amber) 26%, transparent);
+  color: #f1c37d;
+}
+
+.coverage-definitions b.missing {
+  background: rgba(255, 255, 255, .1);
+  color: rgba(244, 241, 232, .78);
+}
+
+.coverage-definitions p {
+  color: rgba(244, 241, 232, .68);
+  font-size: .9rem;
+  line-height: 1.6;
+  margin-top: .7rem;
+}
+
+.faq-list {
+  display: grid;
+  gap: .65rem;
+  margin-top: 1.2rem;
+}
+
+.faq-list details {
+  background: var(--color-white);
+  border: 1px solid var(--color-ink-200);
+  border-radius: .5rem;
+  padding: .95rem 1rem;
+}
+
+.faq-list summary {
+  color: var(--color-ink-950);
+  cursor: pointer;
+  font-size: .9rem;
+  font-weight: 760;
+}
+
+.faq-list p {
+  font-size: .9rem;
+  line-height: 1.65;
+  margin: .65rem 0 0;
+}
+
+.contribute-callout {
+  align-items: center;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-signal-blue) 18%, transparent), transparent),
+    var(--color-white);
+  border: 1px solid var(--color-ink-200);
+  border-radius: .7rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1.15rem;
+}
+
+.contribute-callout > div:first-child {
+  align-items: start;
+  display: flex;
+  gap: .7rem;
+}
+
+.contribute-callout svg {
+  color: var(--color-signal-blue);
+  flex: 0 0 auto;
+}
+
+.contribute-callout strong {
+  color: var(--color-ink-950);
+  display: block;
+}
+
+.contribute-callout p {
+  color: var(--color-ink-600);
+  font-size: .9rem;
+  line-height: 1.55;
+  margin: .2rem 0 0;
+}
+
+.callout-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.callout-actions a {
+  align-items: center;
+  background: var(--color-ink-950);
+  border-radius: .45rem;
+  color: var(--color-ink-50);
+  display: inline-flex;
+  font-size: .86rem;
+  font-weight: 780;
+  gap: .3rem;
+  padding: .68rem .82rem;
+  text-decoration: none;
+}
+
+.callout-actions a:last-child {
+  background: transparent;
+  border: 1px solid var(--color-ink-300);
+  color: var(--color-ink-900);
+}
+
+@media (min-width: 720px) {
+  .info-panel,
+  .coverage-panel {
+    grid-template-columns: 11rem minmax(0, 1fr);
+  }
+
+  .rule-stack {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .coverage-definitions {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .info-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(22rem, 28rem);
+  }
+
+  .evidence-ledger {
+    margin-top: 1rem;
+  }
+}
 </style>

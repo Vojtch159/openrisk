@@ -240,13 +240,13 @@ function suppressClickAfterDrag(event: MouseEvent) {
 
 <template>
   <div>
-    <section class="border-b border-ink-200 bg-white">
-      <div class="app-shell grid gap-6 py-8 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-end">
+    <section class="registry-hero">
+      <div class="app-shell grid gap-8 py-10 lg:grid-cols-[minmax(0,1fr)_380px] lg:items-end">
         <div>
-          <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-signal-blue">Protocol registry</p>
-          <h1 class="max-w-4xl text-3xl font-semibold text-ink-950 sm:text-5xl">Compare protocol evidence across every
+          <p class="page-eyebrow registry-eyebrow">Protocol registry</p>
+          <h1 class="registry-title">Compare protocol evidence across every
             source.</h1>
-          <p class="mt-4 max-w-3xl text-base leading-7 text-ink-600">Provider-native ratings, version scope, and
+          <p class="registry-lede">Provider-native ratings, version scope, and
             coverage states stay attributed and side by side, without an aggregate verdict.</p>
         </div>
         <dl class="registry-stats">
@@ -267,23 +267,27 @@ function suppressClickAfterDrag(event: MouseEvent) {
     </section>
 
     <main class="app-shell py-6">
-      <div class="grid gap-3 lg:grid-cols-[minmax(0,1fr)_220px_220px] mb-6">
+      <div class="control-strip mb-6 grid gap-3 lg:grid-cols-[minmax(0,1fr)_220px_220px]">
         <label class="relative block">
           <Search class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-ink-500" :size="18" /><span
-            class="sr-only">Search protocols</span><input v-model="query"
-            class="h-12 w-full rounded-md border border-ink-300 bg-white pl-10 pr-3 outline-none focus:border-signal-blue"
+            class="sr-only">Search protocols</span><input
+v-model="query"
+            class="h-12 w-full border border-ink-300 bg-white pl-10 pr-3 text-sm outline-none focus:border-signal-blue"
             placeholder="Search protocol, category, or version">
         </label>
         <label class="relative block">
-          <SlidersHorizontal class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-ink-500"
-            :size="18" /><span class="sr-only">Filter category</span><select v-model="category"
-            class="h-12 w-full appearance-none rounded-md border border-ink-300 bg-white pl-10 pr-3 text-sm font-semibold">
+          <SlidersHorizontal
+class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-ink-500"
+            :size="18" /><span class="sr-only">Filter category</span><select
+v-model="category"
+            class="h-12 w-full appearance-none border border-ink-300 bg-white pl-10 pr-3 text-sm font-semibold">
             <option value="all">All categories</option>
             <option v-for="item in categories" :key="item" :value="item">{{ categoryLabels[item] }}</option>
           </select>
         </label>
-        <label><span class="sr-only">Filter coverage</span><select v-model="minimumCoverage"
-            class="h-12 w-full rounded-md border border-ink-300 bg-white px-3 text-sm font-semibold">
+        <label><span class="sr-only">Filter coverage</span><select
+v-model="minimumCoverage"
+            class="h-12 w-full border border-ink-300 bg-white px-3 text-sm font-semibold">
             <option value="all">Any coverage status</option>
             <option value="covered">Has covered source</option>
             <option value="partial">Covered or partial</option>
@@ -291,7 +295,8 @@ function suppressClickAfterDrag(event: MouseEvent) {
       </div>
 
       <div v-if="sortedRows.length === 0" class="empty-state">
-        <Search :size="22" /><strong>No protocols match these filters.</strong><button type="button"
+        <Search :size="22" /><strong>No protocols match these filters.</strong><button
+type="button"
           @click="resetFilters">
           <RotateCcw :size="14" /> Reset filters
         </button>
@@ -299,7 +304,8 @@ function suppressClickAfterDrag(event: MouseEvent) {
 
       <div v-if="sortedRows.length > 0" class="mobile-registry md:hidden">
         <article v-for="row in sortedRows" :key="row.id" class="protocol-card">
-          <NuxtLink :to="`/protocols/${row.id}`" class="card-heading"><img :src="`/icons/protocols/${row.id}.png`"
+          <NuxtLink :to="`/protocols/${row.id}`" class="card-heading"><img
+:src="`/icons/protocols/${row.id}.png`"
               :alt="row.name" width="38" height="38">
             <div>
               <h2>{{ row.name }}</h2><span>{{ categoryLabels[row.category] }}</span>
@@ -309,7 +315,8 @@ function suppressClickAfterDrag(event: MouseEvent) {
           <p>{{ row.summary }}</p>
           <div class="coverage-counts"><span><b>{{ row.coverageCount }}</b> covered</span><span><b>{{ row.partialCount
           }}</b> partial</span><span><b>{{ missingCount(row) }}</b> missing</span></div>
-          <button v-if="row.versions.length > 1" type="button" class="version-toggle"
+          <button
+v-if="row.versions.length > 1" type="button" class="version-toggle"
             :aria-expanded="expanded.has(row.id)" @click="toggleExpanded(row.id)">
             <ChevronDown v-if="expanded.has(row.id)" :size="15" />
             <ChevronRight v-else :size="15" /> {{ row.versions.length }} protocol versions
@@ -332,7 +339,8 @@ function suppressClickAfterDrag(event: MouseEvent) {
         </article>
       </div>
 
-      <div v-if="sortedRows.length > 0" ref="tableScroll" class="evidence-table-wrap hidden md:block"
+      <div
+v-if="sortedRows.length > 0" ref="tableScroll" class="evidence-table-wrap hidden md:block"
         :class="{ dragging: isDraggingTable }" data-testid="evidence-table-scroll" @pointerdown="startTableDrag"
         @pointermove="moveTableDrag" @pointerup="endTableDrag" @pointercancel="endTableDrag"
         @click.capture="suppressClickAfterDrag" @dragstart.prevent>
@@ -357,17 +365,20 @@ function suppressClickAfterDrag(event: MouseEvent) {
           </thead>
           <tbody>
             <template v-for="row in sortedRows" :key="row.id">
-              <tr class="protocol-row" tabindex="0" :aria-label="`Open ${row.name} protocol profile`"
+              <tr
+class="protocol-row" tabindex="0" :aria-label="`Open ${row.name} protocol profile`"
                 @click="openRow($event, row.id)" @keydown.enter="openRow($event, row.id)">
                 <td class="sticky-protocol">
-                  <div class="protocol-cell"><button v-if="row.versions.length > 1" type="button" class="version-expand"
+                  <div class="protocol-cell"><button
+v-if="row.versions.length > 1" type="button" class="version-expand"
                       :aria-label="`${expanded.has(row.id) ? 'Collapse' : 'Expand'} ${row.name} versions`"
                       :aria-expanded="expanded.has(row.id)"
                       :title="`${expanded.has(row.id) ? 'Collapse' : 'Show'} ${row.name} versions`" @pointerdown.stop
                       @click.stop="toggleExpanded(row.id)">
                       <ChevronDown v-if="expanded.has(row.id)" :size="17" />
                       <ChevronRight v-else :size="17" />
-                    </button><span v-else class="indent" /><img :src="`/icons/protocols/${row.id}.png`" :alt="row.name"
+                    </button><span v-else class="indent" /><img
+:src="`/icons/protocols/${row.id}.png`" :alt="row.name"
                       width="30" height="30">
                     <div>
                       <NuxtLink :to="`/protocols/${row.id}`">{{ row.name }}</NuxtLink><small>{{
@@ -376,7 +387,8 @@ function suppressClickAfterDrag(event: MouseEvent) {
                     </div>
                   </div>
                 </td>
-                <td class="metric-cell"><a class="metric-chip" :href="row.links.defillama" target="_blank"
+                <td class="metric-cell"><a
+class="metric-chip" :href="row.links.defillama" target="_blank"
                     rel="noreferrer" :title="metricTitle(row)"
                     :aria-label="`${row.name} ${metricLabel(row)} on DefiLlama`"><strong>{{
                       formatMetricValue(row) }}</strong><span>{{ metricLabel(row) }}</span>
@@ -384,9 +396,12 @@ function suppressClickAfterDrag(event: MouseEvent) {
                   </a></td>
                 <td>
                   <div class="coverage-meter-cell" :title="coverageTitle(row)">
-                    <div class="coverage-rail" aria-hidden="true"><i class="covered"
-                        :style="{ width: coveragePercent(row.coverageCount) }" /><i class="partial"
-                        :style="{ width: coveragePercent(row.partialCount) }" /><i class="missing"
+                    <div class="coverage-rail" aria-hidden="true"><i
+class="covered"
+                        :style="{ width: coveragePercent(row.coverageCount) }" /><i
+class="partial"
+                        :style="{ width: coveragePercent(row.partialCount) }" /><i
+class="missing"
                         :style="{ width: coveragePercent(missingCount(row)) }" /></div>
                     <div class="coverage-tally" :aria-label="coverageTitle(row)"><span><b>{{ row.coverageCount }}</b>
                         covered</span><span><b>{{ row.partialCount }}</b> partial</span><span><b>{{ missingCount(row)
@@ -402,7 +417,8 @@ function suppressClickAfterDrag(event: MouseEvent) {
                   </div>
                 </td>
               </tr>
-              <tr v-for="version in (expanded.has(row.id) ? row.versions : [])" :key="`${row.id}-${version}`"
+              <tr
+v-for="version in (expanded.has(row.id) ? row.versions : [])" :key="`${row.id}-${version}`"
                 class="version-row">
                 <td class="sticky-protocol">
                   <div class="version-name"><span />
@@ -412,10 +428,14 @@ function suppressClickAfterDrag(event: MouseEvent) {
                 <td><span class="not-applicable">Uses parent metric</span></td>
                 <td>
                   <div class="coverage-meter-cell version-meter" :title="versionCoverageTitle(row, version)">
-                    <div class="coverage-rail" aria-hidden="true"><i class="covered"
-                        :style="{ width: coveragePercent(versionCounts(row, version).covered) }" /><i class="partial"
-                        :style="{ width: coveragePercent(versionCounts(row, version).partial) }" /><i class="missing"
-                        :style="{ width: coveragePercent(versionCounts(row, version).missing) }" /><i class="unspecified"
+                    <div class="coverage-rail" aria-hidden="true"><i
+class="covered"
+                        :style="{ width: coveragePercent(versionCounts(row, version).covered) }" /><i
+class="partial"
+                        :style="{ width: coveragePercent(versionCounts(row, version).partial) }" /><i
+class="missing"
+                        :style="{ width: coveragePercent(versionCounts(row, version).missing) }" /><i
+class="unspecified"
                         :style="{ width: coveragePercent(versionCounts(row, version).unspecified) }" /></div>
                     <div class="coverage-tally" :aria-label="versionCoverageTitle(row, version)"><span><b>{{
                       versionCounts(row, version).covered }}</b> covered</span><span><b>{{
@@ -464,7 +484,7 @@ function suppressClickAfterDrag(event: MouseEvent) {
 
 .registry-stats dt {
   color: var(--color-ink-500);
-  font-size: .58rem;
+  font-size: .75rem;
   font-weight: 800;
   line-height: 1.1;
   min-height: 1.3rem;
@@ -493,7 +513,7 @@ function suppressClickAfterDrag(event: MouseEvent) {
   align-items: center;
   color: var(--color-signal-blue);
   display: flex;
-  font-size: .75rem;
+  font-size: .875rem;
   font-weight: 700;
   gap: .3rem;
 }
@@ -519,7 +539,7 @@ function suppressClickAfterDrag(event: MouseEvent) {
 }
 
 .card-heading img {
-  background: white;
+  background: var(--color-white);
   border: 1px solid var(--color-ink-100);
   border-radius: .5rem;
   object-fit: contain;
@@ -533,14 +553,14 @@ function suppressClickAfterDrag(event: MouseEvent) {
 
 .card-heading span {
   color: var(--color-ink-500);
-  font-size: .62rem;
+  font-size: .75rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .protocol-card>p {
   color: var(--color-ink-600);
-  font-size: .78rem;
+  font-size: .9rem;
   line-height: 1.55;
 }
 
@@ -553,7 +573,7 @@ function suppressClickAfterDrag(event: MouseEvent) {
 
 .coverage-counts span {
   color: var(--color-ink-500);
-  font-size: .65rem;
+  font-size: .78rem;
 }
 
 .coverage-counts b {
@@ -565,7 +585,7 @@ function suppressClickAfterDrag(event: MouseEvent) {
   align-items: center;
   color: var(--color-signal-blue);
   display: flex;
-  font-size: .7rem;
+  font-size: .82rem;
   font-weight: 750;
   gap: .3rem;
   margin-top: .8rem;
@@ -587,12 +607,12 @@ function suppressClickAfterDrag(event: MouseEvent) {
 
 .mobile-versions strong {
   color: var(--color-ink-950);
-  font-size: .72rem;
+  font-size: .84rem;
 }
 
 .mobile-versions span {
   color: var(--color-ink-500);
-  font-size: .62rem;
+  font-size: .76rem;
   margin-top: .15rem;
 }
 
@@ -615,13 +635,13 @@ function suppressClickAfterDrag(event: MouseEvent) {
 
 .provider-grid a>span {
   color: var(--color-ink-700);
-  font-size: .63rem;
+  font-size: .76rem;
   font-weight: 750;
 }
 
 .provider-grid strong {
   color: var(--color-ink-950);
-  font-size: .65rem;
+  font-size: .78rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -661,7 +681,7 @@ function suppressClickAfterDrag(event: MouseEvent) {
 .evidence-table thead th {
   background: var(--color-ink-50);
   color: var(--color-ink-500);
-  font-size: .62rem;
+  font-size: .76rem;
   font-weight: 800;
   position: sticky;
   text-transform: uppercase;
@@ -693,7 +713,7 @@ function suppressClickAfterDrag(event: MouseEvent) {
 .provider-head a {
   color: var(--color-ink-900);
   display: block;
-  font-size: .7rem;
+  font-size: .82rem;
   line-height: 1.12;
   margin-inline: auto;
   text-align: center;
@@ -703,7 +723,7 @@ function suppressClickAfterDrag(event: MouseEvent) {
 
 .provider-head span {
   display: block;
-  font-size: .55rem;
+  font-size: .75rem;
   margin: .16rem auto 0;
   max-width: 3rem;
   overflow: hidden;
@@ -759,7 +779,7 @@ function suppressClickAfterDrag(event: MouseEvent) {
 }
 
 .protocol-cell img {
-  background: white;
+  background: var(--color-white);
   border: 1px solid var(--color-ink-100);
   border-radius: .4rem;
   object-fit: contain;
@@ -767,7 +787,7 @@ function suppressClickAfterDrag(event: MouseEvent) {
 
 .protocol-cell a {
   color: var(--color-ink-950);
-  font-size: .78rem;
+  font-size: .9rem;
   font-weight: 750;
 }
 
@@ -775,7 +795,7 @@ function suppressClickAfterDrag(event: MouseEvent) {
 .version-name small {
   color: var(--color-ink-500);
   display: block;
-  font-size: .58rem;
+  font-size: .75rem;
   margin-top: .15rem;
 }
 
@@ -787,7 +807,7 @@ function suppressClickAfterDrag(event: MouseEvent) {
 
 .coverage-summary span {
   color: var(--color-ink-500);
-  font-size: .62rem;
+  font-size: .76rem;
 }
 
 .coverage-summary b {
@@ -796,14 +816,14 @@ function suppressClickAfterDrag(event: MouseEvent) {
 
 .coverage-summary small {
   color: var(--color-ink-500);
-  font-size: .55rem;
+  font-size: .75rem;
   margin-top: .2rem;
 }
 
 .provider-cell strong {
   color: var(--color-ink-900);
   display: -webkit-box;
-  font-size: .62rem;
+  font-size: .76rem;
   line-height: 1.35;
   margin-top: .35rem;
   overflow: hidden;
@@ -831,13 +851,13 @@ function suppressClickAfterDrag(event: MouseEvent) {
 
 .version-name strong {
   color: var(--color-ink-900);
-  font-size: .7rem;
+  font-size: .82rem;
 }
 
 .not-scoped,
 .not-applicable {
   color: var(--color-ink-500);
-  font-size: .58rem;
+  font-size: .75rem;
   font-style: italic;
 }
 
@@ -886,14 +906,14 @@ function suppressClickAfterDrag(event: MouseEvent) {
 
 .metric-chip strong {
   color: var(--color-ink-950);
-  font-size: .78rem;
+  font-size: .9rem;
   font-weight: 800;
   letter-spacing: -.01em;
 }
 
 .metric-chip span {
   color: var(--color-ink-500);
-  font-size: .55rem;
+  font-size: .75rem;
   font-weight: 850;
   text-transform: uppercase;
 }
@@ -948,7 +968,7 @@ function suppressClickAfterDrag(event: MouseEvent) {
   color: var(--color-ink-500);
   display: flex;
   flex-wrap: nowrap;
-  font-size: .58rem;
+  font-size: .75rem;
   gap: .42rem;
   line-height: 1;
   white-space: nowrap;
@@ -956,7 +976,7 @@ function suppressClickAfterDrag(event: MouseEvent) {
 
 .coverage-tally b {
   color: var(--color-ink-950);
-  font-size: .68rem;
+  font-size: .8rem;
   font-weight: 850;
 }
 
@@ -986,7 +1006,7 @@ function suppressClickAfterDrag(event: MouseEvent) {
 
 .provider-cell strong {
   display: block;
-  font-size: .6rem;
+  font-size: .75rem;
   line-height: 1.1;
   margin-top: .24rem;
   max-width: 3.25rem;
@@ -997,9 +1017,181 @@ function suppressClickAfterDrag(event: MouseEvent) {
   -webkit-line-clamp: unset;
 }
 
+.registry-hero {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-white) 88%, transparent), color-mix(in srgb, var(--color-ink-50) 78%, transparent)),
+    var(--color-ink-50);
+  border-bottom: 1px solid var(--color-ink-200);
+}
+
+.registry-eyebrow {
+  color: var(--color-signal-blue);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  margin: 0 0 .85rem;
+}
+
+.registry-title {
+  color: var(--color-ink-950);
+  font-family: var(--font-serif);
+  font-size: clamp(2.15rem, 5.2vw, 4rem);
+  font-weight: 560;
+  letter-spacing: -.035em;
+  line-height: .98;
+  margin: 0;
+  max-width: 48rem;
+}
+
+.registry-lede {
+  color: var(--color-ink-600);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin: 1.2rem 0 0;
+  max-width: 45rem;
+}
+
+.registry-stats {
+  background: color-mix(in srgb, var(--color-white) 72%, transparent);
+  border-radius: .35rem;
+  box-shadow: var(--shadow-line);
+}
+
+.registry-stats dt,
+.card-heading span,
+.metric-chip span,
+.provider-head span {
+  font-family: var(--font-mono);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.registry-stats dd,
+.coverage-tally b,
+.metric-chip strong {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.control-strip input,
+.control-strip select {
+  border-radius: .3rem;
+  color: var(--color-ink-900);
+  box-shadow: inset 0 1px 0 rgba(24, 32, 42, .03);
+}
+
+.control-strip input::placeholder {
+  color: var(--color-ink-500);
+}
+
+.empty-state,
+.protocol-card,
+.provider-grid a,
+.evidence-table-wrap,
+.metric-chip {
+  border-radius: .35rem;
+}
+
+.protocol-card {
+  box-shadow: var(--shadow-line);
+}
+
+.card-heading img,
+.protocol-cell img {
+  border-radius: .25rem;
+  padding: .12rem;
+}
+
+.evidence-table-wrap {
+  background: var(--color-white);
+  border-color: var(--rule-strong);
+  box-shadow: 0 12px 30px rgba(24, 32, 42, .07);
+}
+
+.evidence-table th,
+.evidence-table td {
+  border-color: var(--rule-soft);
+}
+
+.evidence-table thead th {
+  background: color-mix(in srgb, var(--color-ink-100) 70%, var(--color-white));
+  color: var(--color-ink-700);
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.sticky-protocol {
+  min-width: 282px;
+}
+
+.protocol-row:hover td {
+  background: color-mix(in srgb, var(--color-ink-50) 78%, var(--color-white));
+}
+
+.version-expand {
+  border-radius: .25rem;
+}
+
+.metric-chip {
+  background: var(--color-white);
+  border-left: 1px solid var(--color-ink-200);
+  gap: .45rem;
+}
+
+.metric-chip:hover {
+  box-shadow: none;
+}
+
+.coverage-rail {
+  background:
+    repeating-linear-gradient(90deg, rgba(24, 32, 42, .18) 0 1px, transparent 1px calc(20% - 1px)),
+    var(--color-ink-100);
+  border-radius: .15rem;
+  height: .5rem;
+}
+
+.coverage-rail .covered {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, .22), transparent),
+    var(--color-signal-green);
+}
+
+.coverage-rail .partial {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, .24), transparent),
+    var(--color-signal-amber);
+}
+
+.coverage-rail .missing {
+  background: #c8c2b5;
+}
+
+.provider-cell {
+  max-width: 4.1rem;
+  min-width: 4.1rem;
+  width: 4.1rem;
+}
+
 @media (min-width:768px) {
   .mobile-registry {
     display: none;
   }
+}
+
+:global(html.dark) .evidence-table-wrap {
+  box-shadow: 0 14px 34px rgba(0, 0, 0, .28);
+}
+
+:global(html.dark) .metric-chip {
+  background: var(--color-white);
+}
+
+:global(html.dark) .coverage-rail .missing {
+  background: var(--color-ink-300);
+}
+
+:global(html.dark) .coverage-rail .unspecified {
+  background: var(--color-ink-100);
 }
 </style>

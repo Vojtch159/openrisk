@@ -1,44 +1,59 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --color-white: #fcfcfa;
-  --color-ink-950: #20242b;
-  --color-ink-900: #272c34;
-  --color-ink-800: #222832;
-  --color-ink-700: #303844;
-  --color-ink-600: #4a5361;
-  --color-ink-500: #697383;
-  --color-ink-300: #b4bdca;
-  --color-ink-200: #d8dee7;
-  --color-ink-100: #edf1f6;
-  --color-ink-50: #f4f5f3;
-  --color-signal-green: #1f9d63;
-  --color-signal-amber: #c47a16;
-  --color-signal-red: #c23b35;
-  --color-signal-blue: #1d6fd8;
-  --color-on-dark: #edf0f3;
+  --font-sans: "Aptos", "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: "Iowan Old Style", "Charter", "Georgia", ui-serif, serif;
+  --font-mono: "SFMono-Regular", "Roboto Mono", "Cascadia Code", ui-monospace, monospace;
+  --color-white: #fbfaf6;
+  --color-ink-950: #18202a;
+  --color-ink-900: #202936;
+  --color-ink-800: #2d3745;
+  --color-ink-700: #3e4a59;
+  --color-ink-600: #5d6874;
+  --color-ink-500: #7c8792;
+  --color-ink-300: #b9c1c9;
+  --color-ink-200: #d8d7cf;
+  --color-ink-100: #ece9df;
+  --color-ink-50: #f6f3ea;
+  --color-signal-green: #198c64;
+  --color-signal-amber: #b87a24;
+  --color-signal-red: #b4453b;
+  --color-signal-blue: #2b6ea6;
+  --color-on-dark: #f4f1e8;
 }
 
 :root {
-  --app-shell-max-width: 80rem;
+  --app-shell-max-width: 86rem;
+  --surface-paper: #fbfaf6;
+  --surface-ledger: #f6f3ea;
+  --rule-soft: rgba(24, 32, 42, .14);
+  --rule-strong: rgba(24, 32, 42, .28);
+  --shadow-line: 0 1px 0 rgba(24, 32, 42, .05);
 }
 
 html.dark {
   color-scheme: dark;
-  --color-white: #1b212a;
-  --color-ink-950: #e8ebef;
-  --color-ink-900: #dce1e7;
-  --color-ink-800: #cbd2da;
-  --color-ink-700: #b7c0cb;
-  --color-ink-600: #9ca8b6;
-  --color-ink-500: #818e9e;
-  --color-ink-300: #525e6d;
-  --color-ink-200: #3a4451;
-  --color-ink-100: #29323d;
-  --color-ink-50: #141a22;
+  --color-white: #111821;
+  --color-ink-950: #f2efe6;
+  --color-ink-900: #e3dfd4;
+  --color-ink-800: #d2ccbe;
+  --color-ink-700: #b9b2a5;
+  --color-ink-600: #978f83;
+  --color-ink-500: #756f66;
+  --color-ink-300: #4d5966;
+  --color-ink-200: #32404e;
+  --color-ink-100: #1e2a36;
+  --color-ink-50: #0b1118;
+  --color-signal-green: #37b987;
+  --color-signal-amber: #d19a45;
+  --color-signal-red: #d56c60;
   --color-signal-blue: #75adff;
-  --color-on-dark: #e4e8ed;
+  --color-on-dark: #0b1118;
+  --surface-paper: #111821;
+  --surface-ledger: #0b1118;
+  --rule-soft: rgba(242, 239, 230, .12);
+  --rule-strong: rgba(242, 239, 230, .22);
+  --shadow-line: 0 1px 0 rgba(0, 0, 0, .32);
 }
 
 html.dark .nav-link { color: var(--color-ink-600); }
@@ -46,56 +61,6 @@ html.dark .nav-link:hover,
 html.dark .nav-link.router-link-active,
 html.dark .mobile-nav-link.router-link-active { background: var(--color-ink-100); color: var(--color-ink-950); }
 html.dark .mobile-nav-link { color: var(--color-ink-500); }
-
-html.dark .protocol-page .back-link,
-html.dark .protocol-page .protocol-title > p { color: var(--color-ink-600); }
-html.dark .protocol-page .protocol-kickers span,
-html.dark .protocol-page .version-row button { background: var(--color-white); border-color: var(--color-ink-200); color: var(--color-ink-700); }
-html.dark .protocol-page .version-row button.active { background: var(--color-ink-950); color: var(--color-ink-50); }
-html.dark .protocol-page .protocol-title h1,
-html.dark .protocol-page .coverage-total strong,
-html.dark .protocol-page .coverage-strip dd,
-html.dark .protocol-page .section-heading h2,
-html.dark .protocol-page .feed-evidence-card header a,
-html.dark .protocol-page .verbatim-block blockquote,
-html.dark .protocol-page .reference-label strong,
-html.dark .protocol-page .governance-list p,
-html.dark .protocol-page .incident-body strong,
-html.dark .protocol-page .audit-body strong { color: var(--color-ink-950); }
-html.dark .protocol-page .version-note,
-html.dark .protocol-page .lens-count-item { background: var(--color-ink-100); color: var(--color-ink-600) !important; }
-html.dark .protocol-page .coverage-strip,
-html.dark .protocol-page .tab-bar,
-html.dark .protocol-page .tab-content,
-html.dark .protocol-page .feed-evidence-card,
-html.dark .protocol-page .governance-list,
-html.dark .protocol-page .governance-list article,
-html.dark .protocol-page .incident-card,
-html.dark .protocol-page .audit-card,
-html.dark .protocol-page .protocol-rail nav,
-html.dark .protocol-page .protocol-rail > div { background: var(--color-white); border-color: var(--color-ink-200); }
-html.dark .protocol-page .feed-methodology,
-html.dark .protocol-page .coverage-note,
-html.dark .protocol-page .section-heading p,
-html.dark .protocol-page .governance-summary p,
-html.dark .protocol-page .incidents-intro p,
-html.dark .protocol-page .audits-intro p,
-html.dark .protocol-page .incident-body p,
-html.dark .protocol-page .audit-body small { color: var(--color-ink-600); }
-html.dark .protocol-page .scope-line,
-html.dark .protocol-page .coverage-filters,
-html.dark .protocol-page .reference-label { background: var(--color-ink-50); }
-html.dark .protocol-page .verbatim-block { background: #17263b; }
-html.dark .protocol-page .tab-bar button { color: var(--color-ink-500); }
-html.dark .protocol-page .tab-bar button:hover,
-html.dark .protocol-page .tab-bar button.active { color: var(--color-ink-950); }
-html.dark .protocol-page .tab-bar button b { background: var(--color-ink-100); color: var(--color-ink-500); }
-html.dark .protocol-page .tab-bar button.active b { background: #20365a; color: var(--color-signal-blue); }
-html.dark .protocol-page .coverage-strip dt,
-html.dark .protocol-page .coverage-total span,
-html.dark .protocol-page .lens-label,
-html.dark .protocol-page .lens-counts,
-html.dark .protocol-page .lens-disclaimer { color: var(--color-ink-500); }
 
 html {
   background: var(--color-ink-50);
@@ -105,10 +70,21 @@ html {
 }
 
 body {
+  background:
+    linear-gradient(90deg, rgba(24, 32, 42, .035) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(180deg, rgba(24, 32, 42, .025) 1px, transparent 1px) 0 0 / 48px 48px,
+    var(--color-ink-50);
   margin: 0;
   max-width: 100vw;
   overflow-x: hidden;
   padding-bottom: 0;
+}
+
+html.dark body {
+  background:
+    linear-gradient(90deg, rgba(242, 239, 230, .035) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(180deg, rgba(242, 239, 230, .025) 1px, transparent 1px) 0 0 / 48px 48px,
+    var(--color-ink-50);
 }
 
 main {
@@ -122,6 +98,20 @@ main {
   max-width: var(--app-shell-max-width);
   padding-inline: 1rem;
   width: 100%;
+}
+
+.page-eyebrow {
+  font-size: .78rem;
+}
+
+.text-xs {
+  font-size: .8125rem;
+  line-height: 1.35rem;
+}
+
+.text-sm {
+  font-size: .9375rem;
+  line-height: 1.55rem;
 }
 
 main div:has(> table) {
@@ -162,7 +152,7 @@ select {
 }
 
 :focus-visible {
-  outline: 3px solid #9fc4f7;
+  outline: 3px solid color-mix(in srgb, var(--color-signal-blue) 42%, transparent);
   outline-offset: 2px;
 }
 
@@ -176,5 +166,5 @@ select {
 }
 
 ::selection {
-  background: #cfe1ff;
+  background: color-mix(in srgb, var(--color-signal-blue) 24%, transparent);
 }

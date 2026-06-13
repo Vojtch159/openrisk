@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { Activity, BookOpen, Database, GitPullRequestArrow, Moon, Search, Sun } from '@lucide/vue';
+import { BookOpen, Database, GitPullRequestArrow, Moon, Search, Sun } from '@lucide/vue';
 import { GITHUB_REPOSITORY_URL } from '~/utils/links';
 
-const isDark = ref(true);
+const isDark = ref(false);
 
 onMounted(() => {
   isDark.value = document.documentElement.classList.contains('dark');
@@ -24,17 +24,15 @@ const snapshotDate = computed(() => new Intl.DateTimeFormat('en-US', {
 </script>
 
 <template>
-  <div class="flex min-h-screen flex-col bg-ink-50 text-ink-900">
-    <header class="sticky top-0 z-40 border-b border-ink-200 bg-white/95 backdrop-blur">
+  <div class="flex min-h-screen flex-col bg-ink-50/80 text-ink-900">
+    <header class="sticky top-0 z-40 border-b border-ink-200/80 bg-white/90 backdrop-blur">
       <div class="app-shell flex items-center justify-between py-3">
-        <NuxtLink to="/" class="flex items-center gap-3" aria-label="OpenRisk home">
-          <div class="flex size-9 items-center justify-center rounded-md bg-ink-950 text-white">
-            <Activity :size="20" aria-hidden="true" />
-          </div>
-          <div>
-            <div class="text-sm font-semibold uppercase tracking-[0.18em] text-ink-500">OpenRisk</div>
-            <div class="text-sm font-medium text-ink-900">Neutral DeFi risk intelligence</div>
-          </div>
+        <NuxtLink to="/" class="wordmark" aria-label="OpenRisk home">
+          <span class="wordmark-sigil">OR</span>
+          <span>
+            <span class="wordmark-name">OpenRisk</span>
+            <span class="wordmark-subtitle">attributed DeFi evidence</span>
+          </span>
         </NuxtLink>
 
         <nav class="hidden items-center gap-1 md:flex" aria-label="Primary navigation">
@@ -65,14 +63,12 @@ const snapshotDate = computed(() => new Intl.DateTimeFormat('en-US', {
       <slot />
     </main>
 
-    <footer class="border-t border-ink-200 bg-white">
+    <footer class="border-t border-ink-200/80 bg-white/80">
       <div class="app-shell grid gap-6 py-8 md:grid-cols-[minmax(0,1fr)_auto]">
         <div>
-          <div class="flex items-center gap-2 text-sm font-semibold text-ink-950">
-            <Activity :size="16" aria-hidden="true" /> OpenRisk
-          </div>
+          <div class="text-sm font-semibold text-ink-950">OpenRisk</div>
           <p class="mt-2 max-w-2xl text-sm leading-6 text-ink-600">
-            Ethereum-mainnet risk intelligence, aggregated without a proprietary score. Proposed long-term steward: PWN DAO Foundation.
+            Ethereum-mainnet risk intelligence, aggregated without a proprietary score.<br>Proposed long-term steward: PWN DAO Foundation.
           </p>
           <p class="mt-2 text-xs text-ink-500">Static data snapshot generated {{ snapshotDate }}.</p>
         </div>
@@ -112,33 +108,80 @@ const snapshotDate = computed(() => new Intl.DateTimeFormat('en-US', {
 </template>
 
 <style scoped>
+.wordmark {
+  align-items: center;
+  color: inherit;
+  display: inline-flex;
+  gap: .7rem;
+  text-decoration: none;
+}
+
+.wordmark-sigil {
+  align-items: center;
+  background:
+    linear-gradient(90deg, transparent 47%, color-mix(in srgb, var(--color-white) 76%, transparent) 47% 53%, transparent 53%),
+    var(--color-ink-950);
+  border-radius: .3rem;
+  color: var(--color-on-dark);
+  display: inline-flex;
+  font-family: var(--font-mono);
+  font-size: .82rem;
+  font-weight: 800;
+  height: 2.1rem;
+  justify-content: center;
+  letter-spacing: -.02em;
+  width: 2.1rem;
+}
+
+.wordmark-name,
+.wordmark-subtitle {
+  display: block;
+  line-height: 1.05;
+}
+
+.wordmark-name {
+  color: var(--color-ink-950);
+  font-size: 1rem;
+  font-weight: 760;
+  letter-spacing: -.025em;
+}
+
+.wordmark-subtitle {
+  color: var(--color-ink-500);
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  margin-top: .2rem;
+}
+
 .nav-link {
   align-items: center;
-  border-radius: 6px;
-  color: #4a5361;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: var(--color-ink-600);
   display: inline-flex;
-  font-size: 14px;
+  font-size: .9rem;
   font-weight: 600;
-  gap: 8px;
-  padding: 9px 11px;
+  gap: 7px;
+  padding: 8px 10px;
 }
 
 .nav-link:hover,
 .nav-link.router-link-active {
-  background: #edf1f6;
-  color: #181c22;
+  background: var(--color-white);
+  border-color: var(--color-ink-200);
+  color: var(--color-ink-950);
 }
 
-.theme-toggle { align-items: center; background: var(--color-ink-50); border: 1px solid var(--color-ink-200); border-radius: 6px; color: var(--color-ink-700); display: inline-flex; height: 36px; justify-content: center; margin-left: .25rem; width: 36px; }
+.theme-toggle { align-items: center; background: var(--color-white); border: 1px solid var(--color-ink-200); border-radius: 5px; color: var(--color-ink-700); display: inline-flex; height: 36px; justify-content: center; margin-left: .25rem; width: 36px; }
 .theme-toggle:hover { background: var(--color-ink-100); color: var(--color-ink-950); }
 
 .mobile-nav-link {
   align-items: center;
-  border-radius: 6px;
-  color: #697383;
+  border-radius: 5px;
+  color: var(--color-ink-500);
   display: flex;
   flex-direction: column;
-  font-size: 11px;
+  font-size: .76rem;
   font-weight: 700;
   gap: 4px;
   justify-content: center;
@@ -146,8 +189,8 @@ const snapshotDate = computed(() => new Intl.DateTimeFormat('en-US', {
 }
 
 .mobile-nav-link.router-link-active {
-  background: #edf1f6;
-  color: #181c22;
+  background: var(--color-ink-100);
+  color: var(--color-ink-950);
 }
 
 </style>

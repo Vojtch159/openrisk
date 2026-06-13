@@ -32,33 +32,33 @@ const filteredFeeds = computed(() => {
 
 <template>
   <div>
-    <section class="border-b border-ink-200 bg-white">
+    <section class="source-hero">
       <div class="app-shell py-9">
         <div>
-          <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-signal-blue">Source directory</p>
-          <h1 class="max-w-4xl text-3xl font-semibold text-ink-950 sm:text-5xl">Meet the risk intelligence sources.</h1>
-          <p class="mt-4 max-w-3xl text-base leading-7 text-ink-600">Compare focus, methodology, independence, machine-readability, and protocol coverage across every provider in the registry.</p>
+          <p class="page-eyebrow source-eyebrow">Source directory</p>
+          <h1 class="source-title">Read the sources before the summary.</h1>
+          <p class="source-lede">Compare focus, methodology, independence, machine-readability, and protocol coverage across every provider in the registry.</p>
         </div>
       </div>
     </section>
 
     <main class="app-shell py-6">
-      <div class="grid gap-3 md:grid-cols-[minmax(0,1fr)_200px_220px]">
+      <div class="source-controls grid gap-3 md:grid-cols-[minmax(0,1fr)_200px_220px]">
         <label class="relative block">
           <Search class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-ink-500" :size="18" />
           <span class="sr-only">Search sources</span>
-          <input v-model="query" class="h-12 w-full rounded-md border border-ink-300 bg-white pl-10 pr-3 outline-none focus:border-signal-blue focus:ring-4 focus:ring-blue-100" placeholder="Search provider, focus, or methodology">
+          <input v-model="query" class="h-12 w-full border border-ink-300 bg-white pl-10 pr-3 text-sm outline-none focus:border-signal-blue" placeholder="Search provider, focus, or methodology">
         </label>
         <label class="relative block">
           <SlidersHorizontal class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-ink-500" :size="18" />
           <span class="sr-only">Filter source type</span>
-          <select v-model="type" class="h-12 w-full appearance-none rounded-md border border-ink-300 bg-white pl-10 pr-3 text-sm font-semibold">
+          <select v-model="type" class="h-12 w-full appearance-none border border-ink-300 bg-white pl-10 pr-3 text-sm font-semibold">
             <option value="all">All source types</option><option value="rating">Ratings</option><option value="dashboard">Dashboards</option><option value="monitoring">Monitoring</option><option value="research">Research</option>
           </select>
         </label>
         <label>
           <span class="sr-only">Filter machine-readability</span>
-          <select v-model="readability" class="h-12 w-full rounded-md border border-ink-300 bg-white px-3 text-sm font-semibold">
+          <select v-model="readability" class="h-12 w-full border border-ink-300 bg-white px-3 text-sm font-semibold">
             <option value="all">Any machine-readability</option><option value="yes">Machine-readable</option><option value="partial">Partially readable</option><option value="no">Manual only</option>
           </select>
         </label>
@@ -70,13 +70,13 @@ const filteredFeeds = computed(() => {
       </div>
 
       <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        <NuxtLink v-for="feed in filteredFeeds" :key="feed.id" :to="`/feeds/${feed.id}`" class="group flex min-h-60 flex-col rounded-lg border border-ink-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-ink-300 hover:shadow-md">
+        <NuxtLink v-for="feed in filteredFeeds" :key="feed.id" :to="`/feeds/${feed.id}`" class="source-card">
           <div class="flex items-start justify-between gap-4">
             <div class="flex min-w-0 items-center gap-3">
-              <div class="flex size-10 shrink-0 items-center justify-center rounded-md bg-ink-950 text-white"><Database :size="18" /></div>
-              <div><h2 class="font-semibold text-ink-950">{{ feed.name }}</h2><p class="mt-0.5 text-xs font-bold uppercase text-signal-blue">{{ feed.type }}</p></div>
+              <div class="source-card-mark"><Database :size="17" /></div>
+              <div><h2>{{ feed.name }}</h2><p>{{ feed.type }}</p></div>
             </div>
-            <ArrowRight class="mt-2 text-ink-300 transition group-hover:translate-x-1 group-hover:text-signal-blue" :size="18" />
+            <ArrowRight class="source-arrow" :size="18" />
           </div>
           <p class="mt-4 text-sm leading-6 text-ink-600">{{ feed.focus }}</p>
           <div class="mt-auto grid grid-cols-3 gap-2 border-t border-ink-100 pt-4 text-center">
@@ -88,12 +88,119 @@ const filteredFeeds = computed(() => {
         </NuxtLink>
       </div>
 
-      <div v-if="filteredFeeds.length === 0" class="mt-4 rounded-lg border border-dashed border-ink-300 bg-white px-4 py-12 text-center text-sm text-ink-600">No sources match those filters.</div>
+      <div v-if="filteredFeeds.length === 0" class="mt-4 rounded-sm border border-dashed border-ink-300 bg-white px-4 py-12 text-center text-sm text-ink-600">No sources match those filters.</div>
     </main>
   </div>
 </template>
 
 <style scoped>
-.group strong { color: var(--color-ink-950); display: block; font-size: .9rem; }
-.group div span { color: var(--color-ink-500); display: block; font-size: .58rem; font-weight: 750; margin-top: .15rem; text-transform: uppercase; }
+.source-hero {
+  background: color-mix(in srgb, var(--color-white) 86%, transparent);
+  border-bottom: 1px solid var(--color-ink-200);
+}
+
+.source-eyebrow {
+  color: var(--color-signal-blue);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  margin: 0 0 .85rem;
+}
+
+.source-title {
+  color: var(--color-ink-950);
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  font-weight: 560;
+  letter-spacing: -.04em;
+  line-height: .96;
+  margin: 0;
+  max-width: 48rem;
+}
+
+.source-lede {
+  color: var(--color-ink-600);
+  line-height: 1.75;
+  margin: 1rem 0 0;
+  max-width: 46rem;
+}
+
+.source-controls input,
+.source-controls select {
+  border-radius: .3rem;
+  color: var(--color-ink-900);
+}
+
+.source-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-ink-200);
+  border-radius: .35rem;
+  box-shadow: var(--shadow-line);
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  min-height: 15rem;
+  padding: 1rem;
+  text-decoration: none;
+  transition: border-color .15s ease, background .15s ease;
+}
+
+.source-card:hover {
+  background: color-mix(in srgb, var(--color-white) 86%, var(--color-ink-50));
+  border-color: var(--rule-strong);
+}
+
+.source-card h2 {
+  color: var(--color-ink-950);
+  font-size: .98rem;
+  font-weight: 740;
+  letter-spacing: -.01em;
+  margin: 0;
+}
+
+.source-card h2 + p {
+  color: var(--color-signal-blue);
+  font-family: var(--font-mono);
+  font-size: .76rem;
+  font-weight: 700;
+  margin-top: .2rem;
+}
+
+.source-card-mark {
+  align-items: center;
+  background: var(--color-ink-950);
+  border-radius: .25rem;
+  color: var(--color-on-dark);
+  display: flex;
+  flex: 0 0 auto;
+  height: 2.35rem;
+  justify-content: center;
+  width: 2.35rem;
+}
+
+.source-arrow {
+  color: var(--color-ink-300);
+  margin-top: .55rem;
+  transition: transform .15s ease, color .15s ease;
+}
+
+.source-card:hover .source-arrow {
+  color: var(--color-signal-blue);
+  transform: translateX(.18rem);
+}
+
+.source-card strong {
+  color: var(--color-ink-950);
+  display: block;
+  font-family: var(--font-mono);
+  font-size: .86rem;
+}
+
+.source-card div span {
+  color: var(--color-ink-500);
+  display: block;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  font-weight: 700;
+  margin-top: .15rem;
+}
 </style>

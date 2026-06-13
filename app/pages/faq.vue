@@ -1,7 +1,7 @@
 <template>
   <div class="faq-page">
     <div class="app-shell py-8">
-      <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-signal-blue">FAQ</p>
+      <p class="page-eyebrow mb-3 font-bold uppercase tracking-[0.18em] text-signal-blue">FAQ</p>
       <h1 class="text-3xl font-semibold tracking-normal text-ink-950 sm:text-5xl">
         Frequently asked questions
       </h1>
