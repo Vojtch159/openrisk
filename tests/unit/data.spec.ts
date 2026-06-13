@@ -32,9 +32,9 @@ describe('OpenRisk data registry', () => {
     const dataset = await getOpenRiskDataset();
     const positiveCoverage = dataset.coverage.filter((cell) => cell.status !== 'not_covered');
 
-    expect(positiveCoverage).toHaveLength(136);
-    expect(positiveCoverage.filter((cell) => cell.status === 'covered')).toHaveLength(62);
-    expect(positiveCoverage.filter((cell) => cell.status === 'partial')).toHaveLength(74);
+    expect(positiveCoverage).toHaveLength(132);
+    expect(positiveCoverage.filter((cell) => cell.status === 'covered')).toHaveLength(54);
+    expect(positiveCoverage.filter((cell) => cell.status === 'partial')).toHaveLength(78);
     expect(new Set(positiveCoverage.map((cell) => cell.protocolId)).size).toBe(20);
     expect(new Set(positiveCoverage.map((cell) => cell.feedId)).size).toBe(16);
 
@@ -67,6 +67,20 @@ describe('OpenRisk data registry', () => {
   it('materializes all 20 protocol states on every feed detail page', () => {
     for (const feed of Object.values(snapshot.feedDetails)) {
       expect(feed.coverage).toHaveLength(20);
+    }
+  });
+
+  it('shows Spark provider feeds only when scoped to a listed version', () => {
+    const spark = snapshot.matrix.rows.find((row) => row.id === 'spark');
+    const sparkCells = Object.values(snapshot.protocolDetails.spark.coverage);
+
+    expect(spark?.coverageCount).toBe(0);
+    expect(spark?.partialCount).toBe(5);
+    expect(sparkCells.filter((cell) => cell.status === 'partial')).toHaveLength(5);
+
+    for (const cell of sparkCells.filter((item) => item.status === 'partial')) {
+      expect(cell.scope).toMatch(/SparkLend|sUSDS/);
+      expect(cell.scope).not.toBe('Spark: covered');
     }
   });
 });

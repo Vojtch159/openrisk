@@ -26,7 +26,7 @@ const snapshotDate = computed(() => new Intl.DateTimeFormat('en-US', {
 <template>
   <div class="flex min-h-screen flex-col bg-ink-50 text-ink-900">
     <header class="sticky top-0 z-40 border-b border-ink-200 bg-white/95 backdrop-blur">
-      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+      <div class="app-shell flex items-center justify-between py-3">
         <NuxtLink to="/" class="flex items-center gap-3" aria-label="OpenRisk home">
           <div class="flex size-9 items-center justify-center rounded-md bg-ink-950 text-white">
             <Activity :size="20" aria-hidden="true" />
@@ -66,7 +66,7 @@ const snapshotDate = computed(() => new Intl.DateTimeFormat('en-US', {
     </main>
 
     <footer class="border-t border-ink-200 bg-white">
-      <div class="mx-auto grid max-w-7xl gap-6 px-4 py-8 sm:px-6 md:grid-cols-[minmax(0,1fr)_auto] lg:px-8">
+      <div class="app-shell grid gap-6 py-8 md:grid-cols-[minmax(0,1fr)_auto]">
         <div>
           <div class="flex items-center gap-2 text-sm font-semibold text-ink-950">
             <Activity :size="16" aria-hidden="true" /> OpenRisk

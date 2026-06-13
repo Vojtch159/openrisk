@@ -33,7 +33,7 @@ const filteredFeeds = computed(() => {
 <template>
   <div>
     <section class="border-b border-ink-200 bg-white">
-      <div class="mx-auto max-w-7xl px-4 py-9 sm:px-6 lg:px-8">
+      <div class="app-shell py-9">
         <div>
           <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-signal-blue">Source directory</p>
           <h1 class="max-w-4xl text-3xl font-semibold text-ink-950 sm:text-5xl">Meet the risk intelligence sources.</h1>
@@ -42,7 +42,7 @@ const filteredFeeds = computed(() => {
       </div>
     </section>
 
-    <main class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+    <main class="app-shell py-6">
       <div class="grid gap-3 md:grid-cols-[minmax(0,1fr)_200px_220px]">
         <label class="relative block">
           <Search class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-ink-500" :size="18" />

@@ -9,7 +9,7 @@ const machineReadableCount = computed(() =>
 
 <template>
   <div class="methodology-page">
-    <div class="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
+    <div class="app-shell py-8">
       <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-signal-blue">Methodology</p>
       <h1 class="max-w-4xl text-3xl font-semibold tracking-normal text-ink-950 sm:text-5xl">
         How the registry is built

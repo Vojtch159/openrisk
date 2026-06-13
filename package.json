@@ -12,7 +12,6 @@
     "typecheck": "nuxt typecheck",
     "lint": "eslint .",
     "test": "vitest run",
-    "test:e2e": "playwright test",
     "validate:data": "tsx scripts/validate-data.ts",
     "check:no-scoring": "tsx scripts/check-no-scoring.ts",
     "static:data": "tsx scripts/generate-static-data.ts",

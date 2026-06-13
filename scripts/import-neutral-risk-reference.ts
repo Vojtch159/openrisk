@@ -25,7 +25,7 @@ const referenceFeed = Object.fromEntries(reference.feeds.map((feed) => [feed.id,
 const referenceProtocol = Object.fromEntries(reference.protocols.map((protocol) => [protocol.id, protocol]));
 
 const protocolCrosswalk: Record<string, string[]> = {
-  spark: ['spark'],
+  spark: [],
   aave: ['aave-v3', 'aave-v4'],
   morpho: ['morpho'],
   fluid: ['fluid'],
@@ -50,6 +50,7 @@ const protocolCrosswalk: Record<string, string[]> = {
 const referenceUrl = 'https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts';
 const capturedAt = '2026-06-11T14:00:00.000Z';
 const cells = [];
+const sparkNotes = 'Version-scoped Spark coverage; parent Spark is partial because not every listed version has this feed.';
 
 for (const [protocolId, referenceIds] of Object.entries(protocolCrosswalk)) {
   for (const feed of reference.feeds) {
@@ -97,6 +98,94 @@ for (const [protocolId, referenceIds] of Object.entries(protocolCrosswalk)) {
     });
   }
 }
+
+cells.push(
+  {
+    protocolId: 'spark',
+    feedId: 'defiscan',
+    status: 'partial',
+    summary: 'SparkLend: DeFiScan centralization review for Spark governance and upgrade controls; sUSDS has no provider-specific feed in this snapshot.',
+    providerLabel: 'SparkLend: Stage 0',
+    scope: 'SparkLend: covered; sUSDS: not covered',
+    referenceStatus: 'reference_sample',
+    referenceUrl,
+    source: {
+      label: 'DeFiScan source',
+      url: 'https://www.defiscan.info/protocols/spark/ethereum',
+      provenance: 'provider_page',
+      capturedAt,
+    },
+    notes: sparkNotes,
+  },
+  {
+    protocolId: 'spark',
+    feedId: 'blockanalitica',
+    status: 'partial',
+    summary: 'SparkLend: On-chain risk dashboard for SparkLend markets including rates, liquidations, and collateral exposure; sUSDS has no provider-specific feed in this snapshot.',
+    providerLabel: 'SparkLend: Live dashboard',
+    scope: 'SparkLend: covered; sUSDS: not covered',
+    referenceStatus: 'reference_sample',
+    referenceUrl,
+    source: {
+      label: 'BlockAnalitica source',
+      url: 'https://blockanalitica.com/',
+      provenance: 'provider_page',
+      capturedAt,
+    },
+    notes: sparkNotes,
+  },
+  {
+    protocolId: 'spark',
+    feedId: 'credora',
+    status: 'partial',
+    summary: 'sUSDS: Per-vault credit rating coverage for Spark Savings Vaults; SparkLend has no provider-specific feed in this snapshot.',
+    providerLabel: 'sUSDS: A- to B+',
+    scope: 'SparkLend: not covered; sUSDS: covered',
+    referenceStatus: 'reference_sample',
+    referenceUrl,
+    source: {
+      label: 'Credora source',
+      url: 'https://www.credora.network/',
+      provenance: 'provider_page',
+      capturedAt,
+    },
+    notes: sparkNotes,
+  },
+  {
+    protocolId: 'spark',
+    feedId: 'philidor',
+    status: 'partial',
+    summary: 'sUSDS: Deterministic vault scoring for Spark savings vault exposure; SparkLend has no provider-specific feed in this snapshot.',
+    providerLabel: 'sUSDS: Prime (8.38 / 10)',
+    scope: 'SparkLend: not covered; sUSDS: covered',
+    referenceStatus: 'reference_sample',
+    referenceUrl,
+    source: {
+      label: 'Philidor Analytics source',
+      url: 'https://analytics.philidor.io/',
+      provenance: 'provider_page',
+      capturedAt,
+    },
+    notes: sparkNotes,
+  },
+  {
+    protocolId: 'spark',
+    feedId: 'defisaver',
+    status: 'partial',
+    summary: 'SparkLend: Position-management tooling with loan-health, safety-ratio tracking, and liquidation protection; sUSDS has no provider-specific feed in this snapshot.',
+    providerLabel: 'SparkLend: Position tooling',
+    scope: 'SparkLend: covered; sUSDS: not covered',
+    referenceStatus: 'reference_sample',
+    referenceUrl,
+    source: {
+      label: 'DeFi Saver source',
+      url: 'https://defisaver.com/',
+      provenance: 'provider_page',
+      capturedAt,
+    },
+    notes: sparkNotes,
+  },
+);
 
 await writeFile('data/coverage/seed.yaml', stringify(cells, { lineWidth: 0 }), 'utf8');
 console.log(`Imported ${cells.length} positive reference cells.`);

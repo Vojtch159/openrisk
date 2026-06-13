@@ -6,7 +6,7 @@ const { data } = useOpenRiskData();
 </script>
 
 <template>
-  <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+  <div class="app-shell py-10">
     <SectionHeader title="How OpenRisk works" description="The project purpose, coverage model, provenance rules, and common questions in one concise reference." />
 
     <section id="about" class="info-section">

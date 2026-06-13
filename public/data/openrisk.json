@@ -988,21 +988,19 @@
           "defiscan": {
             "protocolId": "spark",
             "feedId": "defiscan",
-            "status": "covered",
-            "summary": "Spark: Governed via Sky/Spark proxy; loss-of-funds upgrades lack a ≥7-day exit window or sufficient Security Council.",
-            "providerLabel": "Spark: Stage 0",
-            "providerText": "Spark: Stage 0",
-            "providerTextVerified": true,
-            "scope": "Spark: covered",
-            "referenceStatus": "verified",
+            "status": "partial",
+            "summary": "SparkLend: DeFiScan centralization review for Spark governance and upgrade controls; sUSDS has no provider-specific feed in this snapshot.",
+            "providerLabel": "SparkLend: Stage 0",
+            "scope": "SparkLend: covered; sUSDS: not covered",
+            "referenceStatus": "reference_sample",
             "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
             "source": {
-              "label": "DeFiScan source",
-              "url": "https://www.defiscan.info/protocols/spark/ethereum",
               "provenance": "provider_page",
-              "capturedAt": "2026-06-11T14:00:00.000Z"
+              "capturedAt": "2026-06-11T14:00:00.000Z",
+              "label": "DeFiScan source",
+              "url": "https://www.defiscan.info/protocols/spark/ethereum"
             },
-            "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+            "notes": "Version-scoped Spark coverage; parent Spark is partial because not every listed version has this feed."
           },
           "llamarisk": {
             "protocolId": "spark",
@@ -1014,74 +1012,50 @@
           "blockanalitica": {
             "protocolId": "spark",
             "feedId": "blockanalitica",
-            "status": "covered",
-            "summary": "Spark: On-chain risk dashboard for SparkLend markets: rates, liquidations, collateral exposure.",
-            "providerLabel": "Spark: Live dashboard",
-            "providerText": "Spark: Live dashboard",
-            "providerTextVerified": true,
-            "scope": "Spark: covered",
-            "referenceStatus": "verified",
+            "status": "partial",
+            "summary": "SparkLend: On-chain risk dashboard for SparkLend markets including rates, liquidations, and collateral exposure; sUSDS has no provider-specific feed in this snapshot.",
+            "providerLabel": "SparkLend: Live dashboard",
+            "scope": "SparkLend: covered; sUSDS: not covered",
+            "referenceStatus": "reference_sample",
             "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
             "source": {
-              "label": "BlockAnalitica source",
-              "url": "https://spark.blockanalitica.com",
               "provenance": "provider_page",
-              "capturedAt": "2026-06-11T14:00:00.000Z"
+              "capturedAt": "2026-06-11T14:00:00.000Z",
+              "label": "BlockAnalitica source",
+              "url": "https://blockanalitica.com/"
             },
-            "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+            "notes": "Version-scoped Spark coverage; parent Spark is partial because not every listed version has this feed."
           },
           "curatorwatch": {
             "protocolId": "spark",
             "feedId": "curatorwatch",
-            "status": "partial",
-            "summary": "Spark: Vault-level risk monitoring for Morpho curators: allocation risk and curator behavior.",
-            "providerLabel": "Version-limited coverage",
-            "scope": "Spark: partial",
-            "referenceStatus": "reference_sample",
-            "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
-            "source": {
-              "label": "CuratorWatch source",
-              "url": "https://curatorwatch.com",
-              "provenance": "provider_page",
-              "capturedAt": "2026-06-11T14:00:00.000Z"
-            },
-            "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+            "status": "not_covered",
+            "summary": "",
+            "notes": "No protocol-specific provider coverage found in the current curated registry."
           },
           "defipunkd": {
             "protocolId": "spark",
             "feedId": "defipunkd",
-            "status": "covered",
-            "summary": "Spark: 5-dimension AI-consensus (Control / Exit / Autonomy / Open Access / Verifiability); spot-check pending.",
-            "providerLabel": "Spark: Bronze tier",
-            "scope": "Spark: covered",
-            "referenceStatus": "reference_sample",
-            "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
-            "source": {
-              "label": "DeFiPunk'd source",
-              "url": "https://defipunkd.com/protocol/spark",
-              "provenance": "provider_page",
-              "capturedAt": "2026-06-11T14:00:00.000Z"
-            },
-            "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+            "status": "not_covered",
+            "summary": "",
+            "notes": "No protocol-specific provider coverage found in the current curated registry."
           },
           "credora": {
             "protocolId": "spark",
             "feedId": "credora",
-            "status": "covered",
-            "summary": "Spark: Per-vault credit ratings on Spark Savings Vaults (e.g. Savings USDS A-, Staked USDS B+) with probability-of-significant-loss.",
-            "providerLabel": "Spark: A to B+",
-            "providerText": "Spark: A to B+",
-            "providerTextVerified": true,
-            "scope": "Spark: covered",
-            "referenceStatus": "verified",
+            "status": "partial",
+            "summary": "sUSDS: Per-vault credit rating coverage for Spark Savings Vaults; SparkLend has no provider-specific feed in this snapshot.",
+            "providerLabel": "sUSDS: A- to B+",
+            "scope": "SparkLend: not covered; sUSDS: covered",
+            "referenceStatus": "reference_sample",
             "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
             "source": {
-              "label": "Credora source",
-              "url": "https://reports.credora.io/spark/latest.pdf",
               "provenance": "provider_page",
-              "capturedAt": "2026-06-11T14:00:00.000Z"
+              "capturedAt": "2026-06-11T14:00:00.000Z",
+              "label": "Credora source",
+              "url": "https://www.credora.network/"
             },
-            "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+            "notes": "Version-scoped Spark coverage; parent Spark is partial because not every listed version has this feed."
           },
           "xerberus": {
             "protocolId": "spark",
@@ -1093,74 +1067,50 @@
           "philidor": {
             "protocolId": "spark",
             "feedId": "philidor",
-            "status": "covered",
-            "summary": "Spark: Deterministic vault scores; e.g. sUSDS 8.38, Spark wstETH 8.71.",
-            "providerLabel": "Spark: Prime (8.4–8.7 / 10)",
-            "providerText": "Spark: Prime (8.4–8.7 / 10)",
-            "providerTextVerified": true,
-            "scope": "Spark: covered",
-            "referenceStatus": "verified",
+            "status": "partial",
+            "summary": "sUSDS: Deterministic vault scoring for Spark savings vault exposure; SparkLend has no provider-specific feed in this snapshot.",
+            "providerLabel": "sUSDS: Prime (8.38 / 10)",
+            "scope": "SparkLend: not covered; sUSDS: covered",
+            "referenceStatus": "reference_sample",
             "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
             "source": {
-              "label": "Philidor Analytics source",
-              "url": "https://analytics.philidor.io",
               "provenance": "provider_page",
-              "capturedAt": "2026-06-11T14:00:00.000Z"
+              "capturedAt": "2026-06-11T14:00:00.000Z",
+              "label": "Philidor Analytics source",
+              "url": "https://analytics.philidor.io/"
             },
-            "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+            "notes": "Version-scoped Spark coverage; parent Spark is partial because not every listed version has this feed."
           },
           "pigi": {
             "protocolId": "spark",
             "feedId": "pigi",
-            "status": "covered",
-            "summary": "Spark: Vault analytics and risk-adjusted yield across 50+ protocols; exploits, concentration, risk-adjusted APY. Paid structured API.",
-            "providerLabel": "Protocol-specific coverage",
-            "scope": "Spark: covered",
-            "referenceStatus": "reference_sample",
-            "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
-            "source": {
-              "label": "pigi.finance source",
-              "url": "https://pigi.finance",
-              "provenance": "provider_page",
-              "capturedAt": "2026-06-11T14:00:00.000Z"
-            },
-            "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+            "status": "not_covered",
+            "summary": "",
+            "notes": "No protocol-specific provider coverage found in the current curated registry."
           },
           "defisaver": {
             "protocolId": "spark",
             "feedId": "defisaver",
-            "status": "covered",
-            "summary": "Spark: Position-management tooling: live loan-health / safety-ratio tracking and automated liquidation protection for leveraged positions.",
-            "providerLabel": "Protocol-specific coverage",
-            "scope": "Spark: covered",
+            "status": "partial",
+            "summary": "SparkLend: Position-management tooling with loan-health, safety-ratio tracking, and liquidation protection; sUSDS has no provider-specific feed in this snapshot.",
+            "providerLabel": "SparkLend: Position tooling",
+            "scope": "SparkLend: covered; sUSDS: not covered",
             "referenceStatus": "reference_sample",
             "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
             "source": {
-              "label": "DeFi Saver source",
-              "url": "https://defisaver.com",
               "provenance": "provider_page",
-              "capturedAt": "2026-06-11T14:00:00.000Z"
+              "capturedAt": "2026-06-11T14:00:00.000Z",
+              "label": "DeFi Saver source",
+              "url": "https://defisaver.com/"
             },
-            "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+            "notes": "Version-scoped Spark coverage; parent Spark is partial because not every listed version has this feed."
           },
           "zyfai": {
             "protocolId": "spark",
             "feedId": "zyfai",
-            "status": "covered",
-            "summary": "Spark: Live per-pool risk grade (TVL/APY stability, liquidity, Lindy checks).",
-            "providerLabel": "Spark: Excellent (6/6)",
-            "providerText": "Spark: Excellent (6/6)",
-            "providerTextVerified": true,
-            "scope": "Spark: covered",
-            "referenceStatus": "verified",
-            "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
-            "source": {
-              "label": "Zyfai Risk source",
-              "url": "https://risk.zyf.ai",
-              "provenance": "provider_page",
-              "capturedAt": "2026-06-11T14:00:00.000Z"
-            },
-            "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+            "status": "not_covered",
+            "summary": "",
+            "notes": "No protocol-specific provider coverage found in the current curated registry."
           },
           "anticapture": {
             "protocolId": "spark",
@@ -1198,8 +1148,8 @@
             "notes": "No protocol-specific provider coverage found in the current curated registry."
           }
         },
-        "coverageCount": 8,
-        "partialCount": 1
+        "coverageCount": 0,
+        "partialCount": 5
       },
       {
         "id": "aave",
@@ -5426,21 +5376,19 @@
         {
           "protocolId": "spark",
           "feedId": "defiscan",
-          "status": "covered",
-          "summary": "Spark: Governed via Sky/Spark proxy; loss-of-funds upgrades lack a ≥7-day exit window or sufficient Security Council.",
-          "providerLabel": "Spark: Stage 0",
-          "providerText": "Spark: Stage 0",
-          "providerTextVerified": true,
-          "scope": "Spark: covered",
-          "referenceStatus": "verified",
+          "status": "partial",
+          "summary": "SparkLend: DeFiScan centralization review for Spark governance and upgrade controls; sUSDS has no provider-specific feed in this snapshot.",
+          "providerLabel": "SparkLend: Stage 0",
+          "scope": "SparkLend: covered; sUSDS: not covered",
+          "referenceStatus": "reference_sample",
           "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
           "source": {
-            "label": "DeFiScan source",
-            "url": "https://www.defiscan.info/protocols/spark/ethereum",
             "provenance": "provider_page",
-            "capturedAt": "2026-06-11T14:00:00.000Z"
+            "capturedAt": "2026-06-11T14:00:00.000Z",
+            "label": "DeFiScan source",
+            "url": "https://www.defiscan.info/protocols/spark/ethereum"
           },
-          "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+          "notes": "Version-scoped Spark coverage; parent Spark is partial because not every listed version has this feed."
         },
         {
           "protocolId": "spark",
@@ -5452,74 +5400,50 @@
         {
           "protocolId": "spark",
           "feedId": "blockanalitica",
-          "status": "covered",
-          "summary": "Spark: On-chain risk dashboard for SparkLend markets: rates, liquidations, collateral exposure.",
-          "providerLabel": "Spark: Live dashboard",
-          "providerText": "Spark: Live dashboard",
-          "providerTextVerified": true,
-          "scope": "Spark: covered",
-          "referenceStatus": "verified",
+          "status": "partial",
+          "summary": "SparkLend: On-chain risk dashboard for SparkLend markets including rates, liquidations, and collateral exposure; sUSDS has no provider-specific feed in this snapshot.",
+          "providerLabel": "SparkLend: Live dashboard",
+          "scope": "SparkLend: covered; sUSDS: not covered",
+          "referenceStatus": "reference_sample",
           "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
           "source": {
-            "label": "BlockAnalitica source",
-            "url": "https://spark.blockanalitica.com",
             "provenance": "provider_page",
-            "capturedAt": "2026-06-11T14:00:00.000Z"
+            "capturedAt": "2026-06-11T14:00:00.000Z",
+            "label": "BlockAnalitica source",
+            "url": "https://blockanalitica.com/"
           },
-          "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+          "notes": "Version-scoped Spark coverage; parent Spark is partial because not every listed version has this feed."
         },
         {
           "protocolId": "spark",
           "feedId": "curatorwatch",
-          "status": "partial",
-          "summary": "Spark: Vault-level risk monitoring for Morpho curators: allocation risk and curator behavior.",
-          "providerLabel": "Version-limited coverage",
-          "scope": "Spark: partial",
-          "referenceStatus": "reference_sample",
-          "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
-          "source": {
-            "label": "CuratorWatch source",
-            "url": "https://curatorwatch.com",
-            "provenance": "provider_page",
-            "capturedAt": "2026-06-11T14:00:00.000Z"
-          },
-          "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+          "status": "not_covered",
+          "summary": "",
+          "notes": "No protocol-specific provider coverage found in the current curated registry."
         },
         {
           "protocolId": "spark",
           "feedId": "defipunkd",
-          "status": "covered",
-          "summary": "Spark: 5-dimension AI-consensus (Control / Exit / Autonomy / Open Access / Verifiability); spot-check pending.",
-          "providerLabel": "Spark: Bronze tier",
-          "scope": "Spark: covered",
-          "referenceStatus": "reference_sample",
-          "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
-          "source": {
-            "label": "DeFiPunk'd source",
-            "url": "https://defipunkd.com/protocol/spark",
-            "provenance": "provider_page",
-            "capturedAt": "2026-06-11T14:00:00.000Z"
-          },
-          "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+          "status": "not_covered",
+          "summary": "",
+          "notes": "No protocol-specific provider coverage found in the current curated registry."
         },
         {
           "protocolId": "spark",
           "feedId": "credora",
-          "status": "covered",
-          "summary": "Spark: Per-vault credit ratings on Spark Savings Vaults (e.g. Savings USDS A-, Staked USDS B+) with probability-of-significant-loss.",
-          "providerLabel": "Spark: A to B+",
-          "providerText": "Spark: A to B+",
-          "providerTextVerified": true,
-          "scope": "Spark: covered",
-          "referenceStatus": "verified",
+          "status": "partial",
+          "summary": "sUSDS: Per-vault credit rating coverage for Spark Savings Vaults; SparkLend has no provider-specific feed in this snapshot.",
+          "providerLabel": "sUSDS: A- to B+",
+          "scope": "SparkLend: not covered; sUSDS: covered",
+          "referenceStatus": "reference_sample",
           "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
           "source": {
-            "label": "Credora source",
-            "url": "https://reports.credora.io/spark/latest.pdf",
             "provenance": "provider_page",
-            "capturedAt": "2026-06-11T14:00:00.000Z"
+            "capturedAt": "2026-06-11T14:00:00.000Z",
+            "label": "Credora source",
+            "url": "https://www.credora.network/"
           },
-          "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+          "notes": "Version-scoped Spark coverage; parent Spark is partial because not every listed version has this feed."
         },
         {
           "protocolId": "spark",
@@ -5531,74 +5455,50 @@
         {
           "protocolId": "spark",
           "feedId": "philidor",
-          "status": "covered",
-          "summary": "Spark: Deterministic vault scores; e.g. sUSDS 8.38, Spark wstETH 8.71.",
-          "providerLabel": "Spark: Prime (8.4–8.7 / 10)",
-          "providerText": "Spark: Prime (8.4–8.7 / 10)",
-          "providerTextVerified": true,
-          "scope": "Spark: covered",
-          "referenceStatus": "verified",
+          "status": "partial",
+          "summary": "sUSDS: Deterministic vault scoring for Spark savings vault exposure; SparkLend has no provider-specific feed in this snapshot.",
+          "providerLabel": "sUSDS: Prime (8.38 / 10)",
+          "scope": "SparkLend: not covered; sUSDS: covered",
+          "referenceStatus": "reference_sample",
           "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
           "source": {
-            "label": "Philidor Analytics source",
-            "url": "https://analytics.philidor.io",
             "provenance": "provider_page",
-            "capturedAt": "2026-06-11T14:00:00.000Z"
+            "capturedAt": "2026-06-11T14:00:00.000Z",
+            "label": "Philidor Analytics source",
+            "url": "https://analytics.philidor.io/"
           },
-          "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+          "notes": "Version-scoped Spark coverage; parent Spark is partial because not every listed version has this feed."
         },
         {
           "protocolId": "spark",
           "feedId": "pigi",
-          "status": "covered",
-          "summary": "Spark: Vault analytics and risk-adjusted yield across 50+ protocols; exploits, concentration, risk-adjusted APY. Paid structured API.",
-          "providerLabel": "Protocol-specific coverage",
-          "scope": "Spark: covered",
-          "referenceStatus": "reference_sample",
-          "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
-          "source": {
-            "label": "pigi.finance source",
-            "url": "https://pigi.finance",
-            "provenance": "provider_page",
-            "capturedAt": "2026-06-11T14:00:00.000Z"
-          },
-          "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+          "status": "not_covered",
+          "summary": "",
+          "notes": "No protocol-specific provider coverage found in the current curated registry."
         },
         {
           "protocolId": "spark",
           "feedId": "defisaver",
-          "status": "covered",
-          "summary": "Spark: Position-management tooling: live loan-health / safety-ratio tracking and automated liquidation protection for leveraged positions.",
-          "providerLabel": "Protocol-specific coverage",
-          "scope": "Spark: covered",
+          "status": "partial",
+          "summary": "SparkLend: Position-management tooling with loan-health, safety-ratio tracking, and liquidation protection; sUSDS has no provider-specific feed in this snapshot.",
+          "providerLabel": "SparkLend: Position tooling",
+          "scope": "SparkLend: covered; sUSDS: not covered",
           "referenceStatus": "reference_sample",
           "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
           "source": {
-            "label": "DeFi Saver source",
-            "url": "https://defisaver.com",
             "provenance": "provider_page",
-            "capturedAt": "2026-06-11T14:00:00.000Z"
+            "capturedAt": "2026-06-11T14:00:00.000Z",
+            "label": "DeFi Saver source",
+            "url": "https://defisaver.com/"
           },
-          "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+          "notes": "Version-scoped Spark coverage; parent Spark is partial because not every listed version has this feed."
         },
         {
           "protocolId": "spark",
           "feedId": "zyfai",
-          "status": "covered",
-          "summary": "Spark: Live per-pool risk grade (TVL/APY stability, liquidity, Lindy checks).",
-          "providerLabel": "Spark: Excellent (6/6)",
-          "providerText": "Spark: Excellent (6/6)",
-          "providerTextVerified": true,
-          "scope": "Spark: covered",
-          "referenceStatus": "verified",
-          "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
-          "source": {
-            "label": "Zyfai Risk source",
-            "url": "https://risk.zyf.ai",
-            "provenance": "provider_page",
-            "capturedAt": "2026-06-11T14:00:00.000Z"
-          },
-          "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+          "status": "not_covered",
+          "summary": "",
+          "notes": "No protocol-specific provider coverage found in the current curated registry."
         },
         {
           "protocolId": "spark",
@@ -11344,21 +11244,19 @@
         {
           "protocolId": "spark",
           "feedId": "defiscan",
-          "status": "covered",
-          "summary": "Spark: Governed via Sky/Spark proxy; loss-of-funds upgrades lack a ≥7-day exit window or sufficient Security Council.",
-          "providerLabel": "Spark: Stage 0",
-          "providerText": "Spark: Stage 0",
-          "providerTextVerified": true,
-          "scope": "Spark: covered",
-          "referenceStatus": "verified",
+          "status": "partial",
+          "summary": "SparkLend: DeFiScan centralization review for Spark governance and upgrade controls; sUSDS has no provider-specific feed in this snapshot.",
+          "providerLabel": "SparkLend: Stage 0",
+          "scope": "SparkLend: covered; sUSDS: not covered",
+          "referenceStatus": "reference_sample",
           "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
           "source": {
-            "label": "DeFiScan source",
-            "url": "https://www.defiscan.info/protocols/spark/ethereum",
             "provenance": "provider_page",
-            "capturedAt": "2026-06-11T14:00:00.000Z"
+            "capturedAt": "2026-06-11T14:00:00.000Z",
+            "label": "DeFiScan source",
+            "url": "https://www.defiscan.info/protocols/spark/ethereum"
           },
-          "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+          "notes": "Version-scoped Spark coverage; parent Spark is partial because not every listed version has this feed."
         },
         {
           "protocolId": "aave",
@@ -11886,21 +11784,19 @@
         {
           "protocolId": "spark",
           "feedId": "blockanalitica",
-          "status": "covered",
-          "summary": "Spark: On-chain risk dashboard for SparkLend markets: rates, liquidations, collateral exposure.",
-          "providerLabel": "Spark: Live dashboard",
-          "providerText": "Spark: Live dashboard",
-          "providerTextVerified": true,
-          "scope": "Spark: covered",
-          "referenceStatus": "verified",
+          "status": "partial",
+          "summary": "SparkLend: On-chain risk dashboard for SparkLend markets including rates, liquidations, and collateral exposure; sUSDS has no provider-specific feed in this snapshot.",
+          "providerLabel": "SparkLend: Live dashboard",
+          "scope": "SparkLend: covered; sUSDS: not covered",
+          "referenceStatus": "reference_sample",
           "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
           "source": {
-            "label": "BlockAnalitica source",
-            "url": "https://spark.blockanalitica.com",
             "provenance": "provider_page",
-            "capturedAt": "2026-06-11T14:00:00.000Z"
+            "capturedAt": "2026-06-11T14:00:00.000Z",
+            "label": "BlockAnalitica source",
+            "url": "https://blockanalitica.com/"
           },
-          "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+          "notes": "Version-scoped Spark coverage; parent Spark is partial because not every listed version has this feed."
         },
         {
           "protocolId": "aave",
@@ -12126,19 +12022,9 @@
         {
           "protocolId": "spark",
           "feedId": "curatorwatch",
-          "status": "partial",
-          "summary": "Spark: Vault-level risk monitoring for Morpho curators: allocation risk and curator behavior.",
-          "providerLabel": "Version-limited coverage",
-          "scope": "Spark: partial",
-          "referenceStatus": "reference_sample",
-          "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
-          "source": {
-            "label": "CuratorWatch source",
-            "url": "https://curatorwatch.com",
-            "provenance": "provider_page",
-            "capturedAt": "2026-06-11T14:00:00.000Z"
-          },
-          "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+          "status": "not_covered",
+          "summary": "",
+          "notes": "No protocol-specific provider coverage found in the current curated registry."
         },
         {
           "protocolId": "aave",
@@ -12357,19 +12243,9 @@
         {
           "protocolId": "spark",
           "feedId": "defipunkd",
-          "status": "covered",
-          "summary": "Spark: 5-dimension AI-consensus (Control / Exit / Autonomy / Open Access / Verifiability); spot-check pending.",
-          "providerLabel": "Spark: Bronze tier",
-          "scope": "Spark: covered",
-          "referenceStatus": "reference_sample",
-          "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
-          "source": {
-            "label": "DeFiPunk'd source",
-            "url": "https://defipunkd.com/protocol/spark",
-            "provenance": "provider_page",
-            "capturedAt": "2026-06-11T14:00:00.000Z"
-          },
-          "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+          "status": "not_covered",
+          "summary": "",
+          "notes": "No protocol-specific provider coverage found in the current curated registry."
         },
         {
           "protocolId": "aave",
@@ -12704,21 +12580,19 @@
         {
           "protocolId": "spark",
           "feedId": "credora",
-          "status": "covered",
-          "summary": "Spark: Per-vault credit ratings on Spark Savings Vaults (e.g. Savings USDS A-, Staked USDS B+) with probability-of-significant-loss.",
-          "providerLabel": "Spark: A to B+",
-          "providerText": "Spark: A to B+",
-          "providerTextVerified": true,
-          "scope": "Spark: covered",
-          "referenceStatus": "verified",
+          "status": "partial",
+          "summary": "sUSDS: Per-vault credit rating coverage for Spark Savings Vaults; SparkLend has no provider-specific feed in this snapshot.",
+          "providerLabel": "sUSDS: A- to B+",
+          "scope": "SparkLend: not covered; sUSDS: covered",
+          "referenceStatus": "reference_sample",
           "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
           "source": {
-            "label": "Credora source",
-            "url": "https://reports.credora.io/spark/latest.pdf",
             "provenance": "provider_page",
-            "capturedAt": "2026-06-11T14:00:00.000Z"
+            "capturedAt": "2026-06-11T14:00:00.000Z",
+            "label": "Credora source",
+            "url": "https://www.credora.network/"
           },
-          "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+          "notes": "Version-scoped Spark coverage; parent Spark is partial because not every listed version has this feed."
         },
         {
           "protocolId": "aave",
@@ -13087,21 +12961,19 @@
         {
           "protocolId": "spark",
           "feedId": "philidor",
-          "status": "covered",
-          "summary": "Spark: Deterministic vault scores; e.g. sUSDS 8.38, Spark wstETH 8.71.",
-          "providerLabel": "Spark: Prime (8.4–8.7 / 10)",
-          "providerText": "Spark: Prime (8.4–8.7 / 10)",
-          "providerTextVerified": true,
-          "scope": "Spark: covered",
-          "referenceStatus": "verified",
+          "status": "partial",
+          "summary": "sUSDS: Deterministic vault scoring for Spark savings vault exposure; SparkLend has no provider-specific feed in this snapshot.",
+          "providerLabel": "sUSDS: Prime (8.38 / 10)",
+          "scope": "SparkLend: not covered; sUSDS: covered",
+          "referenceStatus": "reference_sample",
           "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
           "source": {
-            "label": "Philidor Analytics source",
-            "url": "https://analytics.philidor.io",
             "provenance": "provider_page",
-            "capturedAt": "2026-06-11T14:00:00.000Z"
+            "capturedAt": "2026-06-11T14:00:00.000Z",
+            "label": "Philidor Analytics source",
+            "url": "https://analytics.philidor.io/"
           },
-          "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+          "notes": "Version-scoped Spark coverage; parent Spark is partial because not every listed version has this feed."
         },
         {
           "protocolId": "aave",
@@ -13330,19 +13202,9 @@
         {
           "protocolId": "spark",
           "feedId": "pigi",
-          "status": "covered",
-          "summary": "Spark: Vault analytics and risk-adjusted yield across 50+ protocols; exploits, concentration, risk-adjusted APY. Paid structured API.",
-          "providerLabel": "Protocol-specific coverage",
-          "scope": "Spark: covered",
-          "referenceStatus": "reference_sample",
-          "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
-          "source": {
-            "label": "pigi.finance source",
-            "url": "https://pigi.finance",
-            "provenance": "provider_page",
-            "capturedAt": "2026-06-11T14:00:00.000Z"
-          },
-          "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+          "status": "not_covered",
+          "summary": "",
+          "notes": "No protocol-specific provider coverage found in the current curated registry."
         },
         {
           "protocolId": "aave",
@@ -13587,19 +13449,19 @@
         {
           "protocolId": "spark",
           "feedId": "defisaver",
-          "status": "covered",
-          "summary": "Spark: Position-management tooling: live loan-health / safety-ratio tracking and automated liquidation protection for leveraged positions.",
-          "providerLabel": "Protocol-specific coverage",
-          "scope": "Spark: covered",
+          "status": "partial",
+          "summary": "SparkLend: Position-management tooling with loan-health, safety-ratio tracking, and liquidation protection; sUSDS has no provider-specific feed in this snapshot.",
+          "providerLabel": "SparkLend: Position tooling",
+          "scope": "SparkLend: covered; sUSDS: not covered",
           "referenceStatus": "reference_sample",
           "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
           "source": {
-            "label": "DeFi Saver source",
-            "url": "https://defisaver.com",
             "provenance": "provider_page",
-            "capturedAt": "2026-06-11T14:00:00.000Z"
+            "capturedAt": "2026-06-11T14:00:00.000Z",
+            "label": "DeFi Saver source",
+            "url": "https://defisaver.com/"
           },
-          "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+          "notes": "Version-scoped Spark coverage; parent Spark is partial because not every listed version has this feed."
         },
         {
           "protocolId": "aave",
@@ -13885,21 +13747,9 @@
         {
           "protocolId": "spark",
           "feedId": "zyfai",
-          "status": "covered",
-          "summary": "Spark: Live per-pool risk grade (TVL/APY stability, liquidity, Lindy checks).",
-          "providerLabel": "Spark: Excellent (6/6)",
-          "providerText": "Spark: Excellent (6/6)",
-          "providerTextVerified": true,
-          "scope": "Spark: covered",
-          "referenceStatus": "verified",
-          "referenceUrl": "https://github.com/rails-finance/neutral-risk/blob/56bd9c47d90dc09935ac4fb96c4f7677bba180ad/lib/data/coverage.ts",
-          "source": {
-            "label": "Zyfai Risk source",
-            "url": "https://risk.zyf.ai",
-            "provenance": "provider_page",
-            "capturedAt": "2026-06-11T14:00:00.000Z"
-          },
-          "notes": "Coverage status synchronized from the Neutral Risk reference; provider-authored text is included only where that reference marks the rating verified."
+          "status": "not_covered",
+          "summary": "",
+          "notes": "No protocol-specific provider coverage found in the current curated registry."
         },
         {
           "protocolId": "aave",
@@ -15316,9 +15166,9 @@
     "protocols": 20,
     "feeds": 16,
     "cells": 320,
-    "covered": 62,
-    "partial": 74,
-    "positiveCells": 136,
+    "covered": 54,
+    "partial": 78,
+    "positiveCells": 132,
     "governanceFacts": 101,
     "audits": 64,
     "incidents": 16

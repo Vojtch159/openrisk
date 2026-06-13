@@ -100,7 +100,7 @@ const previewProtocol = computed(() => protocol.value ? { ...protocol.value, cov
 </script>
 
 <template>
-  <div class="protocol-page">
+  <div class="protocol-page app-shell">
     <div v-if="isLoading" class="protocol-loading">Loading protocol evidence...</div>
 
     <div v-else-if="protocol">
@@ -340,7 +340,7 @@ const previewProtocol = computed(() => protocol.value ? { ...protocol.value, cov
 </template>
 
 <style scoped>
-.protocol-page { margin: 0 auto; max-width: 90rem; padding: 1.5rem 1rem 4rem; }
+.protocol-page { padding-block: 1.5rem 4rem; }
 .protocol-loading { color: #697383; padding: 4rem 0; text-align: center; }
 .back-link { align-items: center; color: #697383; display: inline-flex; font-size: .78rem; font-weight: 700; gap: .35rem; margin-bottom: 1.5rem; }
 .back-link:hover { color: #1d6fd8; }
@@ -467,7 +467,6 @@ const previewProtocol = computed(() => protocol.value ? { ...protocol.value, cov
 .protocol-rail b { color: #8a94a3; font-size: .65rem; }
 
 @media (min-width: 640px) {
-  .protocol-page { padding-inline: 1.5rem; }
   .coverage-strip { align-items: center; grid-template-columns: 9rem minmax(10rem,1fr) 20rem auto; }
   .coverage-strip dl { grid-template-columns: repeat(3,1fr); }
   .lens-count-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
@@ -476,7 +475,6 @@ const previewProtocol = computed(() => protocol.value ? { ...protocol.value, cov
   .tab-bar button { padding: .85rem 1.2rem; }
 }
 @media (min-width: 1024px) {
-  .protocol-page { padding-inline: 2rem; }
   .protocol-hero { grid-template-columns: minmax(0,1fr) 20rem; }
   .protocol-layout { grid-template-columns: minmax(0,1fr) 14rem; }
   .protocol-rail { display: block; }

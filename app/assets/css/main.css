@@ -20,6 +20,10 @@
   --color-on-dark: #edf0f3;
 }
 
+:root {
+  --app-shell-max-width: 80rem;
+}
+
 html.dark {
   color-scheme: dark;
   --color-white: #1b212a;
@@ -112,10 +116,30 @@ main {
   overflow-x: hidden;
 }
 
+.app-shell {
+  box-sizing: border-box;
+  margin-inline: auto;
+  max-width: var(--app-shell-max-width);
+  padding-inline: 1rem;
+  width: 100%;
+}
+
 main div:has(> table) {
   max-width: 100%;
   min-width: 0;
   overflow-x: auto;
+}
+
+@media (min-width: 640px) {
+  .app-shell {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .app-shell {
+    padding-inline: 2rem;
+  }
 }
 
 @media (max-width: 767px) {

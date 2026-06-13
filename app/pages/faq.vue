@@ -1,6 +1,6 @@
 <template>
   <div class="faq-page">
-    <div class="mx-auto max-w-3xl px-4 py-8 sm:px-6 lg:px-8">
+    <div class="app-shell py-8">
       <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-signal-blue">FAQ</p>
       <h1 class="text-3xl font-semibold tracking-normal text-ink-950 sm:text-5xl">
         Frequently asked questions

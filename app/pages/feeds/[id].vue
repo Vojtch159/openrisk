@@ -13,7 +13,7 @@ const reporting = computed(() => feed.value?.coverage.filter((cell) => cell.stat
 </script>
 
 <template>
-  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+  <div class="app-shell py-8">
     <div v-if="isLoading" class="text-sm text-ink-600">Loading feed...</div>
 
     <div v-else-if="feed" class="space-y-6">
