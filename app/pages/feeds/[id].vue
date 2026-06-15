@@ -10,6 +10,12 @@ const protocolById = computed(() => Object.fromEntries(
   protocols.value.map((protocol) => [protocol.id, protocol]),
 ) as Record<string, Protocol>);
 const reporting = computed(() => feed.value?.coverage.filter((cell) => cell.status !== 'not_covered') ?? []);
+
+function machineReadabilityLabel(value?: string) {
+  if (value === 'yes') return 'Machine-readable';
+  if (value === 'partial') return 'Partially machine-readable';
+  return 'Manual only';
+}
 </script>
 
 <template>
@@ -22,7 +28,7 @@ const reporting = computed(() => feed.value?.coverage.filter((cell) => cell.stat
         <div class="rounded-lg border border-ink-200 bg-white p-5 shadow-sm">
           <div class="grid grid-cols-2 gap-3">
             <div><div class="text-xs font-bold uppercase text-ink-500">Reporting</div><div class="mt-1 text-2xl font-semibold text-ink-950">{{ reporting.length }}/20</div></div>
-            <div><div class="text-xs font-bold uppercase text-ink-500">Machine-readable</div><div class="mt-1 text-sm font-semibold text-ink-950">{{ feed.machineReadable }}</div></div>
+            <div><div class="text-xs font-bold uppercase text-ink-500">Machine-readable</div><div class="mt-1 text-sm font-semibold text-ink-950">{{ machineReadabilityLabel(feed.machineReadable) }}</div></div>
           </div>
           <div v-if="feed.independence" class="mt-4 rounded border border-ink-200 bg-ink-50 px-3 py-2 text-sm text-ink-700">
             <strong class="capitalize">{{ feed.independence.replaceAll('_', ' ') }}</strong>

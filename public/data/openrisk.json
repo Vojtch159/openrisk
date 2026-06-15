@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-12T11:38:58.794Z",
+  "generatedAt": "2026-06-15T10:52:31.629Z",
   "protocols": [
     {
       "id": "spark",
@@ -5152,142 +5152,142 @@
     "spark": {
       "protocolId": "spark",
       "metric": "tvl",
-      "value": 7205428195.019962,
-      "asOf": "2026-06-12T11:38:58.291Z",
+      "value": 7188347103.488653,
+      "asOf": "2026-06-15T10:52:31.253Z",
       "source": "https://defillama.com/protocol/spark"
     },
     "aave": {
       "protocolId": "aave",
       "metric": "tvl",
-      "value": 10066079462.681976,
-      "asOf": "2026-06-12T11:38:58.291Z",
+      "value": 10371257538.810984,
+      "asOf": "2026-06-15T10:52:31.253Z",
       "source": "https://defillama.com/protocol/aave"
     },
     "morpho": {
       "protocolId": "morpho",
       "metric": "tvl",
-      "value": 3376988346.834213,
-      "asOf": "2026-06-12T11:38:58.291Z",
+      "value": 3495179607.208063,
+      "asOf": "2026-06-15T10:52:31.253Z",
       "source": "https://defillama.com/protocol/morpho-blue"
     },
     "fluid": {
       "protocolId": "fluid",
       "metric": "tvl",
-      "value": 569187521.2416575,
-      "asOf": "2026-06-12T11:38:58.291Z",
+      "value": 614845414.9423865,
+      "asOf": "2026-06-15T10:52:31.253Z",
       "source": "https://defillama.com/protocol/fluid"
     },
     "gearbox": {
       "protocolId": "gearbox",
       "metric": "tvl",
-      "value": 14511684.96834697,
-      "asOf": "2026-06-12T11:38:58.291Z",
+      "value": 14591647.617924448,
+      "asOf": "2026-06-15T10:52:31.253Z",
       "source": "https://defillama.com/protocol/gearbox"
     },
     "euler": {
       "protocolId": "euler",
       "metric": "tvl",
-      "value": 126998325.68858638,
-      "asOf": "2026-06-12T11:38:58.291Z",
+      "value": 126398111.90489866,
+      "asOf": "2026-06-15T10:52:31.253Z",
       "source": "https://defillama.com/protocol/euler"
     },
     "compound": {
       "protocolId": "compound",
       "metric": "tvl",
-      "value": 1049808366.8765851,
-      "asOf": "2026-06-12T11:38:58.291Z",
+      "value": 1071194542.1375433,
+      "asOf": "2026-06-15T10:52:31.253Z",
       "source": "https://defillama.com/protocol/compound-finance"
     },
     "liquity": {
       "protocolId": "liquity",
       "metric": "tvl",
-      "value": 197251877.7806286,
-      "asOf": "2026-06-12T11:38:58.291Z",
+      "value": 202943474.8969882,
+      "asOf": "2026-06-15T10:52:31.253Z",
       "source": "https://defillama.com/protocol/liquity"
     },
     "uniswap": {
       "protocolId": "uniswap",
       "metric": "tvl",
-      "value": 1923901188.6694388,
-      "asOf": "2026-06-12T11:38:58.291Z",
+      "value": 1941485285.888802,
+      "asOf": "2026-06-15T10:52:31.253Z",
       "source": "https://defillama.com/protocol/uniswap"
     },
     "curve": {
       "protocolId": "curve",
       "metric": "tvl",
-      "value": 1368546809.6452157,
-      "asOf": "2026-06-12T11:38:58.291Z",
+      "value": 1375065981.3671007,
+      "asOf": "2026-06-15T10:52:31.253Z",
       "source": "https://defillama.com/protocol/curve-dex"
     },
     "balancer": {
       "protocolId": "balancer",
       "metric": "tvl",
-      "value": 91608571.87124644,
-      "asOf": "2026-06-12T11:38:58.291Z",
+      "value": 98003675.1962214,
+      "asOf": "2026-06-15T10:52:31.253Z",
       "source": "https://defillama.com/protocol/balancer"
     },
     "cow-swap": {
       "protocolId": "cow-swap",
       "metric": "volume",
-      "value": 87668602,
-      "asOf": "2026-06-12T11:38:58.291Z",
+      "value": 28253279,
+      "asOf": "2026-06-15T10:52:31.253Z",
       "source": "https://defillama.com/protocol/cowswap"
     },
     "one-inch": {
       "protocolId": "one-inch",
       "metric": "volume",
-      "value": 52241669,
-      "asOf": "2026-06-12T11:38:58.291Z",
+      "value": 25272591,
+      "asOf": "2026-06-15T10:52:31.253Z",
       "source": "https://defillama.com/protocol/1inch-network"
     },
     "zero-x-matcha": {
       "protocolId": "zero-x-matcha",
       "metric": "volume",
-      "value": 80972539,
-      "asOf": "2026-06-12T11:38:58.291Z",
+      "value": 33911954,
+      "asOf": "2026-06-15T10:52:31.253Z",
       "source": "https://defillama.com/protocol/0x-aggregator"
     },
     "yearn": {
       "protocolId": "yearn",
       "metric": "tvl",
-      "value": 119495245.22919984,
-      "asOf": "2026-06-12T11:38:58.291Z",
+      "value": 117159058.35929929,
+      "asOf": "2026-06-15T10:52:31.253Z",
       "source": "https://defillama.com/protocol/yearn-finance"
     },
     "mellow": {
       "protocolId": "mellow",
       "metric": "tvl",
-      "value": 123151763.86314106,
-      "asOf": "2026-06-12T11:38:58.291Z",
+      "value": 127340897.00972365,
+      "asOf": "2026-06-15T10:52:31.253Z",
       "source": "https://defillama.com/protocol/mellow-protocol"
     },
     "morpho-vaults": {
       "protocolId": "morpho-vaults",
       "metric": "tvl",
-      "value": 3376988346.834213,
-      "asOf": "2026-06-12T11:38:58.291Z",
+      "value": 3495179607.208063,
+      "asOf": "2026-06-15T10:52:31.253Z",
       "source": "https://defillama.com/protocol/metamorpho",
       "scopeNote": "DefiLlama includes MetaMorpho vault capital in the Morpho protocol total."
     },
     "pendle": {
       "protocolId": "pendle",
       "metric": "tvl",
-      "value": 776515281.3380607,
-      "asOf": "2026-06-12T11:38:58.291Z",
+      "value": 795743266.9678438,
+      "asOf": "2026-06-15T10:52:31.253Z",
       "source": "https://defillama.com/protocol/pendle"
     },
     "lido": {
       "protocolId": "lido",
       "metric": "tvl",
-      "value": 14991914191.308891,
-      "asOf": "2026-06-12T11:38:58.291Z",
+      "value": 15434517873.02192,
+      "asOf": "2026-06-15T10:52:31.253Z",
       "source": "https://defillama.com/protocol/lido"
     },
     "rocket-pool": {
       "protocolId": "rocket-pool",
       "metric": "tvl",
-      "value": 900193557.2579623,
-      "asOf": "2026-06-12T11:38:58.291Z",
+      "value": 919822808.6552389,
+      "asOf": "2026-06-15T10:52:31.253Z",
       "source": "https://defillama.com/protocol/rocket-pool"
     }
   },

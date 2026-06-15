@@ -23,11 +23,11 @@ export default defineNuxtConfig({
           name: 'description',
           content: 'A neutral, open source registry of Ethereum DeFi risk feed coverage, governance facts, and data provenance.',
         },
-        { name: 'theme-color', content: '#121418' },
+        { name: 'theme-color', content: '#fbfaf6' },
       ],
       link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
       script: [{
-        innerHTML: "try{document.documentElement.classList.toggle('dark',(localStorage.getItem('openrisk-theme')||'dark')==='dark')}catch(e){document.documentElement.classList.add('dark')}",
+        innerHTML: "try{document.documentElement.classList.toggle('dark',localStorage.getItem('openrisk-theme')==='dark')}catch(e){}",
       }],
     },
   },
@@ -35,7 +35,7 @@ export default defineNuxtConfig({
     preset: 'vercel-static',
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/feeds', '/matrix', '/info', '/methodology', '/contribute', '/about', '/faq'],
+      routes: ['/', '/feeds', '/info', '/contribute', '/about', '/faq'],
     },
   },
   build: {

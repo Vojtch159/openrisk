@@ -60,7 +60,7 @@ async function copyTemplate() {
           <textarea v-model="correction" class="mt-1 min-h-36 w-full rounded-md border border-ink-300 p-3 outline-none focus:border-signal-blue focus:ring-4 focus:ring-blue-100" placeholder="Describe the exact status, curator note, provider-authored text, or provenance update." />
         </label>
         <div class="flex flex-wrap gap-2">
-          <button type="submit" class="inline-flex items-center gap-2 rounded-md bg-ink-950 px-4 py-2.5 text-sm font-semibold text-white hover:bg-ink-800"><Copy :size="16" aria-hidden="true" />{{ copied ? 'Copied to clipboard' : 'Copy issue template' }}</button>
+          <button type="submit" class="copy-template-button"><Copy :size="16" aria-hidden="true" />{{ copied ? 'Copied to clipboard' : 'Copy issue template' }}</button>
           <a :href="GITHUB_ISSUES_URL" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-md border border-ink-300 bg-white px-4 py-2.5 text-sm font-semibold text-ink-900"><GitFork :size="16" /> Open GitHub issue <ExternalLink :size="13" /></a>
           <a :href="GITHUB_REPOSITORY_URL" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-2 py-2.5 text-sm font-semibold text-signal-blue">View repository <ExternalLink :size="13" /></a>
         </div>
@@ -69,10 +69,10 @@ async function copyTemplate() {
         </p>
       </form>
 
-      <aside class="rounded-lg border border-ink-200 bg-ink-950 p-5 text-white shadow-sm">
+      <aside class="validation-panel">
         <GitPullRequestArrow :size="22" aria-hidden="true" />
         <h2 class="mt-4 text-lg font-semibold">Validation rules</h2>
-        <ul class="mt-4 space-y-3 text-sm leading-6 text-ink-200">
+        <ul class="mt-4 space-y-3 text-sm leading-6">
           <li>Covered and partial cells require a dated source.</li>
           <li>Provider-authored text must remain clearly attributed and unedited.</li>
           <li>New protocols must include Ethereum scope and DefiLlama mapping.</li>
@@ -82,3 +82,40 @@ async function copyTemplate() {
     </div>
   </div>
 </template>
+
+<style scoped>
+.copy-template-button {
+  align-items: center;
+  background: var(--accent-mark);
+  border: 1px solid var(--emphasis-border);
+  border-radius: .375rem;
+  color: var(--accent-mark-ink);
+  display: inline-flex;
+  font-size: .875rem;
+  font-weight: 650;
+  gap: .5rem;
+  padding: .625rem 1rem;
+}
+
+.copy-template-button:hover {
+  background: color-mix(in srgb, var(--accent-mark) 78%, var(--color-white));
+  border-color: var(--rule-strong);
+}
+
+.validation-panel {
+  background: var(--surface-emphasis);
+  border: 1px solid var(--emphasis-border);
+  border-radius: .5rem;
+  box-shadow: var(--shadow-line);
+  color: var(--emphasis-ink);
+  padding: 1.25rem;
+}
+
+.validation-panel > svg {
+  color: var(--accent-mark-ink);
+}
+
+.validation-panel ul {
+  color: var(--emphasis-muted);
+}
+</style>

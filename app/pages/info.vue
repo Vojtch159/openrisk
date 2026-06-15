@@ -11,7 +11,7 @@ const { data } = useOpenRiskData();
       <div class="app-shell info-hero-grid">
         <div class="info-hero-copy">
           <p class="page-eyebrow info-eyebrow">About OpenRisk</p>
-          <h1>Risk evidence belongs in daylight.</h1>
+          <h1 class="page-title">Risk evidence belongs in daylight.</h1>
           <p>
             OpenRisk collects what independent DeFi risk providers publish, keeps their words attached to their names,
             and shows the disagreements instead of smoothing them into a proprietary verdict.
@@ -21,7 +21,6 @@ const { data } = useOpenRiskData();
         <aside class="evidence-ledger" aria-label="OpenRisk evidence model">
           <div class="ledger-topline">
             <span>Current snapshot</span>
-            <strong>No OpenRisk score</strong>
           </div>
           <dl class="ledger-stats">
             <div>
@@ -37,20 +36,6 @@ const { data } = useOpenRiskData();
               <dd>{{ data.stats.positiveCells }}</dd>
             </div>
           </dl>
-          <div class="ledger-rows" aria-hidden="true">
-            <div class="ledger-row">
-              <span>Aave</span>
-              <i class="covered" /><i class="covered" /><i class="partial" /><i class="missing" /><i class="covered" />
-            </div>
-            <div class="ledger-row">
-              <span>Lido</span>
-              <i class="covered" /><i class="partial" /><i class="covered" /><i class="covered" /><i class="missing" />
-            </div>
-            <div class="ledger-row">
-              <span>Uniswap</span>
-              <i class="partial" /><i class="covered" /><i class="missing" /><i class="covered" /><i class="covered" />
-            </div>
-          </div>
           <p>Each cell says whether source material exists. It does not say whether a protocol is safe.</p>
         </aside>
       </div>
@@ -199,14 +184,7 @@ const { data } = useOpenRiskData();
 }
 
 .info-hero h1 {
-  color: var(--color-ink-950);
-  font-family: var(--font-serif);
-  font-size: clamp(3rem, 9vw, 6.8rem);
-  font-weight: 520;
-  letter-spacing: -.055em;
-  line-height: .86;
-  margin: 0;
-  max-width: 54rem;
+  text-wrap: balance;
 }
 
 .info-hero-copy > p:not(.info-eyebrow) {
@@ -218,10 +196,8 @@ const { data } = useOpenRiskData();
 }
 
 .evidence-ledger {
-  align-self: stretch;
-  background:
-    linear-gradient(90deg, rgba(24, 32, 42, .045) 1px, transparent 1px) 0 0 / 2.25rem 2.25rem,
-    var(--color-white);
+  align-self: end;
+  background: var(--color-white);
   border: 1px solid var(--color-ink-200);
   border-radius: .55rem;
   box-shadow: var(--shadow-line);
@@ -249,14 +225,6 @@ const { data } = useOpenRiskData();
   text-transform: uppercase;
 }
 
-.ledger-topline strong {
-  background: var(--color-ink-950);
-  border-radius: 99px;
-  color: var(--color-ink-50);
-  font-size: .78rem;
-  padding: .38rem .6rem;
-}
-
 .ledger-stats {
   display: grid;
   gap: .6rem;
@@ -281,49 +249,6 @@ const { data } = useOpenRiskData();
   font-weight: 760;
   line-height: 1;
   margin: .32rem 0 0;
-}
-
-.ledger-rows {
-  display: grid;
-  gap: .48rem;
-}
-
-.ledger-row {
-  align-items: center;
-  background: color-mix(in srgb, var(--color-ink-50) 72%, transparent);
-  border: 1px solid var(--color-ink-100);
-  border-radius: .35rem;
-  display: grid;
-  gap: .45rem;
-  grid-template-columns: 5.2rem repeat(5, minmax(1.5rem, 1fr));
-  padding: .48rem;
-}
-
-.ledger-row span {
-  color: var(--color-ink-700);
-  font-size: .82rem;
-  font-weight: 750;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.ledger-row i {
-  border-radius: .18rem;
-  display: block;
-  height: 1.7rem;
-}
-
-.ledger-row i.covered {
-  background: color-mix(in srgb, var(--color-signal-green) 82%, var(--color-white));
-}
-
-.ledger-row i.partial {
-  background: color-mix(in srgb, var(--color-signal-amber) 82%, var(--color-white));
-}
-
-.ledger-row i.missing {
-  background: var(--color-ink-200);
 }
 
 .evidence-ledger > p {
@@ -414,20 +339,25 @@ const { data } = useOpenRiskData();
 }
 
 .coverage-panel {
-  background: #18202a;
-  color: #f4f1e8;
+  background: var(--surface-emphasis);
+  border-color: var(--emphasis-border);
+  color: var(--emphasis-ink);
+}
+
+.coverage-copy {
+  min-width: 0;
 }
 
 .coverage-panel .section-label {
-  color: #9cc6ef;
+  color: var(--color-signal-blue);
 }
 
 .coverage-panel h2 {
-  color: #f4f1e8;
+  color: var(--emphasis-ink);
 }
 
 .coverage-panel p {
-  color: rgba(244, 241, 232, .72);
+  color: var(--emphasis-muted);
 }
 
 .coverage-definitions {
@@ -436,8 +366,8 @@ const { data } = useOpenRiskData();
 }
 
 .coverage-definitions article {
-  background: rgba(255, 255, 255, .07);
-  border: 1px solid rgba(255, 255, 255, .14);
+  background: var(--surface-emphasis-raised);
+  border: 1px solid var(--emphasis-border);
   border-radius: .55rem;
   padding: 1rem;
 }
@@ -455,21 +385,21 @@ const { data } = useOpenRiskData();
 
 .coverage-definitions b.covered {
   background: color-mix(in srgb, var(--color-signal-green) 24%, transparent);
-  color: #8ee5bd;
+  color: var(--color-signal-green);
 }
 
 .coverage-definitions b.partial {
   background: color-mix(in srgb, var(--color-signal-amber) 26%, transparent);
-  color: #f1c37d;
+  color: var(--color-signal-amber);
 }
 
 .coverage-definitions b.missing {
-  background: rgba(255, 255, 255, .1);
-  color: rgba(244, 241, 232, .78);
+  background: color-mix(in srgb, var(--emphasis-muted) 14%, transparent);
+  color: var(--emphasis-muted);
 }
 
 .coverage-definitions p {
-  color: rgba(244, 241, 232, .68);
+  color: var(--emphasis-muted);
   font-size: .9rem;
   line-height: 1.6;
   margin-top: .7rem;
@@ -546,9 +476,9 @@ const { data } = useOpenRiskData();
 
 .callout-actions a {
   align-items: center;
-  background: var(--color-ink-950);
+  background: var(--accent-mark);
   border-radius: .45rem;
-  color: var(--color-ink-50);
+  color: var(--accent-mark-ink);
   display: inline-flex;
   font-size: .86rem;
   font-weight: 780;
@@ -564,8 +494,7 @@ const { data } = useOpenRiskData();
 }
 
 @media (min-width: 720px) {
-  .info-panel,
-  .coverage-panel {
+  .info-panel {
     grid-template-columns: 11rem minmax(0, 1fr);
   }
 
@@ -585,6 +514,21 @@ const { data } = useOpenRiskData();
 
   .evidence-ledger {
     margin-top: 1rem;
+  }
+
+  .coverage-copy {
+    align-items: end;
+    display: grid;
+    gap: .75rem 2rem;
+    grid-template-columns: minmax(0, 1.25fr) minmax(20rem, .75fr);
+  }
+
+  .coverage-copy .section-label {
+    grid-column: 1 / -1;
+  }
+
+  .coverage-copy p {
+    margin: 0;
   }
 }
 </style>

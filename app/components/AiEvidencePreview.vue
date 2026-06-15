@@ -92,7 +92,7 @@ const lensLabel = computed(() => {
 .ai-preview { background: var(--color-white); border: 1px solid var(--color-ink-200); border-radius: .35rem; box-shadow: var(--shadow-line); color: var(--color-ink-900); margin-top: 1rem; overflow: hidden; padding: 1.2rem; position: relative; }
 .ai-preview::before { background: var(--color-signal-blue); content: ''; inset: 0 auto 0 0; position: absolute; width: 3px; }
 .ai-preview-heading { align-items: center; display: flex; gap: .75rem; position: relative; z-index: 1; }
-.ai-icon { align-items: center; background: var(--color-ink-950); border-radius: .25rem; color: var(--color-on-dark); display: flex; height: 2.25rem; justify-content: center; width: 2.25rem; }
+.ai-icon { align-items: center; background: var(--accent-mark); border-radius: .25rem; color: var(--accent-mark-ink); display: flex; height: 2.25rem; justify-content: center; width: 2.25rem; }
 .ai-label { color: var(--color-ink-500); font-family: var(--font-mono); font-size: .76rem; font-weight: 800; }
 .ai-label span { background: var(--color-ink-100); border-radius: .2rem; color: var(--color-ink-600); margin-left: .35rem; padding: .2rem .4rem; }
 .ai-preview h2 { font-size: 1rem; margin: .15rem 0 0; }

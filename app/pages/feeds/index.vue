@@ -36,7 +36,7 @@ const filteredFeeds = computed(() => {
       <div class="app-shell py-9">
         <div>
           <p class="page-eyebrow source-eyebrow">Source directory</p>
-          <h1 class="source-title">Read the sources before the summary.</h1>
+          <h1 class="page-title source-title">Read the sources before the summary.</h1>
           <p class="source-lede">Compare focus, methodology, independence, machine-readability, and protocol coverage across every provider in the registry.</p>
         </div>
       </div>
@@ -69,22 +69,22 @@ const filteredFeeds = computed(() => {
         <p class="text-xs text-ink-500">Coverage is descriptive, not a quality ranking.</p>
       </div>
 
-      <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div class="source-grid grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         <NuxtLink v-for="feed in filteredFeeds" :key="feed.id" :to="`/feeds/${feed.id}`" class="source-card">
-          <div class="flex items-start justify-between gap-4">
+          <div class="source-card-header flex items-start justify-between gap-4">
             <div class="flex min-w-0 items-center gap-3">
               <div class="source-card-mark"><Database :size="17" /></div>
               <div><h2>{{ feed.name }}</h2><p>{{ feed.type }}</p></div>
             </div>
             <ArrowRight class="source-arrow" :size="18" />
           </div>
-          <p class="mt-4 text-sm leading-6 text-ink-600">{{ feed.focus }}</p>
-          <div class="mt-auto grid grid-cols-3 gap-2 border-t border-ink-100 pt-4 text-center">
+          <p class="source-card-focus text-sm leading-6 text-ink-600">{{ feed.focus }}</p>
+          <div class="source-card-metrics grid grid-cols-3 gap-2 border-t border-ink-100 pt-4 text-center">
             <div><strong>{{ feed.covered }}</strong><span>Covered</span></div>
             <div><strong>{{ feed.partial }}</strong><span>Partial</span></div>
             <div><strong class="capitalize">{{ feed.machineReadable }}</strong><span>Readable</span></div>
           </div>
-          <p v-if="feed.independence" class="mt-3 text-xs text-ink-500"><span class="font-semibold capitalize text-ink-700">{{ feed.independence.replaceAll('_', ' ') }}</span><span v-if="feed.independenceNote"> · {{ feed.independenceNote }}</span></p>
+          <p v-if="feed.independence" class="source-card-independence text-xs text-ink-500"><span class="font-semibold capitalize text-ink-700">{{ feed.independence.replaceAll('_', ' ') }}</span><span v-if="feed.independenceNote"> · {{ feed.independenceNote }}</span></p>
         </NuxtLink>
       </div>
 
@@ -107,14 +107,7 @@ const filteredFeeds = computed(() => {
 }
 
 .source-title {
-  color: var(--color-ink-950);
-  font-family: var(--font-serif);
-  font-size: clamp(2.4rem, 6vw, 4.8rem);
-  font-weight: 560;
-  letter-spacing: -.04em;
-  line-height: .96;
-  margin: 0;
-  max-width: 48rem;
+  text-wrap: balance;
 }
 
 .source-lede {
@@ -136,10 +129,11 @@ const filteredFeeds = computed(() => {
   border-radius: .35rem;
   box-shadow: var(--shadow-line);
   color: inherit;
-  display: flex;
-  flex-direction: column;
-  min-height: 15rem;
+  display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
   padding: 1rem;
+  row-gap: 0;
   text-decoration: none;
   transition: border-color .15s ease, background .15s ease;
 }
@@ -167,14 +161,26 @@ const filteredFeeds = computed(() => {
 
 .source-card-mark {
   align-items: center;
-  background: var(--color-ink-950);
+  background: var(--accent-mark);
   border-radius: .25rem;
-  color: var(--color-on-dark);
+  color: var(--accent-mark-ink);
   display: flex;
   flex: 0 0 auto;
   height: 2.35rem;
   justify-content: center;
   width: 2.35rem;
+}
+
+.source-card-focus {
+  margin: 1rem 0 0;
+}
+
+.source-card-metrics {
+  align-self: start;
+}
+
+.source-card-independence {
+  margin: .75rem 0 0;
 }
 
 .source-arrow {

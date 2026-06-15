@@ -34,7 +34,7 @@
             should be canonical for something as important as protocol risk. We show what each feed publishes
             side by side, attributed and verbatim, and let users weigh them. The aggregation is the value.
             OpenRisk is bound by its
-            <NuxtLink to="/about#project-charter" class="text-signal-blue hover:underline">project charter</NuxtLink>
+            <NuxtLink to="/info#about" class="text-signal-blue hover:underline">project charter</NuxtLink>
             to never produce its own risk score, ranking, or composite assessment.
           </dd>
         </div>
@@ -54,8 +54,7 @@
           <dd class="mt-3 text-base leading-7 text-ink-600">
             The registry includes 16 feeds chosen to maximize methodology diversity: formal rating desks, dashboards,
             security-monitoring tools, and research. Each feed's independence, methodology, and machine-readability
-            are documented in the
-            <NuxtLink to="/methodology" class="text-signal-blue hover:underline">methodology page</NuxtLink>.
+            are documented in the source profiles.
             Feed automation is tracked per provider and will be automated wherever providers expose data publicly (M2 target).
           </dd>
         </div>

@@ -244,7 +244,7 @@ function suppressClickAfterDrag(event: MouseEvent) {
       <div class="app-shell grid gap-8 py-10 lg:grid-cols-[minmax(0,1fr)_380px] lg:items-end">
         <div>
           <p class="page-eyebrow registry-eyebrow">Protocol registry</p>
-          <h1 class="registry-title">Compare protocol evidence across every
+          <h1 class="page-title registry-title">Compare protocol evidence across every
             source.</h1>
           <p class="registry-lede">Provider-native ratings, version scope, and
             coverage states stay attributed and side by side, without an aggregate verdict.</p>
@@ -358,8 +358,7 @@ v-if="sortedRows.length > 0" ref="tableScroll" class="evidence-table-wrap hidden
                 </div>
               </th>
               <th v-for="feed in feeds" :key="feed.id" class="provider-head">
-                <NuxtLink :to="`/feeds/${feed.id}`">{{ feed.name }}</NuxtLink><span>{{ feed.type
-                }}</span>
+                <NuxtLink :to="`/feeds/${feed.id}`">{{ feed.name }}</NuxtLink>
               </th>
             </tr>
           </thead>
@@ -721,17 +720,6 @@ class="unspecified"
   white-space: normal;
 }
 
-.provider-head span {
-  display: block;
-  font-size: .75rem;
-  margin: .16rem auto 0;
-  max-width: 3rem;
-  overflow: hidden;
-  text-align: center;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .protocol-row {
   cursor: pointer;
 }
@@ -981,7 +969,14 @@ class="unspecified"
 }
 
 .version-meter {
-  min-width: 215px;
+  min-width: 170px;
+  width: 170px;
+}
+
+.version-meter .coverage-tally {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  row-gap: .25rem;
 }
 
 .provider-cell {
@@ -1032,14 +1027,7 @@ class="unspecified"
 }
 
 .registry-title {
-  color: var(--color-ink-950);
-  font-family: var(--font-serif);
-  font-size: clamp(2.15rem, 5.2vw, 4rem);
-  font-weight: 560;
-  letter-spacing: -.035em;
-  line-height: .98;
-  margin: 0;
-  max-width: 48rem;
+  text-wrap: balance;
 }
 
 .registry-lede {
@@ -1058,8 +1046,7 @@ class="unspecified"
 
 .registry-stats dt,
 .card-heading span,
-.metric-chip span,
-.provider-head span {
+.metric-chip span {
   font-family: var(--font-mono);
   letter-spacing: 0;
   text-transform: none;
@@ -1122,7 +1109,8 @@ class="unspecified"
 }
 
 .sticky-protocol {
-  min-width: 282px;
+  min-width: 294px;
+  width: 294px;
 }
 
 .protocol-row:hover td {

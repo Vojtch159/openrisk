@@ -97,6 +97,12 @@ const typeLabels: Record<string, string> = {
 };
 
 const previewProtocol = computed(() => protocol.value ? { ...protocol.value, coverage: scopedCoverage.value } : null);
+
+function machineReadabilityLabel(value?: string) {
+  if (value === 'yes') return 'machine-readable';
+  if (value === 'partial') return 'partially machine-readable';
+  return 'manual only';
+}
 </script>
 
 <template>
@@ -214,7 +220,7 @@ const previewProtocol = computed(() => protocol.value ? { ...protocol.value, cov
                 <header>
                   <div>
                     <NuxtLink :to="`/feeds/${cell.feedId}`">{{ feedById[cell.feedId]?.name ?? cell.feedId }}</NuxtLink>
-                    <span>{{ feedById[cell.feedId]?.type }} · {{ feedById[cell.feedId]?.machineReadable }} machine-readable</span>
+                    <span>{{ feedById[cell.feedId]?.type }} · {{ machineReadabilityLabel(feedById[cell.feedId]?.machineReadable) }}</span>
                   </div>
                   <StatusBadge :status="cell.status" />
                 </header>
@@ -317,13 +323,6 @@ const previewProtocol = computed(() => protocol.value ? { ...protocol.value, cov
         </main>
 
         <aside class="protocol-rail">
-          <nav>
-            <span>On this page</span>
-            <a href="#tab-feeds" :class="{ active: activeTab === 'feeds' }" @click.prevent="activeTab = 'feeds'">Feed evidence <b>{{ counts.covered + counts.partial }}</b></a>
-            <a href="#tab-governance" :class="{ active: activeTab === 'governance' }" @click.prevent="activeTab = 'governance'">Governance <b>{{ protocol.governance.length }}</b></a>
-            <a href="#tab-incidents" :class="{ active: activeTab === 'incidents' }" @click.prevent="activeTab = 'incidents'">Incidents <b>{{ protocol.incidents.length }}</b></a>
-            <a href="#tab-audits" :class="{ active: activeTab === 'audits' }" @click.prevent="activeTab = 'audits'">Audits <b>{{ protocol.audits.length }}</b></a>
-          </nav>
           <div>
             <span>Official links</span>
             <a :href="protocol.links.website" target="_blank" rel="noreferrer">Protocol site <ExternalLink :size="13" /></a>
@@ -437,8 +436,8 @@ const previewProtocol = computed(() => protocol.value ? { ...protocol.value, cov
 .protocol-layout { display: grid; gap: 1rem; margin-top: 1rem; }
 .protocol-layout main { overflow: visible; min-width: 0; }
 
-.tab-bar { background: var(--color-white); border: 1px solid #d8dee7; border-radius: .75rem .75rem 0 0; display: flex; gap: 0; overflow: hidden; }
-.tab-bar button { align-items: center; background: none; border: none; border-bottom: 3px solid transparent; color: #697383; display: flex; font-size: .9rem; font-weight: 700; gap: .4rem; padding: .9rem 1.1rem; transition: color .15s, border-color .15s; }
+.tab-bar { background: var(--color-white); border: 1px solid #d8dee7; border-radius: .75rem .75rem 0 0; display: grid; gap: 0; grid-template-columns: repeat(2,minmax(0,1fr)); overflow: hidden; }
+.tab-bar button { align-items: center; background: none; border: none; border-bottom: 3px solid transparent; color: #697383; display: flex; font-size: .9rem; font-weight: 700; gap: .4rem; justify-content: center; min-width: 0; padding: .75rem .45rem; transition: color .15s, border-color .15s; white-space: nowrap; }
 .tab-bar button:hover { color: #303844; }
 .tab-bar button.active { border-bottom-color: #1d6fd8; color: #121418; }
 .tab-bar button b { background: #edf1f6; border-radius: 99px; color: #697383; font-size: .75rem; font-weight: 800; padding: .2rem .45rem; }
@@ -472,9 +471,11 @@ const previewProtocol = computed(() => protocol.value ? { ...protocol.value, cov
 .feed-evidence-card.covered { border-left: 3px solid #1f9d63; }
 .feed-evidence-card.partial { border-left: 3px solid #d78a1e; }
 .feed-evidence-card.not_covered { opacity: .68; }
-.feed-evidence-card header { align-items: start; display: flex; gap: .8rem; justify-content: space-between; }
+.feed-evidence-card header { align-items: start; display: flex; flex-wrap: wrap; gap: .8rem; justify-content: space-between; }
+.feed-evidence-card header > div { flex: 1 1 9rem; min-width: 0; }
 .feed-evidence-card header a { color: #181c22; font-size: 1rem; font-weight: 750; }
 .feed-evidence-card header > div > span { color: #8a94a3; display: block; font-size: .75rem; font-weight: 700; margin-top: .18rem; text-transform: uppercase; }
+.feed-evidence-card header :deep(.status-badge) { flex: 0 0 auto; max-width: 100%; }
 .feed-methodology,.coverage-note { color: #4a5361; font-size: .88rem; line-height: 1.55; }
 .feed-methodology { border-bottom: 1px solid #edf1f6; margin: .75rem 0 0; padding-bottom: .75rem; }
 .coverage-note { margin: .75rem 0 0; }
@@ -520,8 +521,7 @@ const previewProtocol = computed(() => protocol.value ? { ...protocol.value, cov
 .empty-tab { color: #8a94a3; font-size: .94rem; padding: 1rem 0; text-align: center; }
 
 .protocol-rail { display: none; align-self: start; position: sticky; top: 5.5rem; }
-.protocol-rail nav,.protocol-rail > div { background: var(--color-white); border: 1px solid #d8dee7; border-radius: .75rem; display: grid; gap: .15rem; padding: .8rem; }
-.protocol-rail > div { margin-top: .6rem; }
+.protocol-rail > div { background: var(--color-white); border: 1px solid #d8dee7; border-radius: .75rem; display: grid; gap: .15rem; padding: .8rem; }
 .protocol-rail span { color: #8a94a3; font-size: .75rem; font-weight: 800; letter-spacing: .06em; padding: .3rem .4rem; text-transform: uppercase; }
 .protocol-rail a { align-items: center; border-radius: .4rem; color: #4a5361; display: flex; font-size: .84rem; font-weight: 700; gap: .4rem; justify-content: space-between; padding: .6rem .45rem; text-decoration: none; }
 .protocol-rail a:hover,.protocol-rail a.active { background: #f7f9fc; color: #1d6fd8; }
@@ -972,7 +972,8 @@ const previewProtocol = computed(() => protocol.value ? { ...protocol.value, cov
   .lens-count-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .feed-card-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .governance-list article { grid-template-columns: 10rem minmax(0,1fr) auto; }
-  .tab-bar button { padding: .85rem 1.2rem; }
+  .tab-bar { display: flex; }
+  .tab-bar button { flex: 1 1 0; padding: .85rem 1.2rem; }
 }
 @media (min-width: 1024px) {
   .protocol-hero { grid-template-columns: minmax(0,1fr) 20rem; }

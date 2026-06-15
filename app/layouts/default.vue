@@ -119,10 +119,10 @@ const snapshotDate = computed(() => new Intl.DateTimeFormat('en-US', {
 .wordmark-sigil {
   align-items: center;
   background:
-    linear-gradient(90deg, transparent 47%, color-mix(in srgb, var(--color-white) 76%, transparent) 47% 53%, transparent 53%),
-    var(--color-ink-950);
+    linear-gradient(90deg, transparent 47%, color-mix(in srgb, var(--accent-mark-ink) 42%, transparent) 47% 53%, transparent 53%),
+    var(--accent-mark);
   border-radius: .3rem;
-  color: var(--color-on-dark);
+  color: var(--accent-mark-ink);
   display: inline-flex;
   font-family: var(--font-mono);
   font-size: .82rem;
